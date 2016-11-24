@@ -1,17 +1,17 @@
 
-#cubotto {
+.cubotto {
 	position: relative;
 	display: block;
 	width: 150px;
 	height: 150px;
 	border: 1px lightgrey solid;
 	border-radius: 10px;
-	margin-left: 20px;
+	margin: 20px;
 	background-color: white;
 	box-shadow: 5px 5px 10px 0px lightgrey;
 }
 
-#cubotto-icon {
+.cubotto-icon {
 	display: block;
 	position: relative;
 	width: 70%;
@@ -21,7 +21,7 @@
 	margin-right: auto;
 }
 
-#cubotto-text {
+.cubotto-text {
 	display: block;
 	position: relative;
 	text-align: center;
@@ -33,17 +33,13 @@
 	font-style: normal;
 }
 
-#homeIconNavBar {
+.homeIconNavBar {
 	position: relative;
 	width: height;
 	height: 70px;
 }
 
-#uniboColor{
-	background-color: #9c090f;
-}
-
-#iconNavBar {
+.iconNavBar {
 	position: relative;
 	width: height;
 	height: 20px;
