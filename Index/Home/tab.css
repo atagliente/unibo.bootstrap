@@ -1,0 +1,37 @@
+
+.container {
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+}
+
+.tab-content {
+    margin-top: 50px;
+}
+/*
+.red, .red .active a,
+.red .active a:hover {
+    background-color: white !important;
+    color: black !important;
+}
+*/
+/*
+#wow {
+    background-color: blue;
+}
+*/
+#tab-esami {
+    background: linear-gradient(lightgrey, white);
+    height: 200px;
+}
+
+
+.red {
+    background-color: white !important;
+    color: black !important;
+}
+
+.red .active a, .red .active a:hover {
+    background-color: darkred !important;
+    color: white !important;
+}
