@@ -16,7 +16,7 @@
 .red .active a, .red .active a:hover {
     background-color: #6b0808 !important;
     color: white !important;
-    font-size: 120%;
+    
 }
 
 h1 {
@@ -36,7 +36,7 @@ h1 {
 }
 
 #prenota_btn {
-    height: 50px;
+    /*height: 50px;*/
     width: 200px;
     color: white;
     border-radius: 10px;
@@ -68,4 +68,10 @@ a:link, a:visited, a:hover, a:active {
 #header {
     margin-bottom: 0px;
     padding: 4%;
+}
+
+@media screen and (max-width: 480px) {
+    a {
+        font-size: 13px;
+    }
 }
