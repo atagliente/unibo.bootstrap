@@ -6,7 +6,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 -->
 <html>
 <head>
-	<title>Generic - Phantom by HTML5 UP</title>
+	<title>Esami - UniBo</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
@@ -14,7 +14,8 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" href="assets/css/main.css" />
-	<link type ="text/css" rel="stylesheet" href="tab.css">
+	<link rel="stylesheet" href="assets/css/tab.css" />
+
 	<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 	<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 
@@ -26,26 +27,23 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 
 		<!-- Header -->
 		<header id="header">
+			<picture>
+				<source class="logoOnNavBar" srcset="images/logoResize.png" media="(max-device-width: 601px)"/>
+				<img class="logoOnNavBar" src="images/unibo.png" alt="Flowers" style="width:auto;"/>
+			</picture>
+			<!-- Logo -->
 			<div class="inner">
-
-				<!-- Logo -->
-				<a href="index.html" class="logo">
-					<span class="symbol"><img src="images/unibo.png" alt="Logo Unibo" /></span>
-				</a>
-
-				<!-- Nav -->
 				<nav>
 					<ul>
 						<li><a href="#menu">Menu</a></li>
 					</ul>
 				</nav>
-
 			</div>
 		</header>
 
 		<!-- Menu -->
 		<nav id="menu">
-			<h2>Menu</h2>
+			<h2>Menu</h2> <!-- da cambiare -->
 			<ul>
 				<li><a href="index.html">Home</a></li>
 				<li><a href="generic.html">Notifiche</a></li>
@@ -69,69 +67,123 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 				<div class="container">
 					<ul class="nav nav-pills red">
 						<li class="active"><a data-toggle="pill" href="#restanti">Restanti</a></li>
-						<li id="wow"><a data-toggle="pill" href="#prenotati">Prenotati</a></li>
+						<li><a data-toggle="pill" href="#prenotati">Prenotati</a></li>
 						<li><a data-toggle="pill" href="#verbalizzati">Verbalizzati</a></li>
 					</ul>
 
 					<div class="tab-content">
 						<div id="restanti" class="tab-pane fade in active">
-							<!-- <h3>Restanti</h3> -->
-							<div id="tab-esami">
-								<p>Tecnologie Web </br> 12/11/2020 <button id="prenota_btn" type="button"> Prenota </button></br> 12/11/2020<button id="prenota_btn" type="button"> Prenota </button></br> 12/11/2020<button id="prenota_btn" type="button"> Prenota </button></br></p>
+							<a data-toggle="collapse" data-parent="#restanti" href="#TecnologieWeb"/>
+							<!--   serve per tenere aperti tab contemporaneamente con "chiudi un tab e apri un altro" -->
+							<!--<div class="panel-group" id="accordion"> -->
+							<!--	<div class="panel panel-default" id="acaso">-->
+							<div class="panel-heading">
+								<h2 class="panel-title"> Tecnologie Web </h2>
 							</div>
-							<div id="tab-esami">
-								<p>Programmazioni di reti</p>
-							</div>
-							<div id="tab-esami">
-								<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-							</div>
-						</div>
-						<div id="prenotati" class="tab-pane fade">
-							<!-- <h3>Prenotati</h3> -->
-							<div id="tab-esami">
-								<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-							</div>
-							<div id="tab-esami">
-								<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-							</div>
-							<div id="tab-esami">
-								<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+							<!-- aggiungere "in" per aprire il tab di default -->
+							<div id="TecnologieWeb" class="panel-collapse collapse in">
+								<div class="panel-body">
+									<p>12/11/2020 <button id="prenota_btn" type="button"> Prenota </button></br></p>
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+									sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+									quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+								</div>
 							</div>
 						</div>
-						<div id="verbalizzati" class="tab-pane fade">
-							<!-- <h3>Verbalizzati</h3>  -->
-							<div id="tab-esami">
-								<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+						<div id="restanti" class="tab-pane fade in active">
+							<a data-toggle="collapse" data-parent="#restanti" href="#BasiDiDati"/>
+							<!--   serve per tenere aperti tab contemporaneamente con "chiudi un tab e apri un altro" -->
+							<!--<div class="panel-group" id="accordion"> -->
+							<!--	<div class="panel panel-default" id="acaso">-->
+							<div class="panel-heading">
+								<h2 class="panel-title"> Basi di Dati </h2>
 							</div>
-							<div id="tab-esami">
-								<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+							<div id="BasiDiDati" class="panel-collapse collapse">
+								<div class="panel-body">
+									<p>12/11/2020 <button id="prenota_btn" type="button"> Prenota </button></br></p>
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+									sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+									quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+								</div>
 							</div>
-							<div id="tab-esami">
-								<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+						</div>
+						<div id="restanti" class="tab-pane fade in active">
+							<a data-toggle="collapse" data-parent="#restanti" href="#ProgrammazioneEmbedded"/>
+							<!--   serve per tenere aperti tab contemporaneamente con "chiudi un tab e apri un altro" -->
+							<!--<div class="panel-group" id="accordion"> -->
+							<!--	<div class="panel panel-default" id="acaso">-->
+							<div class="panel-heading">
+								<h2 class="panel-title"> Programmazione Embedded </h2>
+							</div>
+							<div id="ProgrammazioneEmbedded" class="panel-collapse collapse">
+								<div class="panel-body">
+									<p>12/11/2020 <button id="prenota_btn" type="button"> Prenota </button></br></p>
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+									sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+									quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+								</div>
 							</div>
 						</div>
 					</div>
+					<!--
+
+					<div id="tab-esami">
+					<p>Tecnologie Web </br> 12/11/2020 <button id="prenota_btn" type="button"> Prenota </button></br> 12/11/2020<button id="prenota_btn" type="button"> Prenota </button></br> 12/11/2020<button id="prenota_btn" type="button"> Prenota </button></br></p>
 				</div>
-				<!-- End of Section Tab -->
-
+				<div id="tab-esami">
+				<p>Programmazioni di reti</p>
 			</div>
+			<div id="tab-esami">
+			<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 		</div>
-
-
-			<!--
-			<footer id="footer">
-			<div class="inner">
-			<section>
-			<h2>Get in touch</h2>
-			<form method="post" action="#">
-			<div class="field half first">
-			<input type="text" name="name" id="name" placeholder="Name" />
-		</div>
-		<div class="field half">
-		<input type="email" name="email" id="email" placeholder="Email" />
+	-->
+</div>
+<div id="prenotati" class="tab-pane fade">
+	<!-- <h3>Prenotati</h3> -->
+	<div id="tab-esami">
+		<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 	</div>
-	<div class="field">
-	<textarea name="message" id="message" placeholder="Message"></textarea>
+	<div id="tab-esami">
+		<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+	</div>
+	<div id="tab-esami">
+		<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+	</div>
+</div>
+<div id="verbalizzati" class="tab-pane fade">
+	<!-- <h3>Verbalizzati</h3>  -->
+	<div id="tab-esami">
+		<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+	</div>
+	<div id="tab-esami">
+		<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+	</div>
+	<div id="tab-esami">
+		<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+	</div>
+</div>
+</div>
+</div>
+<!-- End of Section Tab -->
+
+</div>
+</div>
+
+
+<!--
+<footer id="footer">
+<div class="inner">
+<section>
+<h2>Get in touch</h2>
+<form method="post" action="#">
+<div class="field half first">
+<input type="text" name="name" id="name" placeholder="Name" />
+</div>
+<div class="field half">
+<input type="email" name="email" id="email" placeholder="Email" />
+</div>
+<div class="field">
+<textarea name="message" id="message" placeholder="Message"></textarea>
 </div>
 <ul class="actions">
 <li><input type="submit" value="Send" class="special" /></li>

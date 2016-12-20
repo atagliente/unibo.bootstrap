@@ -8,27 +8,6 @@
     margin-top: 50px;
 }
 
-
-/*
-.red, .red .active a,
-.red .active a:hover {
-    background-color: white !important;
-    color: black !important;
-}
-*/
-
-
-/*
-#wow {
-    background-color: blue;
-}
-*/
-
-#tab-esami {
-    background: linear-gradient(lightgrey, white);
-    height: 200px;
-}
-
 .red {
     background-color: white !important;
     color: black !important;
@@ -37,24 +16,23 @@
 .red .active a, .red .active a:hover {
     background-color: #6b0808 !important;
     color: white !important;
+    font-size: 120%;
 }
 
 h1 {
-    font-size: 400%;
+    font-size: 200%;
     font-family: "TrajanPro-Regular", serif;
     text-align: center;
-    color: #bb2e29;
+    color: #6b0808;
+    margin: 4%;
+    padding: 4%;
 }
 
 #tab-esami {
+    background: linear-gradient(lightgrey, white);
     height: 50px;
     width: auto;
     text-indent: 20px;
-}
-
-#tab-esami:active {
-    position: relative;
-    height: 200px;
 }
 
 #prenota_btn {
@@ -67,4 +45,27 @@ h1 {
 
 #prenota_btn:hover {
     background-color: #6b0808;
+}
+
+.tab-pane {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#restanti {
+    background: linear-gradient(lightgrey, white);
+}
+
+a:link, a:visited, a:hover, a:active {
+    color: #6b0808 !important;
+    text-decoration: none !important;
+}
+
+#main {
+    margin-top: 0px;
+}
+
+#header {
+    margin-bottom: 0px;
+    padding: 4%;
 }
