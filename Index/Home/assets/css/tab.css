@@ -16,16 +16,7 @@
 .red .active a, .red .active a:hover {
     background-color: #6b0808 !important;
     color: white !important;
-    
-}
 
-h1 {
-    font-size: 200%;
-    font-family: "TrajanPro-Regular", serif;
-    text-align: center;
-    color: #6b0808;
-    margin: 4%;
-    padding: 4%;
 }
 
 #tab-esami {
@@ -74,4 +65,33 @@ a:link, a:visited, a:hover, a:active {
     a {
         font-size: 13px;
     }
+}
+
+h1 {
+    font-size: 200%;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    color: #6b0808; /* #bb2e29 è il rosso chiaro, #6b0808 è quello scuro per gli hover ecc, #1d6684 è il blu */
+    margin: 0%;
+    padding: 4%;
+    /* border: solid 3px blue; */
+}
+
+h2, p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+}
+
+h2 {
+    padding: 1.5%;
+    font-style: Open Sans;
+    /* border: solid 3px green; */
+}
+
+.logoOnNavBar {
+    display: fixed;
+    position: absolute;
+    height: 10%;
+    top: 10px;
+    background-image: url('/images/unibo.png');
 }
