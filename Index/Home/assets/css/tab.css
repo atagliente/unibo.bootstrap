@@ -47,9 +47,9 @@
     background: linear-gradient(lightgrey, white);
 }
 
+
 a:link, a:visited, a:hover, a:active {
-    color: #6b0808 !important;
-    text-decoration: none !important;
+    text-decoration: none !important;           /*toglie la sottolineatura*/
 }
 
 #main {
