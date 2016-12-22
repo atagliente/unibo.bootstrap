@@ -26,16 +26,12 @@
     text-indent: 20px;
 }
 
-#prenota_btn {
-    /*height: 50px;*/
-    width: 200px;
-    color: white;
+.button {       /*phantom button*/
+  /*  width: 200px;*/
+    color: black;
     border-radius: 10px;
     border: 1px solid red;
-}
-
-#prenota_btn:hover {
-    background-color: #6b0808;
+    float: right;
 }
 
 .tab-pane {
@@ -64,6 +60,10 @@ a:link, a:visited, a:hover, a:active {
 @media screen and (max-width: 480px) {
     a {
         font-size: 13px;
+    }
+
+    .button {
+      font-size: 0.6em;
     }
 }
 
