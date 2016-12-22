@@ -1,0 +1,24 @@
+/*Calendario -->*/
+#bodycal{
+  outline:none;
+  height: 40%! important;
+  width: 90%! important;
+
+}
+/*---------------------*/
+
+/*Calendario -->*/
+span,div{
+  outline:none;
+  height: 20%! important;
+  width: 90%! important;
+}
+/*---------------------*/
+
+/*Calendario -->*/
+li{
+  outline:none;
+  height: 10%! important;
+
+}
+/*---------------------*/
