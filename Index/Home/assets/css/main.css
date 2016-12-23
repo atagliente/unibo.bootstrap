@@ -2561,7 +2561,7 @@ nav
 	input[type="submit"].big,
 	input[type="reset"].big,
 	input[type="button"].big,
-	button.big,
+	button.	big,
 	.button.big {
 		font-size: 1em;
 	}
