@@ -1,6 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html lang="en"> <script type="text/javascript" src="sha512.js"></script>
+<script type="text/javascript" src="../assets/js/forms.js"></script>
+<?php
+if(isset($_GET['error'])) {
+   echo 'Error Logging In!';
+}
+?>
 <head>
+
   <title>Login Sol#</title>
   <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="login.css" media="screen" /> 
@@ -9,13 +17,13 @@
 
 <div id="background_Laptop"></div>
 <div id="insert_box">
-	<form>
+	<form action="../assets/php/process_login.php" method="post" name="login_form">
 	  <label style="display:none" for="username">Email</label>
 	  <input type="text" id="username" name="username" value="email istituzionale">
 	  <br/>
-	  <label style="display:none" for="pw">Password</label>
-	  <input type="password" id="pw" name="pw" value="password">
-	  <input type="submit" id="submit_button">
+	  <label style="display:none" for="password">Password</label>
+	  <input type="password" id="password" name="password" value="password">
+	<input type="submit" value="Login" onclick="formhash(this.form, this.form.password);" />
 	</form>
 </div>
 </body>
