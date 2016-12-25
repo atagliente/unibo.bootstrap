@@ -6,27 +6,23 @@
  * Time: 21:51
  */
 
+require ('Login.php');
 
-include 'secureConnection.php';
+$login = new Login();
 
-require ('DBconfig.php');
-
-sec_session_start();
-
-define("TABLE_NAME", "Login");
-define("QUERY", "SELECT * FROM ". TABLE_NAME ." WHERE (username=?) AND (password=?)");
-define("SUCCESS_REDIRECT", "Location: ../../../Home/index.html");
+$login->sec_session_start();
 
 if(isset($_POST['username'], $_POST['password'])) {
-    $email = $_POST['username'];
-    $password = $_POST['password']; // Recupero la password criptata.
+    $username = $_POST['username'];
+    $password = $_POST['password'];
 
-    if(login($email, $password, $mysqli) == true) {
+    if($login->loginCheck($username, $password) == true) {
         // Login eseguito
-        echo 'Success: You have been logged in!';
+        $login->writeDebugLog("Login Effettuato");
+        header('Location: ../../Home/index.html');
     } else {
         // Login fallito
-        sec_session_start();
+        $login->sec_session_start();
         // Elimina tutti i valori della sessione.
         $_SESSION = array();
         // Recupera i parametri di sessione.
@@ -35,7 +31,8 @@ if(isset($_POST['username'], $_POST['password'])) {
         setcookie(session_name(), '', time() - 42000, $params["path"], $params["domain"], $params["secure"], $params["httponly"]);
         // Cancella la sessione.
         session_destroy();
-        //header('Location: ../../Login/login.html');
+        $login->writeDebugLog("Login Fallito");
+        header('Location: cryptoEcho.php');
     }
 } else {
     // Le variabili corrette non sono state inviate a questa pagina dal metodo POST.
