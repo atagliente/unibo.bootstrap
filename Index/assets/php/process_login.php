@@ -16,7 +16,7 @@ if(isset($_POST['username'], $_POST['password'])) {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    if($login->loginCheck($username, $password) == true) {
+    if($login->login($username, $password) == true) {
         // Login eseguito
         $login->writeDebugLog("Login Effettuato");
         header('Location: ../../Home/index.html');
@@ -32,7 +32,7 @@ if(isset($_POST['username'], $_POST['password'])) {
         // Cancella la sessione.
         session_destroy();
         $login->writeDebugLog("Login Fallito");
-        header('Location: cryptoEcho.php');
+        header('Location: ../../Login/login.html');
     }
 } else {
     // Le variabili corrette non sono state inviate a questa pagina dal metodo POST.

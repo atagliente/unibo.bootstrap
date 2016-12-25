@@ -11,8 +11,12 @@ define("SERVER_NAME", "localhost");
 define("USER_NAME","root");
 define("PASSWORD","");
 define("LOGIN_TABLE", "Login");
+define("ATTEMPS_TABLE","LogAttemps");
+define("WRONG_ACCESS", "INSERT INTO " . ATTEMPS_TABLE . " (username, time) VALUES (?, ?)");
 define("GET_USER_QUERY","SELECT * FROM ". LOGIN_TABLE ." WHERE (username=?)");
+define("GET_ATTEMPS_QUERY","SELECT time FROM  WHERE (username=?) AND time > ?");
 define("DATABASE","solUnibo");
+define("EMAIL","antoniotagliente@aol.com");
 
 class DBConnection
 {
@@ -29,7 +33,6 @@ class DBConnection
         if ($mysqli ->connect_error) {
             $string = "Connection failed: " . $mysqli->connect_error;
             die($string);
-            error_log($string, 0);
             throw new Exception($string);
         }
         if (!syslog( LOG_DEBUG, $string)) {
@@ -96,4 +99,36 @@ class DBConnection
     {
     }
 
+    public function sendEmail($email) {
+        $headers = "From: ". EMAIL . "\r\n" .
+            "Reply-To: " . EMAIL . "\r\n" .
+            'X-Mailer: PHP/' . phpversion();
+        mail($email, 'Sol Security', StandardMessages::ALERT_MAIL, $headers);
+    }
+
+    public function insertWrongAccess($username)
+    {
+        $now = time();
+        if($stmt = $this->_connection->prepare(WRONG_ACCESS)) {
+            $stmt->bind_param('ss', $username, $now);
+            $stmt->execute();
+        }
+
+    }
+
+    public function checkbrute($username) {
+        $now = time();
+        $valid_attempts = $now - (2 * 60 * 60); //last 2 hours
+        if ($stmt = $this->_connection->prepare("SELECT time FROM " . ATTEMPS_TABLE ." WHERE (username=?) AND time > ".$valid_attempts)) {
+            $stmt->bind_param('s', $username);
+            $stmt->execute();
+            $stmt->store_result();
+            if($stmt->num_rows > 5) {
+                $this->sendEmail("antoniotagliente@aol.com");
+                return true;
+            } else {
+                return false;
+            }
+        }
+    }
 }

@@ -26,15 +26,19 @@ class Login
      * @param $password
      * @return null or query result
      */
-    public function loginCheck($username, $password) {
+    public function login($username, $password) {
         $result = $this->_dbConnection->getUser($username);
         if ($result->num_rows == 1) {
             $user = mysqli_fetch_array($result);
-            if ($this->encrypt($password) == $user['password']) {
+            if (!$this->_dbConnection->checkbrute($username) && $this->encrypt($password) == $user['password']) {
+                $user_browser = $_SERVER['HTTP_USER_AGENT'];
+                $username = preg_replace("/[^a-zA-Z0-9_\-]+/", "", $username);
+                $_SESSION['username'] = $username;
+                $_SESSION['password'] = hash('sha512', $password.$user_browser);
                 return true;
             }   else {
                 $this->writeAlertLog(StandardMessages::PW_WRONG);
-                //$this->wrongAccessHandler();
+                $this->_dbConnection->insertWrongAccess($username);
             }
         } else {
             $this->writeDebugLog(StandardMessages::USER_WRONG);
@@ -85,6 +89,29 @@ class Login
         $iv = substr(hash('sha256', $this->_iv), 0, 16);
         $output = openssl_decrypt(base64_decode($string), $this->_encryptMethod, $key, 0, $iv);
         return $output;
+    }
+
+    function loginCheck() {
+        if(isset($_SESSION['username'], $_SESSION['password'])) {
+            $password = $_SESSION['password'];
+            $username = $_SESSION['username'];
+            $user_browser = $_SERVER['HTTP_USER_AGENT'];
+            $result = $this->_dbConnection->getUser($username);
+                if($result->num_rows == 1) { // se l'utente esiste
+                    $db_password = (mysqli_fetch_array($result));
+                    $db_password = $db_password['password'];
+                    $login_check = hash('sha512', $password.$user_browser);
+                    if($this->encrypt($login_check) == $db_password) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+                } else {
+                    return false;
+                }
+            } else {
+                return false;
+            }
     }
 
 }
