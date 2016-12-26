@@ -31,6 +31,9 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 	<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 	<script src="assets/js/main.js"></script>
 
+	<script type="text/javascript" src="calendario.js"></script>
+
+	<script src="canvasjs.min.js"></script>
 </head>
 
 <body>
@@ -138,6 +141,8 @@ ci sono pull-right e pull-left-->
 						</div>
 
 						<div id="verbalizzati" class="tab-pane fade">
+
+							<div id="chartContainer" style="height: 400px; width: 100%;"></div>
 							<!-- <h3>Verbalizzati</h3>  -->
 							<div>
 								<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
