@@ -105,3 +105,7 @@ h4, p {
 .panel-body {
   background: linear-gradient(white, white);
 }
+
+#footer {
+	padding: 0.5em 0 1em 0 ;
+}

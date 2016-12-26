@@ -37,41 +37,8 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 	<!-- Wrapper -->
 	<div id="wrapper">
 
-		<!-- Header -->
-		<header id="header">
-			<!-- Logo -->
-			<a href="index.html">
-				<picture>
-					<!--modificare con jquery per ottenere un'unica riga?-->
-					<img id="logoUnibo" class="logoOnNavBar" src="images/logoBig.png" alt="logo" style="width:auto">
-				</picture>
-			</a>
-			<div class="inner">
-				<nav>
-					<ul>
-						<li><a href="#menu">Menu</a></li>
-					</ul>
-				</nav>
-			</div>
-		</header>
-
-		<!-- Menu -->
-		<nav id="menu">
-			<h2>Menu</h2>
-			<!-- da cambiare -->
-			<ul>
-				<li><a href="index.html">Home</a></li>
-				<li><a href="generic.html">Notifiche</a></li>
-				<li><a href="generic.html">Esami</a></li>
-				<li><a href="generic.html">Insegnamenti</a></li>
-				<li><a href="generic.html">Tasse</a></li>
-				<li><a href="generic.html">Mensa</a></li>
-				<li><a href="generic.html">Bike Sharing</a></li>
-				<li><a href="generic.html">Mail</a></li>
-				<li><a href="generic.html">About us</a></li>
-				<li><a href="../Login/login.html">Logout</a></li>
-			</ul>
-		</nav>
+		<?php require ("header.html");
+			  require ("navigation.html"); ?>
 
 		<!-- Main -->
 		<div id="main">
@@ -99,6 +66,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 							      </div>
 							      <div id="TecnologieWeb" class="panel-collapse collapse in">
 							        <div class="panel-body">
+
 										<!-- >>>>>>>>>>>>>>>>>>>>>>>>> da finire di sistemare -->
 										<p>Prima prova scritta: <br/>giorno: 12/11/2020
 											<button type="button" class="button hidden-xs">Prenota</button>
@@ -188,6 +156,9 @@ ci sono pull-right e pull-left-->
 
 			</div>
 		</div>
+
+		<?php require ("footer.html"); ?>
+
 	</div>
 </body>
 
