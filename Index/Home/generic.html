@@ -24,6 +24,13 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 
 	<script src="logoSwap.js"></script>
 
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/skel.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+	<script src="assets/js/main.js"></script>
+
 </head>
 
 <body>
@@ -36,7 +43,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 			<a href="index.html">
 				<picture>
 					<!--modificare con jquery per ottenere un'unica riga?-->
-					<img id="logoUnibo" class="logoOnNavBar" src="" alt="logo" style="width:auto">
+					<img id="logoUnibo" class="logoOnNavBar" src="images/logoBig.png" alt="logo" style="width:auto">
 				</picture>
 			</a>
 			<div class="inner">
@@ -93,18 +100,19 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 							      <div id="TecnologieWeb" class="panel-collapse collapse in">
 							        <div class="panel-body">
 										<!-- >>>>>>>>>>>>>>>>>>>>>>>>> da finire di sistemare -->
-										<p>Prima prova scritta: </br>giorno: 12/11/2020
+										<p>Prima prova scritta: <br/>giorno: 12/11/2020
 											<button type="button" class="button hidden-xs">Prenota</button>
 											<button type="button" class="button fit hidden-sm hidden-md hidden-lg">Prenota</button>
-										</br> ore: 18:34 aula A</p>
-										<p>Prima prova orale: </br>giorno: 12/11/2020
+										<br/> ore: 18:34 aula A</p>
+
+										<p>Prima prova orale: <br/>giorno: 12/11/2020
 											<button type="button" class="button disabled hidden-xs">Prenota</button>
 											<button type="button" class="button fit hidden-sm disabled hidden-md hidden-lg">Prenota</button>
-										</br> ore: 18:34 aula A</p>
-										<p>Prima prova antonio: </br>giorno: 12/11/2020
+										<br/> ore: 18:34 aula A</p>
+										<p>Prima prova antonio: <br/>giorno: 12/11/2020
 											<button type="button" class="button disabled hidden-xs">Prenota</button>
 											<button type="button" class="button fit hidden-sm disabled hidden-md hidden-lg">Prenota</button>
-										</br> ore: 18:34 aula A</p>
+										<br/> ore: 18:34 aula A</p>
 <!-- dare un'occhiata a questa fighissima pagina: http://www.w3schools.com/bootstrap/bootstrap_ref_css_helpers.asp
 le classi visible sono deprecate...
 ci sono pull-right e pull-left-->
@@ -121,9 +129,9 @@ ci sono pull-right e pull-left-->
 							      </div>
 							      <div id="IngegeriaSW" class="panel-collapse collapse in">
 							        <div class="panel-body">
-												<p>Prima prova scritta: </br>giorno: 12/11/2020 <button type="button" class="button">Prenota</button> </br> ore: 18:34 aula A</p>
-												<p>Prima prova orale: </br>giorno: 12/11/2020 <button type="button" class="button">Prenota</button> </br> ore: 18:34 aula A</p>
-												<p>Prima prova antonio: </br>giorno: 12/11/2020 <button type="button" class="button">Prenota</button> </br> ore: 18:34 aula A</p>
+												<p>Prima prova scritta: <br/>giorno: 12/11/2020 <button type="button" class="button">Prenota</button> <br/> ore: 18:34 aula A</p>
+												<p>Prima prova orale: <br/>giorno: 12/11/2020 <button type="button" class="button">Prenota</button> <br/> ore: 18:34 aula A</p>
+												<p>Prima prova antonio: <br/>giorno: 12/11/2020 <button type="button" class="button">Prenota</button> <br/> ore: 18:34 aula A</p>
 											</div>
 							      </div>
 							    </div>
@@ -136,9 +144,9 @@ ci sono pull-right e pull-left-->
 							      </div>
 							      <div id="SistemiEmbedded" class="panel-collapse collapse in">
 							        <div class="panel-body">
-												<p>Prima prova scritta: </br>giorno: 12/11/2020 <button type="button" class="button">Prenota</button> </br> ore: 18:34 aula A</p>
-												<p>Prima prova orale: </br>giorno: 12/11/2020 <button type="button" class="button">Prenota</button> </br> ore: 18:34 aula A</p>
-												<p>Prima prova antonio: </br>giorno: 12/11/2020 <button type="button" class="button">Prenota</button> </br> ore: 18:34 aula A</p>
+												<p>Prima prova scritta: <br/>giorno: 12/11/2020 <button type="button" class="button">Prenota</button> <br/> ore: 18:34 aula A</p>
+												<p>Prima prova orale: <br/>giorno: 12/11/2020 <button type="button" class="button">Prenota</button> <br/> ore: 18:34 aula A</p>
+												<p>Prima prova antonio: <br/>giorno: 12/11/2020 <button type="button" class="button">Prenota</button> <br/> ore: 18:34 aula A</p>
 											</div>
 							      </div>
 							    </div>
@@ -150,26 +158,26 @@ ci sono pull-right e pull-left-->
 
 						<div id="prenotati" class="tab-pane fade">
 							<!-- <h3>Prenotati</h3> -->
-							<div id="tab-esami">
+							<div>
 								<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 							</div>
-							<div id="tab-esami">
+							<div >
 								<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 							</div>
-							<div id="tab-esami">
+							<div>
 								<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 							</div>
 						</div>
 
 						<div id="verbalizzati" class="tab-pane fade">
 							<!-- <h3>Verbalizzati</h3>  -->
-							<div id="tab-esami">
+							<div>
 								<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 							</div>
-							<div id="tab-esami">
+							<div>
 								<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 							</div>
-							<div id="tab-esami">
+							<div>
 								<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 							</div>
 						</div>
@@ -180,56 +188,7 @@ ci sono pull-right e pull-left-->
 
 			</div>
 		</div>
-
-
-		<!--
-<footer id="footer">
-<div class="inner">
-<section>
-<h2>Get in touch</h2>
-<form method="post" action="#">
-<div class="field half first">
-<input type="text" name="name" id="name" placeholder="Name" />
-</div>
-<div class="field half">
-<input type="email" name="email" id="email" placeholder="Email" />
-</div>
-<div class="field">
-<textarea name="message" id="message" placeholder="Message"></textarea>
-</div>
-<ul class="actions">
-<li><input type="submit" value="Send" class="special" /></li>
-</ul>
-</form>
-</section>
-<section>
-<h2>Follow</h2>
-<ul class="icons">
-<li><a href="#" class="icon style2 fa-twitter"><span class="label">Twitter</span></a></li>
-<li><a href="#" class="icon style2 fa-facebook"><span class="label">Facebook</span></a></li>
-<li><a href="#" class="icon style2 fa-instagram"><span class="label">Instagram</span></a></li>
-<li><a href="#" class="icon style2 fa-dribbble"><span class="label">Dribbble</span></a></li>
-<li><a href="#" class="icon style2 fa-github"><span class="label">GitHub</span></a></li>
-<li><a href="#" class="icon style2 fa-500px"><span class="label">500px</span></a></li>
-<li><a href="#" class="icon style2 fa-phone"><span class="label">Phone</span></a></li>
-<li><a href="#" class="icon style2 fa-envelope-o"><span class="label">Email</span></a></li>
-</ul>
-</section>
-<ul class="copyright">
-<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-</ul>
-</div>
-</footer>
-
-</div>
--->
-		<!-- Scripts -->
-		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/skel.min.js"></script>
-		<script src="assets/js/util.js"></script>
-		<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-		<script src="assets/js/main.js"></script>
-
+	</div>
 </body>
 
 </html>
