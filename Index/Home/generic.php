@@ -22,49 +22,26 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 	<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 	<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 
+	<script src="logoSwap.js"></script>
 
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/skel.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+	<script src="assets/js/main.js"></script>
+
+	<script type="text/javascript" src="calendario.js"></script>
+
+	<script src="canvasjs.min.js"></script>
 </head>
 
 <body>
 	<!-- Wrapper -->
 	<div id="wrapper">
 
-		<!-- Header -->
-		<header id="header">
-			<!-- Logo -->
-			<a href="index.html">
-				<picture>
-					<source class="logoOnNavBar" srcset="images/logoSmall.png" media="(max-device-width: 601px)" />
-					<!--modificare con jquery per ottenere un'unica riga?-->
-					<img class="logoOnNavBar" src="images/logoBig.png" alt="logo" style="width:auto;" />
-				</picture>
-			</a>
-			<div class="inner">
-				<nav>
-					<ul>
-						<li><a href="#menu">Menu</a></li>
-					</ul>
-				</nav>
-			</div>
-		</header>
-
-		<!-- Menu -->
-		<nav id="menu">
-			<h2>Menu</h2>
-			<!-- da cambiare -->
-			<ul>
-				<li><a href="index.html">Home</a></li>
-				<li><a href="generic.html">Notifiche</a></li>
-				<li><a href="generic.html">Esami</a></li>
-				<li><a href="generic.html">Insegnamenti</a></li>
-				<li><a href="generic.html">Tasse</a></li>
-				<li><a href="generic.html">Mensa</a></li>
-				<li><a href="generic.html">Bike Sharing</a></li>
-				<li><a href="generic.html">Mail</a></li>
-				<li><a href="generic.html">About us</a></li>
-				<li><a href="../Login/login.html">Logout</a></li>
-			</ul>
-		</nav>
+		<?php require ("header.html");
+			  require ("navigation.html"); ?>
 
 		<!-- Main -->
 		<div id="main">
@@ -74,9 +51,9 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 				<!-- Section Tab -->
 				<div class="container">
 					<ul class="nav nav-pills red">
-						<li class="active"><a data-toggle="pill" href="#restanti">Restanti</a></li>
-						<li><a data-toggle="pill" href="#prenotati">Prenotati</a></li>
-						<li><a data-toggle="pill" href="#verbalizzati">Verbalizzati</a></li>
+						<li class="active"><a class"nemesis" data-toggle="pill" href="#restanti">Restanti</a></li>
+						<li><a class="nemesis" data-toggle="pill" href="#prenotati">Prenotati</a></li>
+						<li><a class="nemesis" data-toggle="pill" href="#verbalizzati">Verbalizzati</a></li>
 					</ul>
 
 
@@ -92,19 +69,21 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 							      </div>
 							      <div id="TecnologieWeb" class="panel-collapse collapse in">
 							        <div class="panel-body">
+
 										<!-- >>>>>>>>>>>>>>>>>>>>>>>>> da finire di sistemare -->
-										<p>Prima prova scritta: </br>giorno: 12/11/2020
+										<p>Prima prova scritta: <br/>giorno: 12/11/2020
 											<button type="button" class="button hidden-xs">Prenota</button>
 											<button type="button" class="button fit hidden-sm hidden-md hidden-lg">Prenota</button>
-										</br> ore: 18:34 aula A</p>
-										<p>Prima prova orale: </br>giorno: 12/11/2020
+										<br/> ore: 18:34 aula A</p>
+
+										<p>Prima prova orale: <br/>giorno: 12/11/2020
 											<button type="button" class="button disabled hidden-xs">Prenota</button>
 											<button type="button" class="button fit hidden-sm disabled hidden-md hidden-lg">Prenota</button>
-										</br> ore: 18:34 aula A</p>
-										<p>Prima prova antonio: </br>giorno: 12/11/2020
+										<br/> ore: 18:34 aula A</p>
+										<p>Prima prova antonio: <br/>giorno: 12/11/2020
 											<button type="button" class="button disabled hidden-xs">Prenota</button>
 											<button type="button" class="button fit hidden-sm disabled hidden-md hidden-lg">Prenota</button>
-										</br> ore: 18:34 aula A</p>
+										<br/> ore: 18:34 aula A</p>
 <!-- dare un'occhiata a questa fighissima pagina: http://www.w3schools.com/bootstrap/bootstrap_ref_css_helpers.asp
 le classi visible sono deprecate...
 ci sono pull-right e pull-left-->
@@ -121,9 +100,9 @@ ci sono pull-right e pull-left-->
 							      </div>
 							      <div id="IngegeriaSW" class="panel-collapse collapse in">
 							        <div class="panel-body">
-												<p>Prima prova scritta: </br>giorno: 12/11/2020 <button type="button" class="button">Prenota</button> </br> ore: 18:34 aula A</p>
-												<p>Prima prova orale: </br>giorno: 12/11/2020 <button type="button" class="button">Prenota</button> </br> ore: 18:34 aula A</p>
-												<p>Prima prova antonio: </br>giorno: 12/11/2020 <button type="button" class="button">Prenota</button> </br> ore: 18:34 aula A</p>
+												<p>Prima prova scritta: <br/>giorno: 12/11/2020 <button type="button" class="button">Prenota</button> <br/> ore: 18:34 aula A</p>
+												<p>Prima prova orale: <br/>giorno: 12/11/2020 <button type="button" class="button">Prenota</button> <br/> ore: 18:34 aula A</p>
+												<p>Prima prova antonio: <br/>giorno: 12/11/2020 <button type="button" class="button">Prenota</button> <br/> ore: 18:34 aula A</p>
 											</div>
 							      </div>
 							    </div>
@@ -136,9 +115,9 @@ ci sono pull-right e pull-left-->
 							      </div>
 							      <div id="SistemiEmbedded" class="panel-collapse collapse in">
 							        <div class="panel-body">
-												<p>Prima prova scritta: </br>giorno: 12/11/2020 <button type="button" class="button">Prenota</button> </br> ore: 18:34 aula A</p>
-												<p>Prima prova orale: </br>giorno: 12/11/2020 <button type="button" class="button">Prenota</button> </br> ore: 18:34 aula A</p>
-												<p>Prima prova antonio: </br>giorno: 12/11/2020 <button type="button" class="button">Prenota</button> </br> ore: 18:34 aula A</p>
+												<p>Prima prova scritta: <br/>giorno: 12/11/2020 <button type="button" class="button">Prenota</button> <br/> ore: 18:34 aula A</p>
+												<p>Prima prova orale: <br/>giorno: 12/11/2020 <button type="button" class="button">Prenota</button> <br/> ore: 18:34 aula A</p>
+												<p>Prima prova antonio: <br/>giorno: 12/11/2020 <button type="button" class="button">Prenota</button> <br/> ore: 18:34 aula A</p>
 											</div>
 							      </div>
 							    </div>
@@ -150,26 +129,28 @@ ci sono pull-right e pull-left-->
 
 						<div id="prenotati" class="tab-pane fade">
 							<!-- <h3>Prenotati</h3> -->
-							<div id="tab-esami">
+							<div>
 								<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 							</div>
-							<div id="tab-esami">
+							<div >
 								<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 							</div>
-							<div id="tab-esami">
+							<div>
 								<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 							</div>
 						</div>
 
 						<div id="verbalizzati" class="tab-pane fade">
+
+							<div id="chartContainer" style="height: 400px; width: 100%;"></div>
 							<!-- <h3>Verbalizzati</h3>  -->
-							<div id="tab-esami">
+							<div>
 								<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 							</div>
-							<div id="tab-esami">
+							<div>
 								<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 							</div>
-							<div id="tab-esami">
+							<div>
 								<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 							</div>
 						</div>
@@ -181,55 +162,9 @@ ci sono pull-right e pull-left-->
 			</div>
 		</div>
 
+		<?php require ("footer.html"); ?>
 
-		<!--
-<footer id="footer">
-<div class="inner">
-<section>
-<h2>Get in touch</h2>
-<form method="post" action="#">
-<div class="field half first">
-<input type="text" name="name" id="name" placeholder="Name" />
-</div>
-<div class="field half">
-<input type="email" name="email" id="email" placeholder="Email" />
-</div>
-<div class="field">
-<textarea name="message" id="message" placeholder="Message"></textarea>
-</div>
-<ul class="actions">
-<li><input type="submit" value="Send" class="special" /></li>
-</ul>
-</form>
-</section>
-<section>
-<h2>Follow</h2>
-<ul class="icons">
-<li><a href="#" class="icon style2 fa-twitter"><span class="label">Twitter</span></a></li>
-<li><a href="#" class="icon style2 fa-facebook"><span class="label">Facebook</span></a></li>
-<li><a href="#" class="icon style2 fa-instagram"><span class="label">Instagram</span></a></li>
-<li><a href="#" class="icon style2 fa-dribbble"><span class="label">Dribbble</span></a></li>
-<li><a href="#" class="icon style2 fa-github"><span class="label">GitHub</span></a></li>
-<li><a href="#" class="icon style2 fa-500px"><span class="label">500px</span></a></li>
-<li><a href="#" class="icon style2 fa-phone"><span class="label">Phone</span></a></li>
-<li><a href="#" class="icon style2 fa-envelope-o"><span class="label">Email</span></a></li>
-</ul>
-</section>
-<ul class="copyright">
-<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-</ul>
-</div>
-</footer>
-
-</div>
--->
-		<!-- Scripts -->
-		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/skel.min.js"></script>
-		<script src="assets/js/util.js"></script>
-		<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-		<script src="assets/js/main.js"></script>
-
+	</div>
 </body>
 
 </html>

@@ -1,0 +1,4 @@
+.alert, .alert-success, .alert-dismissable {
+  background-color: lightgrey;
+  color: black;
+}
