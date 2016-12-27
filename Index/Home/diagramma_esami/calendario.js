@@ -1,7 +1,7 @@
 window.onload = function () {
   var chart = new CanvasJS.Chart("chartContainer", {
     title: {
-      text: "Top Categories of New Year's Resolution"
+      text: "Progresso studi"
     },
     exportFileName: "CanvasJS Chart",
     exportEnabled: true,
@@ -17,12 +17,12 @@ window.onload = function () {
       toolTipContent: "{legendText}: <strong>{y}%</strong>",
       indexLabel: "{label} {y}%",
       dataPoints: [
-        { y: 35, legendText: "Health", exploded: true, label: "Health" },
-        { y: 20, legendText: "Finance", label: "Finance" },
-        { y: 18, legendText: "Career", label: "Career" },
-        { y: 15, legendText: "Education", label: "Education" },
-        { y: 5, legendText: "Family", label: "Family" },
-        { y: 7, legendText: "Real Estate", label: "Real Estate" }
+        { y: 20, legendText: "Completati", label: "Esami Primo Anno" },
+        { y: 10, legendText: "Restanti", label: "Esami Primo Anno" },
+        { y: 20, legendText: "Completati", label: "Esami Secondo Anno" },
+        { y: 10, legendText: "Restanti", label: "Esami Secondo Anno" },
+        { y: 10, legendText: "Completati", label: "Esami Terzo Anno" },
+        { y: 30, legendText: "Restanti", label: "Esami Terzo Anno" }
       ]
     }
     ]
