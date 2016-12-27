@@ -8,7 +8,7 @@
 
 require ('Login.php');
 $log = new Login();
-// Recupero la password criptata dal form di inserimento.
+
 $password = $_POST['password'];
 $password = "";
 echo "La password cifrata per il test: " .$password;
