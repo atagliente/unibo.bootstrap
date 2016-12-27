@@ -10,14 +10,13 @@ require ('Login.php');
 
 $login = new Login();
 
-$login->sec_session_start();
-
 if($login->loginCheck() == true) {
     $login->writeDebugLog("Login ok");
+    echo "accept";
 } else {
     $login->writeDebugLog("Login wrong");
-    session_destroy();
-    header(StandardMessages::INSUCCESS_REDIRECT);
+    $login->logout();
+    echo "../Login/login.html";
 }
 
 ?>

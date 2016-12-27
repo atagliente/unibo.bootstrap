@@ -32,9 +32,8 @@ class Login
             $user = mysqli_fetch_array($result);
             if (!$this->_dbConnection->checkbrute($username) && $this->encrypt($password) == $user['password']) {
                 $user_browser = $_SERVER['HTTP_USER_AGENT'];
-                $username = preg_replace("/[^a-zA-Z0-9_\-]+/", "", $username);
                 $_SESSION['username'] = $username;
-                $_SESSION['password'] = hash('sha512', $password.$user_browser);
+                $_SESSION['password'] = hash('sha512', $this->encrypt($password).$user_browser);
                 return true;
             }   else {
                 $this->writeAlertLog(StandardMessages::PW_WRONG);
@@ -58,16 +57,23 @@ class Login
         }
     }
 
-    function sec_session_start() {
-        $session_name = 'sec_session_id'; // Imposta un nome di sessione
-        $secure = false; // Imposta il parametro a true se vuoi usare il protocollo 'https'.
-        $httponly = true; // Questo impedirà ad un javascript di essere in grado di accedere all'id di sessione.
-        ini_set('session.use_only_cookies', 1); // Forza la sessione ad utilizzare solo i cookie.
-        $cookieParams = session_get_cookie_params(); // Legge i parametri correnti relativi ai cookie.
-        session_set_cookie_params($cookieParams["lifetime"], $cookieParams["path"], $cookieParams["domain"], $secure, $httponly);
-        session_name($session_name); // Imposta il nome di sessione con quello prescelto all'inizio della funzione.
-        session_start(); // Avvia la sessione php.
-        session_regenerate_id(); // Rigenera la sessione e cancella quella creata in precedenza.
+    public function sec_session_start() {
+        if (!isset($_SESSION)) {
+            $this->setSessionParameters();
+            session_start(); // Avvia la sessione php.
+            session_regenerate_id(); // Rigenera la sessione e cancella quella creata in precedenza.
+        }
+    }
+
+    private function setSessionParameters()
+    {
+            $session_name = 'sec_session_id'; // Imposta un nome di sessione
+            $secure = false; // Imposta il parametro a true se vuoi usare il protocollo 'https'.
+            $httponly = true; // Questo impedirà ad un javascript di essere in grado di accedere all'id di sessione.
+            ini_set('session.use_only_cookies', 1); // Forza la sessione ad utilizzare solo i cookie.
+            $cookieParams = session_get_cookie_params(); // Legge i parametri correnti relativi ai cookie.
+            session_set_cookie_params($cookieParams["lifetime"], $cookieParams["path"], $cookieParams["domain"], $secure, $httponly);
+            session_name($session_name); // Imposta il nome di sessione con quello prescelto all'inizio della funzione.
     }
 
     private function encrypt($string)
@@ -91,17 +97,17 @@ class Login
         return $output;
     }
 
-    function loginCheck() {
+    public function loginCheck() {
+        $this->sec_session_start();
         if(isset($_SESSION['username'], $_SESSION['password'])) {
             $password = $_SESSION['password'];
             $username = $_SESSION['username'];
             $user_browser = $_SERVER['HTTP_USER_AGENT'];
             $result = $this->_dbConnection->getUser($username);
-                if($result->num_rows == 1) { // se l'utente esiste
+                if($result->num_rows == 1) { // if user is present
                     $db_password = (mysqli_fetch_array($result));
                     $db_password = $db_password['password'];
-                    $login_check = hash('sha512', $password.$user_browser);
-                    if($this->encrypt($login_check) == $db_password) {
+                    if($password == hash('sha512', $db_password.$user_browser)) {
                         return true;
                     } else {
                         return false;
@@ -114,5 +120,15 @@ class Login
             }
     }
 
+    public function logout() {
+        $this->sec_session_start();
+        $_SESSION = array();
+        $params = session_get_cookie_params();
+        setcookie(session_name(), '', time() - 42000, $params["path"], $params["domain"], $params["secure"], $params["httponly"]);
+        session_destroy();
+        $msg = "LOG-OUT EFFETTUATO.";
+        $msg = urlencode($msg);
+        return $msg;
+    }
 }
 

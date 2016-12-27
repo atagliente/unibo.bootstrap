@@ -5,10 +5,14 @@ html5up.net | @ajlkn
 Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 
+
+
 <html>
+
 <head>
 	<title>UniBo</title>
 	<meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" ></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 	<link rel="stylesheet" href="assets/css/main.css" />
@@ -16,10 +20,13 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 	<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 	<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 </head>
-<body>
-	<?php require('../assets/php/test.php'); ?>
+
+<body id="check">
+    <script src="../assets/js/checklogin.js"></script>
 	<!-- Wrapper -->
 	<div id="wrapper">
+
+        <div id="#mailDiv"></div>
 
 		<!-- Header -->
 		<header id="header">
@@ -47,13 +54,12 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 				<li><a href="generic.html">Notifiche</a></li>
 				<li><a href="generic.html">Impostazioni</a></li>
 				<li><a href="generic.html">About us</a></li>
-				<li><a href="../Login/login.html">Logout</a></li>
+				<li><a href="../assets/php/logout.php">Logout</a></li>
 			</ul>
 			<input type="hidden" name="" value="">			</nav>
 
 
-			<!-- Calendario -->
-			<object id="calendario" data ="calendario/index.html"></object>
+
 
 			<!-- Main -->
 			<div id="main">
