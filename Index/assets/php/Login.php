@@ -16,6 +16,7 @@ class Login
     private $_encryptMethod = "AES-256-CBC";
     private $_key = "Ermete Trismegisto";
     private $_iv = "Prosopagnosia";
+
     public function __construct()
     {
         $this->_dbConnection = DBConnection::getInstance();
