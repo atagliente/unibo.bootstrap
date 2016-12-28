@@ -17,12 +17,10 @@
     <orderEntry type="module-library">
       <library name="PHP" type="php">
         <CLASSES>
-          <root url="file://$USER_HOME$" />
-          <root url="file://$MODULE_DIR$/../../../lib/php" />
+          <root url="file://$APPLICATION_HOME_DIR$/jre/jre/bin" />
         </CLASSES>
         <SOURCES>
-          <root url="file://$USER_HOME$" />
-          <root url="file://$MODULE_DIR$/../../../lib/php" />
+          <root url="file://$APPLICATION_HOME_DIR$/jre/jre/bin" />
         </SOURCES>
       </library>
     </orderEntry>
