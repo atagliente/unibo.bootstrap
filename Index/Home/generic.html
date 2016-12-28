@@ -31,17 +31,53 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 	<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 	<script src="assets/js/main.js"></script>
 
-	<script type="text/javascript" src="calendario.js"></script>
+<!--codice che inserisce il calendario-->
+	<script type="text/javascript" src="diagramma_esami/calendario.js"></script>
+	<script src="diagramma_esami/canvasjs.min.js"></script>
 
-	<script src="canvasjs.min.js"></script>
+<!--
+	<script>
+    $(function(){
+      $("#includedContent").load("diagramma_esami/esport-chart.html");
+    });
+	</script>-->
 </head>
 
 <body>
+
 	<!-- Wrapper -->
 	<div id="wrapper">
 
-		<?php require ("header.html");
-			  require ("navigation.html"); ?>
+		<header id="header">
+		    <a href="index.html">
+		        <picture>
+		            <img id="logoUnibo" class="logoOnNavBar" src="images/logoBig.png" alt="logo" style="width:auto">
+		        </picture>
+		    </a>
+		    <div class="inner">
+		        <nav>
+		            <ul>
+		                <li><a href="#menu">Menu</a></li>
+		            </ul>
+		        </nav>
+		    </div>
+		</header>
+
+		<nav id="menu">
+			<h2>Menu</h2>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="generic.html">Notifiche</a></li>
+				<li><a href="generic.html">Esami</a></li>
+				<li><a href="generic.html">Insegnamenti</a></li>
+				<li><a href="generic.html">Tasse</a></li>
+				<li><a href="generic.html">Mensa</a></li>
+				<li><a href="generic.html">Bike Sharing</a></li>
+				<li><a href="generic.html">Mail</a></li>
+				<li><a href="generic.html">About us</a></li>
+				<li><a href="../Login/login.html">Logout</a></li>
+			</ul>
+		</nav>
 
 		<!-- Main -->
 		<div id="main">
@@ -73,7 +109,9 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 										<!-- >>>>>>>>>>>>>>>>>>>>>>>>> da finire di sistemare -->
 										<p>Prima prova scritta: <br/>giorno: 12/11/2020
 											<button type="button" class="button hidden-xs">Prenota</button>
-											<button type="button" class="button fit hidden-sm hidden-md hidden-lg">Prenota</button>
+											<buttonbutton type="button" class="button fit hidden-sm hidden-md hidden-lg">Prenota</button>
+											<buttonbutton type="button" class="button fit hidden-sm hidden-md hidden-lg">Prenota</button>
+											<buttonbutton type="button" class="button fit hidden-sm hidden-md hidden-lg">Prenota</button>
 										<br/> ore: 18:34 aula A</p>
 
 										<p>Prima prova orale: <br/>giorno: 12/11/2020
@@ -142,8 +180,11 @@ ci sono pull-right e pull-left-->
 
 						<div id="verbalizzati" class="tab-pane fade">
 
-							<div id="chartContainer" style="height: 400px; width: 100%;"></div>
+							<div id="chartContainer" style="height: 600px; width: 100%;"></div>
+							<!--<object data="diagramma_esami/esport-chart.html"></object>-->
+							<!--<div w3-include-html="diagramma_esami/esport-chart.html"></div>-->
 							<!-- <h3>Verbalizzati</h3>  -->
+
 							<div>
 								<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 							</div>
@@ -162,7 +203,13 @@ ci sono pull-right e pull-left-->
 			</div>
 		</div>
 
-		<?php require ("footer.html"); ?>
+		<footer id="footer">
+		    <div class="inner">
+		        <ul class="copyright">
+		            <li>&copy; Copyright 2016 - ALMA MATER STUDIORUM - Università di Bologna - Via Zamboni, 33 - 40126 Bologna - Partita IVA: 01131710376</li>
+		        </ul>
+		    </div>
+		</footer>
 
 	</div>
 </body>
