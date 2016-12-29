@@ -26,8 +26,8 @@ iscrizioni da: 25/12/2016 a: 07/01/2017','fk_esami' => '8574')
 
 /* `solunibo`.`esami` */
 $esami = array(
-  array('id_esame' => '8574','nome_esame' => 'Sistemi Operativi','nome_cognome_docente' => 'Vittorio Ghini','cfu' => '12','anno' => '2'),
-  array('id_esame' => '41731','nome_esame' => 'Tecnologie Web','nome_cognome_docente' => 'Paola Salomoni','cfu' => '6','anno' => '3')
+  array('id_esame' => '8574','nome_esame' => 'Sistemi Operativi','nome_cognome_docente' => 'Vittorio Ghini','cfu' => '12','anno' => '2','fk_studente' => '123456'),
+  array('id_esame' => '41731','nome_esame' => 'Tecnologie Web','nome_cognome_docente' => 'Paola Salomoni','cfu' => '6','anno' => '3','fk_studente' => '654321')
 );
 
 /* `solunibo`.`evento` */
@@ -59,8 +59,8 @@ $logattemps = array(
 
 /* `solunibo`.`login` */
 $login = array(
-  array('username' => 'antonio.tagliente@studio.unibo.it','password' => 'dXFlS3FVMWJ4U2s1UTJTZmIzcmdLQT09','fk_studente' => '0'),
-  array('username' => 'rossella.spada@studio.unibo.it','password' => 'dXFlS3FVMWJ4U2s1UTJTZmIzcmdLQT09','fk_studente' => '0')
+  array('username' => 'antonio.tagliente@studio.unibo.it','password' => 'dXFlS3FVMWJ4U2s1UTJTZmIzcmdLQT09','fk_studente' => '123456'),
+  array('username' => 'rossella.spada@studio.unibo.it','password' => 'dXFlS3FVMWJ4U2s1UTJTZmIzcmdLQT09','fk_studente' => '654321')
 );
 
 /* `solunibo`.`materiale_insegnamenti` */

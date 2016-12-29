@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Creato il: Dic 28, 2016 alle 13:14
+-- Creato il: Dic 29, 2016 alle 09:27
 -- Versione del server: 5.7.14
 -- Versione PHP: 5.6.25
 
@@ -57,6 +57,7 @@ CREATE TABLE IF NOT EXISTS `esami` (
   `nome_cognome_docente` char(30) COLLATE utf8_bin NOT NULL,
   `cfu` int(2) NOT NULL,
   `anno` int(1) NOT NULL,
+  `fk_studente` int(12) NOT NULL,
   PRIMARY KEY (`id_esame`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
@@ -64,9 +65,9 @@ CREATE TABLE IF NOT EXISTS `esami` (
 -- Dump dei dati per la tabella `esami`
 --
 
-INSERT INTO `esami` (`id_esame`, `nome_esame`, `nome_cognome_docente`, `cfu`, `anno`) VALUES
-(8574, 'Sistemi Operativi', 'Vittorio Ghini', 12, 2),
-(41731, 'Tecnologie Web', 'Paola Salomoni', 6, 3);
+INSERT INTO `esami` (`id_esame`, `nome_esame`, `nome_cognome_docente`, `cfu`, `anno`, `fk_studente`) VALUES
+(8574, 'Sistemi Operativi', 'Vittorio Ghini', 12, 2, 123456),
+(41731, 'Tecnologie Web', 'Paola Salomoni', 6, 3, 654321);
 
 -- --------------------------------------------------------
 
@@ -163,8 +164,8 @@ CREATE TABLE IF NOT EXISTS `login` (
 --
 
 INSERT INTO `login` (`username`, `password`, `fk_studente`) VALUES
-('antonio.tagliente@studio.unibo.it', 'dXFlS3FVMWJ4U2s1UTJTZmIzcmdLQT09', 0),
-('rossella.spada@studio.unibo.it', 'dXFlS3FVMWJ4U2s1UTJTZmIzcmdLQT09', 0);
+('antonio.tagliente@studio.unibo.it', 'dXFlS3FVMWJ4U2s1UTJTZmIzcmdLQT09', 123456),
+('rossella.spada@studio.unibo.it', 'dXFlS3FVMWJ4U2s1UTJTZmIzcmdLQT09', 654321);
 
 -- --------------------------------------------------------
 
