@@ -7,16 +7,21 @@
  * Time: 14:27
  */
 
-define("SERVER_NAME", "localhost");
-define("USER_NAME","root");
-define("PASSWORD","");
-define("LOGIN_TABLE", "Login");
-define("ATTEMPS_TABLE","LogAttemps");
-define("WRONG_ACCESS", "INSERT INTO " . ATTEMPS_TABLE . " (username, time) VALUES (?, ?)");
-define("GET_USER_QUERY","SELECT * FROM ". LOGIN_TABLE ." WHERE (username=?)");
-define("GET_ATTEMPS_QUERY","SELECT time FROM  WHERE (username=?) AND time > ?");
-define("DATABASE","solUnibo");
-define("EMAIL","antoniotagliente@aol.com");
+if(!defined("DATABASE_VALUE")) {
+  define("SERVER_NAME", "localhost");
+  define("USER_NAME","root");
+  define("PASSWORD","");
+  define("LOGIN_TABLE", "login");
+  define("ATTEMPS_TABLE","logattemps");
+  define("WRONG_ACCESS", "INSERT INTO " . ATTEMPS_TABLE . " (username, time) VALUES (?, ?)");
+  define("GET_USER_QUERY","SELECT * FROM ". LOGIN_TABLE ." WHERE (username=?)");
+  define("GET_ATTEMPS_QUERY","SELECT time FROM  WHERE (username=?) AND time > ?");
+  define("DATABASE","solunibo");
+  define("EMAIL","antoniotagliente@aol.com");
+
+  define("DATABASE_VALUE","DB_OK");
+}
+
 
 class DBConnection
 {
@@ -40,6 +45,10 @@ class DBConnection
         }
     }
 
+    public function getConnection(){
+      return $this->_connection;
+    }
+
     public static function getInstance() {
         if(self::$_instance == null) {
             self::$_instance = new dbConnection();
@@ -52,6 +61,9 @@ class DBConnection
         $this->_connection = null;
     }
 
+    /*
+      Return the current user with mail and cripted password
+    */
     public function getUser($username) {
         $mysqli = $this->_connection;
         if (!$stmt = $mysqli->prepare(GET_USER_QUERY)) {
