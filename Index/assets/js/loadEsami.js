@@ -1,6 +1,7 @@
 window.addEventListener('load', function() {
 
     $.get("../assets/php/esami.php", function(data) {
+
         var obj = JSON.parse(data);
 
         for(var i = 0; i < obj.esami.length; i++){
