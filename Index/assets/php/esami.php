@@ -7,7 +7,9 @@
  * Time: 15:21
  */
 
- define("GET_MATRICOLA", "SELECT * FROM login WHERE username = antonio.tagliente@studio.unibo.it");
+//non funzia perchè userEmail e matricola vengono assegnati in seguito
+ //define("GET_MATRICOLA", "SELECT matricola FROM studente WHERE fk_login = '$userEmail'");
+ //define("GET_ESAMI", "SELECT * FROM esami WHERE fk_studente = '$matricola'");
 
  require ('Login.php');
 
@@ -15,8 +17,6 @@
       $log->sec_session_start();
       $userEmail = $_SESSION['username'];
 
-      //$sql = "SELECT fk_login FROM login WHERE username = $userEmail";
-      //$sql = "SELECT * FROM login WHERE username = antonio.tagliente@studio.unibo.it";
 
 
       $dbConnection = DBConnection::getInstance();
@@ -31,84 +31,26 @@
               $matricola = $row["matricola"];
           }
       } else {
-          echo "errore 0 results";
+          echo "ERROR matricola selected does not exist or there are two matricole with the same value";
       }
+
+//------------------------------------------------------------------------------------
 
       $sql = "SELECT * FROM esami WHERE fk_studente = '$matricola'";
       $result = $conn->query($sql);
 
-      $i = 0;
-      $count = 0;
+
+      $text = '{"esami":[';
 
       if($result->num_rows > 0) {
           while($row = $result->fetch_assoc()) {
-
-            //echo json_encode($row);
-
-
-            foreach ($row as $value){
-              //echo $value . " ";
-              $riga[$i] = $value;
-              $i = $i + 1;
-
-            }
-
-
-
-        //    echo $riga[0] . "  " . $riga[1] . "  " . $riga[2] . "  " . $riga[3] . "  " . $riga[4] . "  " . $riga[5] . "\n";
-            $array_esami[$count] = $row;
-
-
-            $array[$count] = $riga;
-            $i = 0;
-            $count = $count + 1;
+              $text = $text . json_encode($row) . ',';
           }
       } else {
-          echo "errore 0 results";
+          echo "nessun esame disponibile";
       }
 
-      //unica riga
-      echo json_encode($riga);
-    
-    //  echo $array[0][0];
-    //  echo $array_esami[0]["id_esame"];
-    // echo $array;
-
-/*
-          $sql = "SELECT matricola FROM login, studente WHERE username = fk_login";
-          $conn = $dbConnection->getConnection();
-          $result = $conn->query($sql);
-
-          if($result->num_rows > 0) {
-              while($row = $result->fetch_assoc()) {
-                  echo $row["matricola"] . "\n";
-              }
-          } else {
-              echo "0 results";
-          }
-*/
-/*
-    $sql = "SELECT password FROM login WHERE username ";
-
-    $conn = $dbConnection->getConnection();
-    $result = $conn->query($sql);
-
-    if($result->num_rows > 0) {
-        while($row = $result->fetch_assoc()) {
-            echo $row["password"] . "\n";
-        }
-    } else {
-        echo "0 results";
-    }
-
-*/
-
-
-
-
-
-
-
-
+      $text = rtrim($text, ",") . ']}';
+      echo $text;
 
 ?>
