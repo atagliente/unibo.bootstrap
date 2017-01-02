@@ -1,14 +1,14 @@
-window.addEventListener('load', function() {
+var last_ID = 0;
 
+$(function() {
     $.get("../assets/php/esami.php", function(data) {
+        alert(data);
         var obj = JSON.parse(data);
-
-        for(var i = 0; i < obj.esami.length; i++){
-          alert(obj.esami[i].id_esame
-            + " " + obj.esami[i].nome_esame
-            + " " + obj.esami[i].nome_cognome_docente
-            + " " + obj.esami[i].cfu
-            + " " + obj.esami[i].anno);
+        alert(obj.exam.length);
+        for(var i = 0; i < obj.exam.length; i++){
+          alert(obj.exam[i].title
+            + " " + obj.exam[i].cfu
+            );
         }
     });
-})
+});

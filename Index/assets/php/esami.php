@@ -22,7 +22,7 @@
       $dbConnection = DBConnection::getInstance();
       $conn = $dbConnection->getConnection();
 
-      $sql = "SELECT matricola FROM studente WHERE fk_login = '$userEmail'";
+      $sql = "SELECT matricola FROM student WHERE fk_login = '$userEmail'";
       $result = $conn->query($sql);
 
       if($result->num_rows == 1) {
@@ -36,11 +36,10 @@
 
 //------------------------------------------------------------------------------------
 
-      $sql = "SELECT * FROM esami WHERE fk_studente = '$matricola'";
+      $sql = "SELECT * FROM test JOIN exam";
       $result = $conn->query($sql);
 
-
-      $text = '{"esami":[';
+      $text = '{"exam":[';
 
       if($result->num_rows > 0) {
           while($row = $result->fetch_assoc()) {

@@ -13,7 +13,6 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 	<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 	<link rel="stylesheet" href="assets/css/main.css" />
@@ -34,7 +33,9 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 	<!--codice che inserisce il calendario-->
 	<script type="text/javascript" src="diagramma_esami/calendario.js"></script>
 	<script src="diagramma_esami/canvasjs.min.js"></script>
+	<script src="../assets/js/prenotationHandler.js"></script>
 
+	<script src="../assets/js/pageGenerator.js"></script>
 	<!--
 	<script>
     $(function(){
@@ -90,7 +91,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 				<!-- Section Tab -->
 				<div class="container">
 					<ul class="nav nav-pills red">
-						<li class="active"><a class "nemesis" data-toggle="pill" href="#restanti">Restanti</a></li>
+						<li class="active"><a class="nemesis" data-toggle="pill" href="#restanti">Restanti</a></li>
 						<li><a class="nemesis" data-toggle="pill" href="#prenotati">Prenotati</a></li>
 						<li><a class="nemesis" data-toggle="pill" href="#verbalizzati">Verbalizzati</a></li>
 					</ul>
@@ -111,10 +112,10 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 
 											<!-- >>>>>>>>>>>>>>>>>>>>>>>>> da finire di sistemare -->
 											<p>Prima prova scritta: <br/>giorno: 12/11/2020
-												<button type="button" class="button hidden-xs">Prenota</button>
-												<buttonbutton type="button" class="button fit hidden-sm hidden-md hidden-lg">Prenota</button>
-													<buttonbutton type="button" class="button fit hidden-sm hidden-md hidden-lg">Prenota</button>
-														<buttonbutton type="button" class="button fit hidden-sm hidden-md hidden-lg">Prenota</button>
+												<button type="submit" formaction="" class="button hidden-xs">Prenota</button>
+												<button type="button" class="button fit hidden-sm hidden-md hidden-lg">Prenota</button>
+													<button type="button" class="button fit hidden-sm hidden-md hidden-lg">Prenota</button>
+														<button type="button" class="button fit hidden-sm hidden-md hidden-lg">Prenota</button>
 															<br/> ore: 18:34 aula A</p>
 
 											<p>Prima prova orale: <br/>giorno: 12/11/2020
@@ -141,7 +142,7 @@ ci sono pull-right e pull-left-->
 									</div>
 									<div id="IngegeriaSW" class="panel-collapse collapse in">
 										<div class="panel-body">
-											<p>Prima prova scritta: <br/>giorno: 12/11/2020 <button type="button" class="button">Prenota</button> <br/> ore: 18:34 aula A</p>
+											<p>Prima prova scritta: <br/>giorno: 12/11/2020 <button type="button" id="prenotation" class="button">Prenota</button> <br/> ore: 18:34 aula A</p>
 											<p>Prima prova orale: <br/>giorno: 12/11/2020 <button type="button" class="button">Prenota</button> <br/> ore: 18:34 aula A</p>
 											<p>Prima prova antonio: <br/>giorno: 12/11/2020 <button type="button" class="button">Prenota</button> <br/> ore: 18:34 aula A</p>
 										</div>
