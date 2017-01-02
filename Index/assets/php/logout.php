@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Antonio Tagliente
- * Date: 22.12.16
- * Time: 21:36
- */
 
     require ('Login.php');
 

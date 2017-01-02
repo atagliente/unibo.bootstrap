@@ -1,11 +1,5 @@
 <?php
 
-/**
- * Created by PhpStorm.
- * User: Antonio Tagliente
- * Date: 25.12.16
- * Time: 15:33
- */
 abstract class StandardMessages
 {
     const USER_WRONG = "Lo user non esiste";
@@ -16,4 +10,5 @@ abstract class StandardMessages
     const INSUCCESS_REDIRECT = '../Login/login.html';
     const SESSION_ID = "sec_session_id";
     const PASS_KEY = "0p1a2n3t4o5m6i7m8a9";
+    const EXAM = "exam_prenotation";
 }

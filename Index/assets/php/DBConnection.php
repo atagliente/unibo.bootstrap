@@ -1,12 +1,5 @@
 <?php
 
-/**
- * Created by PhpStorm.
- * User: Antonio Tagliente
- * Date: 25.12.16
- * Time: 14:27
- */
-
 if(!defined("DATABASE_VALUE")) {
   define("SERVER_NAME", "localhost");
   define("USER_NAME","root");

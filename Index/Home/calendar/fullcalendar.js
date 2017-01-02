@@ -11416,7 +11416,7 @@ function getMomentLocaleData(localeCode) {
 
 // Initialize English by forcing computation of moment-derived options.
 // Also, sets it as the default.
-FC.locale('en', Calendar.englishDefaults);
+FC.locale('it', Calendar.englishDefaults);
 
 ;;
 
