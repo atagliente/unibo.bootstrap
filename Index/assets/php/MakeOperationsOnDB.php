@@ -22,7 +22,7 @@ class MakeOperationsOnDB{
     */
     public function getCurrentMatricola(){
 
-      $sql = "SELECT matricola FROM studente WHERE fk_login = '$this->userEmail'";
+      $sql = "SELECT matricola FROM student WHERE fk_login = '$this->userEmail'";
       $result = $this->conn->query($sql);
 
       if($result->num_rows == 1) {
@@ -50,9 +50,9 @@ class MakeOperationsOnDB{
           while($row = $result->fetch_assoc()) {
               $text = $text . json_encode($row) . ',';
           }
-      } else {
+      } /*else {
           echo "la query non ha prodotto alcun risultato";
-      }
+      }*/
 
       $text = rtrim($text, ",") . ']}';
       return $text;

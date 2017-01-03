@@ -1,4 +1,12 @@
-$(document).ready(function() {
+$(function() {
+
+
+    $.get("../assets/php/loadCareer.php", function(data) {
+
+      alert(data);
+      var obj = JSON.parse(data);
+      alert(obj.cfu_verbalizzati[0].year);
+    });
 
     var cfu_primo_anno = 60;
     var progress_primo_anno = cfu_primo_anno*100/60;
