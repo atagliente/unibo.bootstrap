@@ -1,23 +1,21 @@
 <?php
 
+require ('DBConnection.php');
+
 if(isset($_POST['messageType']) && !empty($_POST['messageType'])) {
 
     switch ($_POST['messageType']) {
-        case "test":
-            echo "dio bo";
+        case "examPrenotation":
+            echo "Esame prenotato con scuccesso.";
+            putPrenotationEvent(TRUE, 0, $_POST['value']);
             break;
     }
 }
 
-function putPrenotationEvent($title, $description, $matricola) {
-    DBConnection::getInstance()->getConnection()->query(INS_EVENT_QUERY);
-    if (DBConnection::getInstance()->getConnection()->query('INSERT INTO `events`(`id`, `title`, `description`, `time_start`, `time_finish`, `matricola___fk`) VALUES ([],['.$title.'],['.$description.'],['.now().'],[],'.$matricola.')') === TRUE) {
+function putPrenotationEvent($prenotation, $vote, $testID)
+{
+    if (DBConnection::getInstance()->getConnection()->query("INSERT INTO `storyBoard`(`numberID`, `prenotation`, `vote`, `student___fk`, `test___fk`) VALUES ('','" . $prenotation . "','" . $vote . "',123456,'" . $testID . "')") === TRUE) {
         echo "New record created successfully";
-    } else {
-        echo "<script type=\"text/javascript\">alert(\"dio\")</script>";
-    }
+    } else echo "non va";
 }
-
-
-
 ?>

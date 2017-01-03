@@ -38,7 +38,7 @@ $(function () {
             time = obj.test[i].time;
             teacherFirstName = obj.test[i].firstName;
             teacherLastName = obj.test[i].lastName;
-            var test = "<button type=\"button\" class=\"button hidden-xs prenota\" id='#" + numberID + "'>Prenota</button> <p style='text-align: left;'>" + teacherFirstName + " " + teacherLastName + "       " + classroom + "<br/>" + dateStart + "             " + time + "</p> <button type=\"button\" class=\"button fit hidden-sm hidden-md hidden-lg prenota\" id='#" + numberID + "'>Prenota</button>";
+            var test = "<button type=\"button\" class=\"button hidden-xs prenota\" id='" + numberID + "'>Prenota</button> <p style='text-align: left;'>" + teacherFirstName + " " + teacherLastName + "       " + classroom + "<br/>" + dateStart + "             " + time + "</p> <button type=\"button\" class=\"button fit hidden-sm hidden-md hidden-lg prenota\" id='#" + numberID + "'>Prenota</button>";
             var div = document.getElementById(examID);
             div.insertAdjacentHTML('afterbegin', test);
         }
@@ -47,7 +47,7 @@ $(function () {
 
         var action = function() {
             $.ajax({ url: '../assets/php/eventGenerator.php',
-                data: {'messageType':'test' , 'value':$(this).attr('id')},
+                data: {'messageType':'examPrenotation' , 'value':$(this).attr('id')},
                 type: 'post',
                 success: function(output) {
                     alert(output);

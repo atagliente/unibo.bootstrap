@@ -5,7 +5,7 @@ $(function () {
     var myFunction = function() {
 
         $.ajax({ url: '../assets/php/eventGenerator.php',
-            data: {'messageType': 'test'},
+            data: {'messageType': "examPrenotation"},
             type: 'post',
             success: function(output) {
                 alert(output);
