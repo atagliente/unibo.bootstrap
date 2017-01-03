@@ -14,12 +14,16 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 	<link rel="stylesheet" href="assets/css/main.css" />
 	<link rel="stylesheet" href="assets/css/magic.css" />
 
 	<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 	<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+
+	<script src="logoSwap.js"></script>
+	<script src="populate_html.js"></script>
 
 	<!-- Scripts -->
 	<script src="assets/js/jquery.min.js"></script>
@@ -28,13 +32,23 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 	<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 	<script src="assets/js/main.js"></script>
 
+	<!--codice che inserisce il calendario-->
+	<script type="text/javascript" src="diagramma_esami/calendario.js"></script>
+	<script src="diagramma_esami/canvasjs.min.js"></script>
+
+	<!--
+	<script>
+    $(function(){
+      $("#includedContent").load("diagramma_esami/esport-chart.html");
+    });
+	</script>-->
 </head>
 
 <body>
 	<script src="../assets/js/checklogin.js"></script>
-	<script src="logoSwap.js"></script>
+
 	<script src="../assets/js/loadEsami.js"></script>
-	<script src="assets/js/chart.js"></script>
+
 
 	<!-- Wrapper -->
 	<div id="wrapper">
@@ -83,8 +97,8 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 						<li><a class="nemesis" data-toggle="pill" href="#verbalizzati">Verbalizzati</a></li>
 					</ul>
 
-					<div class="tab-content">
 
+					<div class="tab-content">
 						<div id="restanti" class="tab-pane fade in active">
 							<!--inizio-->
 							<div id="container" class="container">
@@ -100,8 +114,11 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 											<!-- >>>>>>>>>>>>>>>>>>>>>>>>> da finire di sistemare -->
 											<p>Prima prova scritta: <br/>giorno: 12/11/2020
 												<button type="button" class="button hidden-xs">Prenota</button>
-												<button type="button" class="button fit hidden-sm hidden-md hidden-lg">Prenota</button>
-												<br/> ore: 18:34 aula A</p>
+												<buttonbutton type="button" class="button fit hidden-sm hidden-md hidden-lg">Prenota</button>
+													<buttonbutton type="button" class="button fit hidden-sm hidden-md hidden-lg">Prenota</button>
+														<buttonbutton type="button" class="button fit hidden-sm hidden-md hidden-lg">Prenota</button>
+															<br/> ore: 18:34 aula A</p>
+
 											<p>Prima prova orale: <br/>giorno: 12/11/2020
 												<button type="button" class="button disabled hidden-xs">Prenota</button>
 												<button type="button" class="button fit hidden-sm disabled hidden-md hidden-lg">Prenota</button>
@@ -110,6 +127,9 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 												<button type="button" class="button disabled hidden-xs">Prenota</button>
 												<button type="button" class="button fit hidden-sm disabled hidden-md hidden-lg">Prenota</button>
 												<br/> ore: 18:34 aula A</p>
+											<!-- dare un'occhiata a questa fighissima pagina: http://www.w3schools.com/bootstrap/bootstrap_ref_css_helpers.asp
+le classi visible sono deprecate...
+ci sono pull-right e pull-left-->
 											<button type="button" class="button special hidden-xs">Esempio button Special</button>
 										</div>
 									</div>
@@ -165,10 +185,12 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 
 						<div id="verbalizzati" class="tab-pane fade">
 
-							<!-- Diagramma -->
-							<div id="chart" style="height:600px; width:800px;"></div>
-
+							<div id="chartContainer" style="height: 600px; width: 100%;"></div>
+							<!--<iframe src="">diagramma_esami/esport-chart.html</iframe>-->
+							<!--<object data="diagramma_esami/esport-chart.html"></object>-->
+							<!--<div w3-include-html="diagramma_esami/esport-chart.html"></div>-->
 							<!-- <h3>Verbalizzati</h3>  -->
+
 							<div>
 								<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 							</div>
