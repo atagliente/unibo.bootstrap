@@ -1,46 +1,27 @@
-var larghezza;
-var altezza;
-
-google.charts.load("current", {packages:["corechart"]});
-google.charts.setOnLoadCallback(drawChart);
-function drawChart() {
-    var data = google.visualization.arrayToDataTable([
-        ['Task', 'Hours per Day'],
-        ['Work',     11],
-        ['Eat',      2],
-        ['Commute',  2],
-        ['Watch TV', 2],
-        ['Sleep',    7]
-    ]);
-
-    var options = {
-        title: 'Progresso della tua carriera',
-        width: larghezza,
-        height: altezza,
-        chartArea:{width:'50%',height:'75%'},
-        legend:{position: 'right', textStyle: {color: 'black', fontSize: 16}}
-    };
-
-    var chart = new google.visualization.PieChart(document.getElementById('chart'));
-    chart.draw(data, options);
-}
-
-// Creare uno script come in logoSwap.js non serve perchè il grafico è già resizable quando si refresha la pagina
-// A caso fuori dal div tab-content fa il resize in automatico quando refreshi la pagina, invece dentro verbalizzati no...
-
-function resizeChart() {
-    if ($(window).width() > 601) {
-        larghezza = 1000;
-        altezza = 400;
-    } else {
-        larghezza = 280;
-        altezza = 280;
-    }
-}
-
 $(document).ready(function() {
-    resizeChart();
-    $(window).resize(function() {
-        resizeChart();
-    });
+
+    var cfu_primo_anno = 60;
+    var progress_primo_anno = cfu_primo_anno*100/60;
+    $('#primo_anno').attr("aria-valuenow", cfu_primo_anno);
+    $('#primo_anno').css("width", progress_primo_anno+"%");
+    $('#primo_anno').html(cfu_primo_anno+"/60 cfu");
+
+    var cfu_secondo_anno = 45;
+    var progress_secondo_anno = cfu_secondo_anno*100/60;
+    $('#secondo_anno').attr("aria-valuenow", cfu_secondo_anno);
+    $('#secondo_anno').css("width", progress_secondo_anno+"%");
+    $('#secondo_anno').html(cfu_secondo_anno+"/60 cfu");
+
+    var cfu_terzo_anno = 10;
+    var progress_terzo_anno = cfu_terzo_anno*100/60;
+    $('#terzo_anno').attr("aria-valuenow", cfu_terzo_anno);
+    $('#terzo_anno').css("width", progress_terzo_anno+"%");
+    $('#terzo_anno').html(cfu_terzo_anno+"/60 cfu");
+
+    var cfu_totali = cfu_primo_anno + cfu_secondo_anno + cfu_terzo_anno;
+    var progress_totale = cfu_totali*100/180;
+    $('#totale_cfu').attr("aria-valuenow", cfu_totali);
+    $('#totale_cfu').css("width", progress_totale+"%");
+    $('#totale_cfu').html(cfu_totali+"/180 cfu");
+
 });
