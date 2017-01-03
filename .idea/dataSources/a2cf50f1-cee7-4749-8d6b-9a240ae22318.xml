@@ -4977,42 +4977,46 @@ usergroup</ColNames>
       <NotNull>1</NotNull>
     </column>
     <column id="1087" parent="116" name="teacher___fk">
-      <Position>4</Position>
-      <DataType>int(11)|0</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="1088" parent="116" name="exam___fk">
       <Position>5</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="1089" parent="116" name="teacher___fk">
+    <column id="1088" parent="116" name="exam___fk">
+      <Position>6</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="1089" parent="116" name=" classroom">
+      <Position>4</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <index id="1090" parent="116" name="teacher___fk">
       <ColNames>teacher___fk</ColNames>
     </index>
-    <index id="1090" parent="116" name="exam___fk">
+    <index id="1091" parent="116" name="exam___fk">
       <ColNames>exam___fk</ColNames>
     </index>
-    <key id="1091" parent="116" name="PRIMARY">
+    <key id="1092" parent="116" name="PRIMARY">
       <ColNames>numberID</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="1092" parent="116" name="exam___fk">
+    <foreign-key id="1093" parent="116" name="exam___fk">
       <ColNames>exam___fk</ColNames>
       <RefSchemaName>solunibo</RefSchemaName>
       <RefTableName>exam</RefTableName>
       <RefColNames>numberID</RefColNames>
     </foreign-key>
-    <column id="1093" parent="117" name="email">
+    <column id="1094" parent="117" name="email">
       <Position>1</Position>
       <DataType>varchar(50)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="1094" parent="117" name="password">
+    <column id="1095" parent="117" name="password">
       <Position>2</Position>
       <DataType>varchar(128)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="1095" parent="117" name="PRIMARY">
+    <key id="1096" parent="117" name="PRIMARY">
       <ColNames>email</ColNames>
       <Primary>1</Primary>
     </key>

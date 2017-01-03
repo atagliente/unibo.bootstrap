@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #variableView{
   position: absolute;
   margin-left: 30%;
@@ -23,3 +24,30 @@
 #bottoni{
 
 }
+=======
+#variableView{
+  position: absolute;
+  margin-left: 30%;
+  margin-top:-10%;
+}
+
+#variableView2{
+  position: absolute;
+  margin-left: 30%;
+  margin-top:-10%;
+}
+
+#inf{
+  position: relative;
+  margin-right: 30%;
+}
+
+#inf2{
+  position: relative;
+  margin-right: 30%;
+}
+
+#bottoni{
+
+}
+>>>>>>> 57b9d445a067276712b03e8b162c10c708b33ba4
