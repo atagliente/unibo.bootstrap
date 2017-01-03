@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="solunibo@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.0">
+    <root id="1"/>
+    <schema id="2" parent="1" name="solunibo">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="information_schema"/>
+    <schema id="4" parent="1" name="mysql"/>
+    <schema id="5" parent="1" name="performance_schema"/>
+    <schema id="6" parent="1" name="phpmyadmin"/>
+    <schema id="7" parent="1" name="solDB"/>
+    <schema id="8" parent="1" name="test"/>
+    <table id="9" parent="2" name="events"/>
+    <table id="10" parent="2" name="exam"/>
+    <table id="11" parent="2" name="logattemps"/>
+    <table id="12" parent="2" name="login"/>
+    <table id="13" parent="2" name="payment"/>
+    <table id="14" parent="2" name="storyBoard"/>
+    <table id="15" parent="2" name="student"/>
+    <table id="16" parent="2" name="tax"/>
+    <table id="17" parent="2" name="teacher"/>
+    <table id="18" parent="2" name="teachingDoc"/>
+    <table id="19" parent="2" name="test"/>
+    <column id="20" parent="9" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="21" parent="9" name="title">
+      <Position>2</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="22" parent="9" name="description">
+      <Position>3</Position>
+      <DataType>varchar(160)|0</DataType>
+      <DefaultExpression>&apos;this is a simple string&apos;</DefaultExpression>
+    </column>
+    <column id="23" parent="9" name="time_start">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="24" parent="9" name="time_finish">
+      <Position>5</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="25" parent="9" name="matricola___fk">
+      <Position>6</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="26" parent="9" name="events_matricola___fk_uindex">
+      <ColNames>matricola___fk</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="27" parent="9" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="28" parent="9" name="events_matricola___fk_uindex">
+      <ColNames>matricola___fk</ColNames>
+      <UnderlyingIndexName>events_matricola___fk_uindex</UnderlyingIndexName>
+    </key>
+    <foreign-key id="29" parent="9" name="matricola___fk">
+      <ColNames>matricola___fk</ColNames>
+      <RefSchemaName>solunibo</RefSchemaName>
+      <RefTableName>student</RefTableName>
+      <RefColNames>matricola</RefColNames>
+    </foreign-key>
+    <column id="30" parent="10" name="numberID">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="31" parent="10" name="title">
+      <Position>2</Position>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="32" parent="10" name="cfu">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="33" parent="10" name="year_">
+      <Position>4</Position>
+      <DataType>date|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="34" parent="10" name="teacher___fk">
+      <Position>5</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="35" parent="10" name="teacher___fk">
+      <ColNames>teacher___fk</ColNames>
+    </index>
+    <key id="36" parent="10" name="PRIMARY">
+      <ColNames>numberID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="37" parent="10" name="teacher___fk">
+      <ColNames>teacher___fk</ColNames>
+      <RefSchemaName>solunibo</RefSchemaName>
+      <RefTableName>teacher</RefTableName>
+      <RefColNames>numberID</RefColNames>
+    </foreign-key>
+    <column id="38" parent="11" name="username">
+      <Position>1</Position>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="39" parent="11" name="time">
+      <Position>2</Position>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="40" parent="11" name="PRIMARY">
+      <ColNames>time</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="41" parent="12" name="username">
+      <Position>1</Position>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="42" parent="12" name="password">
+      <Position>2</Position>
+      <DataType>char(128)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="43" parent="12" name="PRIMARY">
+      <ColNames>username</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="44" parent="13" name="numberID">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="45" parent="13" name="payDay">
+      <Position>2</Position>
+      <DataType>date|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="46" parent="13" name="student___fk">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="47" parent="13" name="tax___fk">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="48" parent="13" name="tax___fk">
+      <ColNames>tax___fk</ColNames>
+    </index>
+    <key id="49" parent="13" name="PRIMARY">
+      <ColNames>numberID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="50" parent="13" name="tax___fk">
+      <ColNames>tax___fk</ColNames>
+      <RefSchemaName>solunibo</RefSchemaName>
+      <RefTableName>tax</RefTableName>
+      <RefColNames>numberID</RefColNames>
+    </foreign-key>
+    <column id="51" parent="14" name="numberID">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="52" parent="14" name="vote">
+      <Position>3</Position>
+      <DataType>int(2)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="53" parent="14" name="student___fk">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="54" parent="14" name="test___fk">
+      <Position>5</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="55" parent="14" name="prenotation">
+      <Position>2</Position>
+      <DataType>tinyint(1)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <index id="56" parent="14" name="student___fk">
+      <ColNames>student___fk</ColNames>
+    </index>
+    <index id="57" parent="14" name="test___fk">
+      <ColNames>test___fk</ColNames>
+    </index>
+    <key id="58" parent="14" name="PRIMARY">
+      <ColNames>numberID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="59" parent="14" name="student___fk">
+      <ColNames>student___fk</ColNames>
+      <RefSchemaName>solunibo</RefSchemaName>
+      <RefTableName>student</RefTableName>
+      <RefColNames>matricola</RefColNames>
+    </foreign-key>
+    <foreign-key id="60" parent="14" name="test___fk">
+      <ColNames>test___fk</ColNames>
+      <RefSchemaName>solunibo</RefSchemaName>
+      <RefTableName>test</RefTableName>
+      <RefColNames>numberID</RefColNames>
+    </foreign-key>
+    <column id="61" parent="15" name="matricola">
+      <Position>1</Position>
+      <DataType>int(12)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="62" parent="15" name="nome">
+      <Position>2</Position>
+      <DataType>char(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="63" parent="15" name="cognome">
+      <Position>3</Position>
+      <DataType>char(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="64" parent="15" name="data_di_nascita">
+      <Position>4</Position>
+      <DataType>char(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="65" parent="15" name="fk_login">
+      <Position>5</Position>
+      <DataType>char(50)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="66" parent="15" name="fk_login">
+      <ColNames>fk_login</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="67" parent="15" name="PRIMARY">
+      <ColNames>matricola</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="68" parent="15" name="fk_login">
+      <ColNames>fk_login</ColNames>
+      <UnderlyingIndexName>fk_login</UnderlyingIndexName>
+    </key>
+    <column id="69" parent="16" name="numberID">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="70" parent="16" name="dateOpen">
+      <Position>2</Position>
+      <DataType>date|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="71" parent="16" name="dateClose">
+      <Position>3</Position>
+      <DataType>date|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="72" parent="16" name="amount">
+      <Position>4</Position>
+      <DataType>float|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="73" parent="16" name="delayFee">
+      <Position>5</Position>
+      <DataType>float|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="74" parent="16" name="PRIMARY">
+      <ColNames>numberID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="75" parent="17" name="numberID">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="76" parent="17" name="email">
+      <Position>2</Position>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="77" parent="17" name="firstName">
+      <Position>3</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="78" parent="17" name="lastName">
+      <Position>4</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="79" parent="17" name="dateOfBirth">
+      <Position>5</Position>
+      <DataType>date|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="80" parent="17" name="nationality">
+      <Position>6</Position>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="81" parent="17" name="curriculum">
+      <Position>7</Position>
+      <DataType>varchar(80)|0</DataType>
+    </column>
+    <key id="82" parent="17" name="PRIMARY">
+      <ColNames>numberID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="83" parent="18" name="numberID">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="84" parent="18" name="title">
+      <Position>2</Position>
+      <DataType>char(50)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="85" parent="18" name="url">
+      <Position>3</Position>
+      <DataType>char(200)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="86" parent="18" name="teacher___fk">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="87" parent="18" name="PRIMARY">
+      <ColNames>numberID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="88" parent="19" name="numberID">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="89" parent="19" name="dateStart">
+      <Position>2</Position>
+      <DataType>date|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="90" parent="19" name="dateFinish">
+      <Position>7</Position>
+      <DataType>date|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="91" parent="19" name="teacher___fk">
+      <Position>6</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="92" parent="19" name="exam___fk">
+      <Position>5</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="93" parent="19" name="classroom">
+      <Position>4</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="94" parent="19" name="time">
+      <Position>3</Position>
+      <DataType>time|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="95" parent="19" name="exam___fk">
+      <ColNames>exam___fk</ColNames>
+    </index>
+    <index id="96" parent="19" name="teacher___fk">
+      <ColNames>teacher___fk</ColNames>
+    </index>
+    <key id="97" parent="19" name="PRIMARY">
+      <ColNames>numberID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="98" parent="19" name="exam___fk">
+      <ColNames>exam___fk</ColNames>
+      <RefSchemaName>solunibo</RefSchemaName>
+      <RefTableName>exam</RefTableName>
+      <RefColNames>numberID</RefColNames>
+    </foreign-key>
+  </database-model>
+</dataSource>

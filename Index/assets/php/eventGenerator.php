@@ -2,9 +2,9 @@
 
 if(isset($_POST['messageType']) && !empty($_POST['messageType'])) {
 
-    switch ($_POST) {
-        case StandardMessages::EXAM:
-            putPrenotationEvent("test", "dumb text", 731579);
+    switch ($_POST['messageType']) {
+        case "test":
+            echo "dio bo";
             break;
     }
 }
@@ -17,5 +17,7 @@ function putPrenotationEvent($title, $description, $matricola) {
         echo "<script type=\"text/javascript\">alert(\"dio\")</script>";
     }
 }
+
+
 
 ?>

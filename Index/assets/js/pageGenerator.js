@@ -21,19 +21,24 @@ $(function () {
     var testID;
     var dateStart = "";
     var dateClose = "";
-    var classroom = "";
-    var examID;
-    alert("test");
+    var classroom = "213584";
+    var examID = "";
+    var time = "";
+    var teacherFirstName = "";
+    var teacherLastName = "";
+
     $.get("../assets/php/pageRequest/testResult.php", function(data) {
         var obj = JSON.parse(data);
-        alert("dio");
         for(var i = 0; i < obj.test.length; i++){
             numberID = obj.test[i].numberID;
             dateStart = obj.test[i].dateStart;
             dateClose = obj.test[i].dateFinish;
             classroom = obj.test[i].classroom;
             examID = obj.test[i].exam___fk;
-            alert("<div class=\"panel panel-default\"> <div class=\"panel-heading\"> <h4 class=\"panel-title\"> <a data-toggle=\"collapse\" href=" + examUrl + ">" + title + "</a> </h4> </div> </div> <div id=\"" + numberID + "\" class= \" panel-collapse collapse in\"> <div class=\"panel-body\"></div></div>");
+            time = obj.test[i].time;
+            teacherFirstName = obj.test[i].firstName;
+            teacherLastName = obj.test[i].lastName;
+            var test = "<button type=\"button\" class=\"button hidden-xs prenota\">Prenota</button> <p style='text-align: left;'>" + teacherFirstName + " " + teacherLastName + "       " + classroom + "<br/>" + dateStart + "             " + time + "</p> <button type=\"button\" class=\"button fit hidden-sm hidden-md hidden-lg prenota\">Prenota</button>";
             var div = document.getElementById(examID);
             div.insertAdjacentHTML('afterbegin', test);
         }
