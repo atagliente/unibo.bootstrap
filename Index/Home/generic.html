@@ -12,8 +12,6 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 	<link rel="stylesheet" href="assets/css/main.css" />
@@ -23,7 +21,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 	<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 
 	<script src="logoSwap.js"></script>
-	<script src="populate_html.js"></script>
+	<!--<script src="populate_html.js"></script>-->
 
 	<!-- Scripts -->
 	<script src="assets/js/jquery.min.js"></script>
@@ -42,13 +40,11 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
       $("#includedContent").load("diagramma_esami/esport-chart.html");
     });
 	</script>-->
+
 </head>
 
 <body>
-	<script src="../assets/js/checklogin.js"></script>
-
-	<script src="../assets/js/loadEsami.js"></script>
-
+	<script src="../assets/js/pageGenerator.js"></script>
 
 	<!-- Wrapper -->
 	<div id="wrapper">
@@ -112,12 +108,12 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 										<div class="panel-body">
 
 											<!-- >>>>>>>>>>>>>>>>>>>>>>>>> da finire di sistemare -->
+											<div id="numberID">
 											<p>Prima prova scritta: <br/>giorno: 12/11/2020
 												<button type="button" class="button hidden-xs">Prenota</button>
-												<buttonbutton type="button" class="button fit hidden-sm hidden-md hidden-lg">Prenota</button>
-													<buttonbutton type="button" class="button fit hidden-sm hidden-md hidden-lg">Prenota</button>
-														<buttonbutton type="button" class="button fit hidden-sm hidden-md hidden-lg">Prenota</button>
-															<br/> ore: 18:34 aula A</p>
+												<br/> ore: 18:34 aula A</p>
+												<button type="button" class="button fit hidden-sm hidden-md hidden-lg">Prenota</button>
+
 
 											<p>Prima prova orale: <br/>giorno: 12/11/2020
 												<button type="button" class="button disabled hidden-xs">Prenota</button>

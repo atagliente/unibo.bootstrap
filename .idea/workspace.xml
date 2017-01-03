@@ -47,46 +47,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="solunibo.student" pinned="false" current-in-tab="false">
-        <entry file="dbDummy://dbtable:/ceed678/a2cf50f1-cee7-4749-8d6b-9a240ae22318/solunibo.student">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="solunibo.storyBoard" pinned="false" current-in-tab="false">
-        <entry file="dbDummy://dbtable:/ceed678/a2cf50f1-cee7-4749-8d6b-9a240ae22318/solunibo.storyBoard">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="solunibo.teachingDoc" pinned="false" current-in-tab="false">
-        <entry file="dbDummy://dbtable:/ceed678/a2cf50f1-cee7-4749-8d6b-9a240ae22318/solunibo.teachingDoc">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+      <file leaf-file-name="pageGenerator.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Index/assets/js/pageGenerator.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" column="264" lean-forward="false" selection-start-line="14" selection-start-column="264" selection-end-line="14" selection-end-column="264" />
               <folding />
             </state>
           </provider>
@@ -107,11 +72,40 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pageGenerator.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Index/assets/js/pageGenerator.js">
+      <file leaf-file-name="examResult.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Index/assets/php/pageRequest/examResult.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="68" lean-forward="false" selection-start-line="6" selection-start-column="68" selection-end-line="6" selection-end-column="68" />
+            <state relative-caret-position="30">
+              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+              <folding>
+                <marker date="1483374317488" expanded="true" signature="88:117" ph="SELECT * FRO... exam" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="testRequest.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Index/assets/php/pageRequest/testRequest.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="42" lean-forward="true" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
+              <folding>
+                <marker date="1483376257791" expanded="true" signature="88:132" ph="SELECT test.... test" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="solunibo.exam" pinned="false" current-in-tab="false">
+        <entry file="dbDummy://dbtable:/ceed678/a2cf50f1-cee7-4749-8d6b-9a240ae22318/solunibo.exam">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -120,68 +114,58 @@
       <file leaf-file-name="loadEsami.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Index/assets/js/loadEsami.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="20" lean-forward="false" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="esami.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Index/assets/php/esami.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="32" lean-forward="true" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
+            <state relative-caret-position="165">
+              <caret line="11" column="7" lean-forward="false" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
               <folding>
-                <element signature="e#7#90#0#PHP" expanded="true" />
-                <marker date="1483308988658" expanded="true" signature="577:636" ph="SELECT matri... studente" />
-                <marker date="1483308988658" expanded="true" signature="1089:1117" ph="SELECT * FRO... test" />
+                <marker date="1483373593430" expanded="true" signature="31:332" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="solunibo.login" pinned="false" current-in-tab="false">
-        <entry file="dbDummy://dbtable:/ceed678/a2cf50f1-cee7-4749-8d6b-9a240ae22318/solunibo.login">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
+      <file leaf-file-name="DBConnection.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Index/assets/php/DBConnection.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="125" column="62" lean-forward="false" selection-start-line="125" selection-start-column="62" selection-end-line="125" selection-end-column="62" />
+              <folding>
+                <marker date="1483204674570" expanded="true" signature="233:297" ph="INSERT INTO ${ATTEMPS_TABLE}... " />
+                <marker date="1483204674570" expanded="true" signature="328:378" ph="SELECT * FRO... ${LOGIN_TABLE}" />
+                <marker date="1483204674570" expanded="true" signature="412:461" ph="SELECT time " />
+                <marker date="1483204674570" expanded="true" signature="3831:3899" ph="SELECT time " />
+              </folding>
             </state>
           </provider>
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </entry>
+      </file>
+      <file leaf-file-name="generic.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Index/Home/generic.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="solunibo.payment" pinned="false" current-in-tab="false">
-        <entry file="dbDummy://dbtable:/ceed678/a2cf50f1-cee7-4749-8d6b-9a240ae22318/solunibo.payment">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Index/Home/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="23" column="6" lean-forward="false" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="solunibo.logattemps" pinned="false" current-in-tab="false">
-        <entry file="dbDummy://dbtable:/ceed678/a2cf50f1-cee7-4749-8d6b-9a240ae22318/solunibo.logattemps">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+      <file leaf-file-name="esami.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Index/assets/php/esami.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="20" selection-end-column="11" />
+              <folding>
+                <marker date="1483374011179" expanded="true" signature="165:194" ph="SELECT * FRO... exam" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -272,13 +256,16 @@
         <option value="$PROJECT_DIR$/Index/assets/php/EventGenerator.php" />
         <option value="$PROJECT_DIR$/Index/assets/js/checklogin.js" />
         <option value="$PROJECT_DIR$/Index/assets/php/StandardMessages.php" />
-        <option value="$PROJECT_DIR$/Index/Home/index.html" />
         <option value="$PROJECT_DIR$/Index/assets/js/prenotationHandler.js" />
-        <option value="$PROJECT_DIR$/Index/assets/js/pageGenerator.js" />
-        <option value="$PROJECT_DIR$/Index/Home/generic.html" />
+        <option value="$PROJECT_DIR$/Index/assets/php/eventGenerator.php" />
+        <option value="$PROJECT_DIR$/Index/Home/index.html" />
+        <option value="$PROJECT_DIR$/Index/assets/php/pageRequest/testResult.php" />
         <option value="$PROJECT_DIR$/Index/assets/js/loadEsami.js" />
         <option value="$PROJECT_DIR$/Index/assets/php/esami.php" />
-        <option value="$PROJECT_DIR$/Index/assets/php/eventGenerator.php" />
+        <option value="$PROJECT_DIR$/Index/Home/generic.html" />
+        <option value="$PROJECT_DIR$/Index/assets/php/pageRequest/examResult.php" />
+        <option value="$PROJECT_DIR$/Index/assets/php/pageRequest/testRequest.php" />
+        <option value="$PROJECT_DIR$/Index/assets/js/pageGenerator.js" />
       </list>
     </option>
   </component>
@@ -295,8 +282,9 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="1360" />
-    <option name="height" value="765" />
+    <option name="x" value="-1" />
+    <option name="width" value="1368" />
+    <option name="height" value="769" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -381,6 +369,32 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="php" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pageRequest" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="unibo.bootstrap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="unibo.bootstrap" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Index" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="js" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -428,17 +442,19 @@
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Index/assets/php/pageRequest" />
+      <recent name="$PROJECT_DIR$/Index/assets/php" />
+      <recent name="$PROJECT_DIR$/Index/Home/calendar" />
+      <recent name="$PROJECT_DIR$/Index/Home/Calendar/demos" />
+      <recent name="$PROJECT_DIR$/Index/Home" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Index/Home/calendar/lib/cupertino/images" />
       <recent name="$PROJECT_DIR$/Index/Home/assets/css" />
       <recent name="$PROJECT_DIR$/Index/Home" />
       <recent name="$PROJECT_DIR$/Index/assets/js" />
       <recent name="$PROJECT_DIR$/Index/assets/php" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/Index/Home/calendar" />
-      <recent name="$PROJECT_DIR$/Index/Home/Calendar/demos" />
-      <recent name="$PROJECT_DIR$/Index/Home" />
     </key>
   </component>
   <component name="RunManager">
@@ -516,22 +532,22 @@
       <workItem from="1482937560073" duration="27410000" />
       <workItem from="1483105047509" duration="4615000" />
       <workItem from="1483200004527" duration="13694000" />
-      <workItem from="1483284520721" duration="18081000" />
+      <workItem from="1483284520721" duration="37982000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="163134000" />
+    <option name="totallyTimeSpent" value="183035000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1360" height="765" extended-state="1" />
+    <frame x="-1" y="0" width="1368" height="769" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2716895" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2700454" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32847896" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32952815" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290469" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32847896" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -555,58 +571,19 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="3" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/Index/assets/js/prenotationHandler.js</url>
+          <line>3</line>
+          <properties />
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="4" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/a2cf50f1-cee7-4749-8d6b-9a240ae22318/console_1.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="46" lean-forward="false" selection-start-line="13" selection-start-column="46" selection-end-line="13" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/ceed678/a2cf50f1-cee7-4749-8d6b-9a240ae22318/solunibo.tax">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/ceed678/a2cf50f1-cee7-4749-8d6b-9a240ae22318/solunibo.tax">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/ceed678/a2cf50f1-cee7-4749-8d6b-9a240ae22318/solunibo.tax">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="dbDummy://dbtable:/ceed678/a2cf50f1-cee7-4749-8d6b-9a240ae22318/solunibo.tax">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -732,26 +709,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Index/Home/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="85" lean-forward="false" selection-start-line="20" selection-start-column="85" selection-end-line="20" selection-end-column="85" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Index/assets/php/StandardMessages.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="12" column="34" lean-forward="false" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Index/assets/js/prenotationHandler.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="31" lean-forward="false" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
           <folding />
         </state>
       </provider>
@@ -761,19 +722,6 @@
         <state relative-caret-position="-1245">
           <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Index/assets/php/DBConnection.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="77" selection-end-column="9" />
-          <folding>
-            <marker date="1483204674570" expanded="true" signature="233:297" ph="INSERT INTO ${ATTEMPS_TABLE}... " />
-            <marker date="1483204674570" expanded="true" signature="328:378" ph="SELECT * FRO... ${LOGIN_TABLE}" />
-            <marker date="1483204674570" expanded="true" signature="412:461" ph="SELECT time " />
-            <marker date="1483204674570" expanded="true" signature="3831:3899" ph="SELECT time " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -910,14 +858,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Index/Home/generic.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="37" column="57" lean-forward="false" selection-start-line="37" selection-start-column="57" selection-end-line="37" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Index/Home/elements.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-5795">
@@ -936,46 +876,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/ceed678/a2cf50f1-cee7-4749-8d6b-9a240ae22318/solunibo.events">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/ceed678/a2cf50f1-cee7-4749-8d6b-9a240ae22318/solunibo.exam">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="dbDummy://dbtable:/ceed678/a2cf50f1-cee7-4749-8d6b-9a240ae22318/solunibo.logattemps">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/ceed678/a2cf50f1-cee7-4749-8d6b-9a240ae22318/solunibo.login">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
@@ -1066,33 +967,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/ceed678/a2cf50f1-cee7-4749-8d6b-9a240ae22318/solunibo.student">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="dbDummy://dbtable:/ceed678/a2cf50f1-cee7-4749-8d6b-9a240ae22318/solunibo.tax">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/ceed678/a2cf50f1-cee7-4749-8d6b-9a240ae22318/solunibo.storyBoard">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
@@ -1118,6 +993,156 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Index/Home/gmap.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/ceed678/a2cf50f1-cee7-4749-8d6b-9a240ae22318/solunibo.storyBoard">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Index/assets/php/MakeOperationsOnDB.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="885">
+          <caret line="59" column="1" lean-forward="true" selection-start-line="59" selection-start-column="1" selection-end-line="59" selection-end-column="1" />
+          <folding>
+            <marker date="1483349694929" expanded="true" signature="565:631" ph="SELECT matri... studente" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Index/assets/js/prenotationHandler.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="9" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/ceed678/a2cf50f1-cee7-4749-8d6b-9a240ae22318/solunibo.events">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/ceed678/a2cf50f1-cee7-4749-8d6b-9a240ae22318/solunibo.student">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/ceed678/a2cf50f1-cee7-4749-8d6b-9a240ae22318/solunibo.login">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Index/assets/php/DBConnection.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="125" column="62" lean-forward="false" selection-start-line="125" selection-start-column="62" selection-end-line="125" selection-end-column="62" />
+          <folding>
+            <marker date="1483204674570" expanded="true" signature="233:297" ph="INSERT INTO ${ATTEMPS_TABLE}... " />
+            <marker date="1483204674570" expanded="true" signature="328:378" ph="SELECT * FRO... ${LOGIN_TABLE}" />
+            <marker date="1483204674570" expanded="true" signature="412:461" ph="SELECT time " />
+            <marker date="1483204674570" expanded="true" signature="3831:3899" ph="SELECT time " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Index/assets/php/esami.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="20" selection-end-column="11" />
+          <folding>
+            <marker date="1483374011179" expanded="true" signature="165:194" ph="SELECT * FRO... exam" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Index/Home/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="23" column="6" lean-forward="false" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Index/Home/generic.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Index/assets/php/pageRequest/examResult.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding>
+            <marker date="1483374317488" expanded="true" signature="88:117" ph="SELECT * FRO... exam" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/ceed678/a2cf50f1-cee7-4749-8d6b-9a240ae22318/solunibo.exam">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Index/assets/js/loadEsami.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="7" lean-forward="false" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+          <folding>
+            <marker date="1483373593430" expanded="true" signature="31:332" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="dbDummy://dbtable:/ceed678/a2cf50f1-cee7-4749-8d6b-9a240ae22318/solunibo.test">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -1133,28 +1158,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Index/assets/js/pageGenerator.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="68" lean-forward="false" selection-start-line="6" selection-start-column="68" selection-end-line="6" selection-end-column="68" />
+        <state relative-caret-position="210">
+          <caret line="14" column="264" lean-forward="false" selection-start-line="14" selection-start-column="264" selection-end-line="14" selection-end-column="264" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Index/assets/js/loadEsami.js">
+    <entry file="file://$PROJECT_DIR$/Index/assets/php/pageRequest/testRequest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="20" lean-forward="false" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Index/assets/php/esami.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="32" lean-forward="true" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
+        <state relative-caret-position="120">
+          <caret line="8" column="42" lean-forward="true" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
           <folding>
-            <element signature="e#7#90#0#PHP" expanded="true" />
-            <marker date="1483308988658" expanded="true" signature="577:636" ph="SELECT matri... studente" />
-            <marker date="1483308988658" expanded="true" signature="1089:1117" ph="SELECT * FRO... test" />
+            <marker date="1483376257791" expanded="true" signature="88:132" ph="SELECT test.... test" />
           </folding>
         </state>
       </provider>
