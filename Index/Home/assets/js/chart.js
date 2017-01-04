@@ -1,35 +1,39 @@
 $(function() {
-
-
     $.get("../assets/php/loadCareer.php", function(data) {
+        var obj = JSON.parse(data);
+        var progress_bar_id;
+        var annual_cfu = 0;
+        var annual_progress = 0;
+        var total_cfu = 0;
+        var total_progress = 0;
 
-      alert(data);
-      var obj = JSON.parse(data);
-      alert(obj.cfu_verbalizzati[0].year);
+        for (var year = 1; year <= 3; year++) {
+            for (var i = 0; i < obj.cfu_verbalizzati.length; i = i + 1) {
+                if (year == parseInt(obj.cfu_verbalizzati[i].year)) {
+                    annual_cfu += parseInt(obj.cfu_verbalizzati[i].cfu);
+                }
+            }
+            total_cfu += annual_cfu;
+
+            if (year == 1) {
+                progress_bar_id = '#primo_anno';
+            } else if (year == 2) {
+                progress_bar_id = '#secondo_anno';
+            } else if (year == 3) {
+                progress_bar_id = '#terzo_anno';
+            }
+
+            annual_progress = annual_cfu * 100 / 60;
+            $(progress_bar_id).attr("aria-valuenow", annual_cfu);
+            $(progress_bar_id).css("width", annual_progress + "%");
+            $(progress_bar_id).html(annual_cfu + "/60 cfu");
+
+            annual_cfu = 0;
+        }
+
+        total_progress = total_cfu * 100 / 180;
+        $('#totale_cfu').attr("aria-valuenow", total_cfu);
+        $('#totale_cfu').css("width", total_progress + "%");
+        $('#totale_cfu').html(total_cfu + "/180 cfu");
     });
-
-    var cfu_primo_anno = 60;
-    var progress_primo_anno = cfu_primo_anno*100/60;
-    $('#primo_anno').attr("aria-valuenow", cfu_primo_anno);
-    $('#primo_anno').css("width", progress_primo_anno+"%");
-    $('#primo_anno').html(cfu_primo_anno+"/60 cfu");
-
-    var cfu_secondo_anno = 45;
-    var progress_secondo_anno = cfu_secondo_anno*100/60;
-    $('#secondo_anno').attr("aria-valuenow", cfu_secondo_anno);
-    $('#secondo_anno').css("width", progress_secondo_anno+"%");
-    $('#secondo_anno').html(cfu_secondo_anno+"/60 cfu");
-
-    var cfu_terzo_anno = 10;
-    var progress_terzo_anno = cfu_terzo_anno*100/60;
-    $('#terzo_anno').attr("aria-valuenow", cfu_terzo_anno);
-    $('#terzo_anno').css("width", progress_terzo_anno+"%");
-    $('#terzo_anno').html(cfu_terzo_anno+"/60 cfu");
-
-    var cfu_totali = cfu_primo_anno + cfu_secondo_anno + cfu_terzo_anno;
-    var progress_totale = cfu_totali*100/180;
-    $('#totale_cfu').attr("aria-valuenow", cfu_totali);
-    $('#totale_cfu').css("width", progress_totale+"%");
-    $('#totale_cfu').html(cfu_totali+"/180 cfu");
-
 });
