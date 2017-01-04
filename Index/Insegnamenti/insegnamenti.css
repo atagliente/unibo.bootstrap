@@ -1,0 +1,65 @@
+.docente, .cfu {
+    text-align: center;
+}
+
+.materiale {
+    border-top: solid 1px lightgrey;
+    padding-top: 3%;
+}
+
+a:link, a:visited, a:active {
+    font-size: 20px;
+    letter-spacing: 3px;
+}
+
+h2, h3 {
+    color: darkgrey;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+h2 {
+    font-size: 17px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    color: #777;
+}
+
+h3 {
+    font-size: 14px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+p {
+    color: #333;
+    font-size: 16px;
+}
+
+.my_li {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.panel-body {
+    margin-left: 9%;
+    margin-right: 9%;
+}
+
+#main {
+    margin-left: 7%;
+    margin-right: 7%;
+}
+
+button {
+    width: 100px !important;
+    height: 25px !important;
+    line-height: 0px !important;
+    color: #333 !important;
+}
+
+.link_materiale {
+    font-size: 16px !important;
+}
