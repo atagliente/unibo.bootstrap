@@ -12,14 +12,14 @@ a:link, a:visited, a:active {
     letter-spacing: 3px;
 }
 
-h2, h3 {
+.my_h2, h3 {
     color: darkgrey;
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
     letter-spacing: 3px;
 }
 
-h2 {
+.my_h2 {
     font-size: 17px;
     margin-top: 2%;
     margin-bottom: 2%;
