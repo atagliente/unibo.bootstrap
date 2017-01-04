@@ -1,9 +1,9 @@
 function swapLogo() {
     if ($(window).width() > 601) {
         //da modificare il percorso
-        $("#logoUnibo").attr("src", "images/logoBig.png");
+        $("#logoUnibo").attr("src", "../Images/logoBig.png");
     } else {
-        $("#logoUnibo").attr("src", "images/logoSmall.png");
+        $("#logoUnibo").attr("src", "../Images/logoSmall.png");
     }
 }
 
