@@ -1,5 +1,6 @@
 $(function() {
     $.get("../assets/php/loadCareer.php", function(data) {
+
         var obj = JSON.parse(data);
         var progress_bar_id;
         var annual_cfu = 0;
@@ -8,9 +9,9 @@ $(function() {
         var total_progress = 0;
 
         for (var year = 1; year <= 3; year++) {
-            for (var i = 0; i < obj.cfu_verbalizzati.length; i = i + 1) {
-                if (year == parseInt(obj.cfu_verbalizzati[i].year)) {
-                    annual_cfu += parseInt(obj.cfu_verbalizzati[i].cfu);
+            for (var i = 0; i < obj.career.length; i = i + 1) {
+                if (year == parseInt(obj.career[i].year)) {
+                    annual_cfu += parseInt(obj.career[i].cfu);
                 }
             }
             total_cfu += annual_cfu;
