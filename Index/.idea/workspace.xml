@@ -33,11 +33,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="pageGenerator.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="pageGenerator.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/js/pageGenerator.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="188">
-              <caret line="40" column="87" lean-forward="false" selection-start-line="40" selection-start-column="87" selection-end-line="40" selection-end-column="87" />
+            <state relative-caret-position="353">
+              <caret line="39" column="51" lean-forward="false" selection-start-line="39" selection-start-column="51" selection-end-line="39" selection-end-column="51" />
               <folding>
                 <marker date="1483458391599" expanded="true" signature="1765:1782" ph="..." />
               </folding>
@@ -45,11 +45,38 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="testResult.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/php/pageRequest/testResult.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="165" lean-forward="false" selection-start-line="6" selection-start-column="165" selection-end-line="6" selection-end-column="165" />
+              <folding>
+                <marker date="1483472414811" expanded="true" signature="88:329" ph="SELECT test.... test" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="solunibo.test" pinned="false" current-in-tab="true">
+        <entry file="dbDummy://dbtable:/b84e1a5b/70eb63aa-e7f1-4b5c-8ea0-6e8a2bd5299f/solunibo.test">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="eventGenerator.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/php/eventGenerator.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="1" lean-forward="false" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+            <state relative-caret-position="135">
+              <caret line="9" column="36" lean-forward="false" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
               <folding>
                 <marker date="1483460368457" expanded="true" signature="436:485" ph="INSERT INTO `events`... " />
                 <marker date="1483460368457" expanded="true" signature="436:533" ph="INSERT INTO `events`... " />
@@ -115,13 +142,13 @@
         <option value="$PROJECT_DIR$/Home/calendar/demos/json.html" />
         <option value="$PROJECT_DIR$/Home/index.html" />
         <option value="$PROJECT_DIR$/assets/php/pageRequest/testRequest.php" />
-        <option value="$PROJECT_DIR$/assets/php/pageRequest/testResult.php" />
         <option value="$PROJECT_DIR$/assets/php/examPrenotation.php" />
         <option value="$PROJECT_DIR$/Home/generic.html" />
         <option value="$PROJECT_DIR$/assets/js/prenotationHandler.js" />
-        <option value="$PROJECT_DIR$/assets/js/pageGenerator.js" />
         <option value="dbtable:/b84e1a5b/70eb63aa-e7f1-4b5c-8ea0-6e8a2bd5299f/solunibo.storyBoard" />
         <option value="$PROJECT_DIR$/assets/php/eventGenerator.php" />
+        <option value="$PROJECT_DIR$/assets/js/pageGenerator.js" />
+        <option value="$PROJECT_DIR$/assets/php/pageRequest/testResult.php" />
       </list>
     </option>
   </component>
@@ -326,19 +353,19 @@
       <option name="presentableId" value="Default" />
       <updated>1483438759827</updated>
       <workItem from="1483438762126" duration="750000" />
-      <workItem from="1483442572549" duration="13929000" />
+      <workItem from="1483442572549" duration="16342000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14679000" />
+    <option name="totallyTimeSpent" value="17092000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="0" width="1368" height="769" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25340393" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25340393" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21860817" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -471,16 +498,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/php/pageRequest/testResult.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding>
-            <marker date="1483445381958" expanded="true" signature="88:250" ph="SELECT test.... test" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Home/generic.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -502,48 +519,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/b84e1a5b/70eb63aa-e7f1-4b5c-8ea0-6e8a2bd5299f/solunibo.test">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="dbDummy://dbtable:/b84e1a5b/70eb63aa-e7f1-4b5c-8ea0-6e8a2bd5299f/solunibo.student">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/php/eventGenerator.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="1" lean-forward="false" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
-          <folding>
-            <marker date="1483460368457" expanded="true" signature="436:485" ph="INSERT INTO `events`... " />
-            <marker date="1483460368457" expanded="true" signature="436:533" ph="INSERT INTO `events`... " />
-            <marker date="1483460368457" expanded="true" signature="436:599" ph="INSERT INTO `storyBoard`... " />
-            <marker date="1483460368457" expanded="true" signature="436:600" ph="INSERT INTO `events`... " />
-            <marker date="1483460368457" expanded="true" signature="436:627" ph="INSERT INTO `storyBoard`... " />
-            <marker date="1483460368457" expanded="true" signature="436:628" ph="INSERT INTO `storyBoard`... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/b84e1a5b/70eb63aa-e7f1-4b5c-8ea0-6e8a2bd5299f/solunibo.storyBoard">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
@@ -571,11 +547,62 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/pageGenerator.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="40" column="87" lean-forward="false" selection-start-line="40" selection-start-column="87" selection-end-line="40" selection-end-column="87" />
+        <state relative-caret-position="353">
+          <caret line="39" column="51" lean-forward="false" selection-start-line="39" selection-start-column="51" selection-end-line="39" selection-end-column="51" />
           <folding>
             <marker date="1483458391599" expanded="true" signature="1765:1782" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/php/eventGenerator.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="36" lean-forward="false" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
+          <folding>
+            <marker date="1483460368457" expanded="true" signature="436:485" ph="INSERT INTO `events`... " />
+            <marker date="1483460368457" expanded="true" signature="436:533" ph="INSERT INTO `events`... " />
+            <marker date="1483460368457" expanded="true" signature="436:599" ph="INSERT INTO `storyBoard`... " />
+            <marker date="1483460368457" expanded="true" signature="436:600" ph="INSERT INTO `events`... " />
+            <marker date="1483460368457" expanded="true" signature="436:627" ph="INSERT INTO `storyBoard`... " />
+            <marker date="1483460368457" expanded="true" signature="436:628" ph="INSERT INTO `storyBoard`... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/php/pageRequest/testResult.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="165" lean-forward="false" selection-start-line="6" selection-start-column="165" selection-end-line="6" selection-end-column="165" />
+          <folding>
+            <marker date="1483472414811" expanded="true" signature="88:329" ph="SELECT test.... test" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/b84e1a5b/70eb63aa-e7f1-4b5c-8ea0-6e8a2bd5299f/solunibo.storyBoard">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/b84e1a5b/70eb63aa-e7f1-4b5c-8ea0-6e8a2bd5299f/solunibo.test">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
