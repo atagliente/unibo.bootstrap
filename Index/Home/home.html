@@ -1,6 +1,5 @@
 <!DOCTYPE HTML>
-
-<html>
+<html lang="it">
 
 <head>
 	<title>UniBo</title>
@@ -16,14 +15,14 @@
 	<script src="assets/js/calendarEvent.js"></script>
 	<script src="../assets/js/checklogin.js"></script>
 	<link rel="stylesheet" href="assets/css/main.css" />
-	<link rel="stylesheet" href="assets/css/magic.css" />
+	<!-- <link rel="stylesheet" href="assets/css/magic.css" /> -->
 	<link rel="stylesheet" href="home.css" />
 	<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 	<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 	<script src="../Shared/logoSwap.js"></script>
 
 
-</head lang="it">
+</head>
 
 <body>
 	<!-- Wrapper -->
@@ -34,7 +33,7 @@
 			<!-- Logo -->
 			<a href="home.html">
 				<picture>
-					<img id="logoUnibo" class="logoOnNavBar" src="images/logoBig.png" alt="logo" style="width:auto">
+					<img id="logoUnibo" class="logoOnNavBar" src="../Images/logoBig.png" alt="logo" style="width:auto">
 				</picture>
 			</a>
 			<div class="inner">
@@ -50,24 +49,31 @@
 		<nav id="menu">
 			<h2>Menu</h2>
 			<ul>
-				<li><a href="../Notifiche/notifiche.html">Notifiche</a></li>
-				<li><a href="../Login/login.html">Impostazioni</a></li>
-				<li><a href="../Login/login.html">About us</a></li>
-				<li><a href="../assets/php/logout.php">Logout</a></li>
+				<li><a href="home.html">Home</a></li>		<!--../Home/home.html-->
+				<!-- <li><a href="../Notifiche/notifiche.html">Notifiche</a></li> -->
+				<li><a href="../Esami/esami.html">Esami</a></li>
+				<li><a href="../Insegnamenti/insegnamenti.html">Insegnamenti</a></li>
+				<li><a href="../Tasse/tasse.html">Tasse</a></li>
+				<li><a href="mensa.html">Mensa</a></li>	<!--Mensa/mensa.html-->
+				<li><a href="../Login/login.html">Bike Sharing</a></li>
+				<li><a href="https://outlook.office365.com/studio.unibo.it" target="_blank">Mail</a></li>
+				<!-- <li><a href="../Login/login.html">About us</a></li> -->
+				<li><a href="../Login/login.html">Logout</a></li>
 			</ul>
-			<input type="hidden" name="" value=""> </nav>
+		</nav>
 
 		<!-- Main -->
 		<div id="main">
 			<div class="inner">
 				<div class="calendar">
-					<iframe src="calendar/demos/json.html" scrolling="no" allowfullscreen="" frameborder="0"></iframe>
+					<iframe src="calendar/demos/json.html"></iframe> <!-- scrolling="no" allowfullscreen="" frameborder="0"  -->
 				</div>
 				<section class="tiles">
+					<h1>Tiles</h1>
 					<article class="style1">
 						<span class="image">
-								<img src="../Images/biblio.png" alt="" longdesc="immagine relativa a esami che raffigura dei libri"/>
-							</span>
+							<img src="../Images/biblio.png" alt="immagine relativa a esami che raffigura dei libri"/>
+						</span>
 						<a href="esami.html">			<!--../Esami/esami.html-->
 							<h2 class="title">Esami</h2>
 							<div class="content">
@@ -77,8 +83,8 @@
 					</article>
 					<article class="style1">
 						<span class="image">
-								<img src="../Images/insegnamenti.png" alt="" longdesc="immagine relativa a insegnamenti che raffigura ragazzi che assistono ad una lezione" />
-							</span>
+							<img src="../Images/insegnamenti.png" alt="immagine relativa a insegnamenti che raffigura ragazzi che assistono ad una lezione" />
+						</span>
 						<a href="../Insegnamenti/insegnamenti.html">
 							<h2 class="title">Insegnamenti</h2>
 							<div class="content">
@@ -88,8 +94,8 @@
 					</article>
 					<article class="style1">
 						<span class="image">
-								<img src="../Images/tax.png" alt="" longdesc="immagine relativa a tasse che raffigura un timer che dice di muoversi a pagare" />
-							</span>
+							<img src="../Images/tax.png" alt="immagine relativa a tasse che raffigura un timer che dice di muoversi a pagare" />
+						</span>
 						<a href="../Tasse/tasse.html">
 							<h2 class="title">Tasse</h2>
 							<div class="content">
@@ -99,8 +105,8 @@
 					</article>
 					<article class="style1">
 						<span class="image">
-								<img src="../Images/bonbon.png" alt="" longdesc="immagine ralativa a mensa che rappresenta gustosi tortini al cioccolato con fragole e zucchero a velo" />
-							</span>
+							<img src="../Images/bonbon.png" alt="immagine ralativa a mensa che rappresenta gustosi tortini al cioccolato con fragole e zucchero a velo" />
+						</span>
 						<a href="mensa.html">
 							<h2 class="title">Mensa</h2>
 							<div class="content">
@@ -110,8 +116,8 @@
 					</article>
 					<article class="style1">
 						<span class="image">
-								<img src="../Images/bike.png" alt="" longdesc="immagine relativa a bike sharing che rappresenta una bicicletta" />
-							</span>
+							<img src="../Images/bike.png" alt="immagine relativa a bike sharing che rappresenta una bicicletta" />
+						</span>
 						<a href="generic.html">
 							<h2 class="title">Bike-Sharing</h2>
 							<div class="content">
@@ -121,9 +127,9 @@
 					</article>
 					<article class="style1">
 						<span class="image">
-								<img src="../Images/mail.png" alt="" longdesc="immagine relativa a mail che rappresenta delle caselle postali" />
-							</span>
-						<a href="index.html">
+							<img src="../Images/mail.png" alt="immagine relativa a mail che rappresenta delle caselle postali" />
+						</span>
+						<a href="https://outlook.office365.com/studio.unibo.it" target="_blank">
 							<h2 class="title">Mail</h2>
 							<div class="content">
 								<p>Mail istituzionale</p>
@@ -133,21 +139,14 @@
 				</section>
 			</div>
 		</div>
-	</div>
 
-	<!-- Footer -->
-	<footer id="footer">
-		<div class="inner">
-
-			<ul class="copyright">
-				<li>&copy; MagicGroup. All rights reserved</li>
-				<li>Design: MagicGroup <a href="http://html5up.net">HTML5 UP</a></li>
-			</ul>
-		</div>
-	</footer>
+		<footer id="footer">
+            <div class="copyright">
+                    &copy; Copyright 2016 - ALMA MATER STUDIORUM - Università di Bologna - Via Zamboni, 33 - 40126 Bologna - Partita IVA: 01131710376
+            </div>
+        </footer>
 
 	</div>
 
 </body>
-
 </html>

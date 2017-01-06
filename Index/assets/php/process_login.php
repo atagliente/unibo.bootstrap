@@ -13,7 +13,7 @@ if(isset($_POST['username'], $_POST['password'])) {
     if($login->login($username, $password) == true) {
         // Login eseguito
         $login->writeDebugLog("Login Effettuato");
-        header('Location: ../../Home/index.html');
+        header('Location: ../../Home/home.html');
     } else {
         // Login fallito
         $login->sec_session_start();

@@ -12,6 +12,7 @@ p {
 .panel-body {
     margin-left: 9%;
     margin-right: 9%;
+    /*border: solid 5px green;*/
 }
 
 #main {
@@ -23,6 +24,7 @@ p {
     background-color: white !important;
     color: black !important;
     margin-bottom: 5%;
+    font-weight: bold;
 }
 
 .red .active a, .red .active a:hover {
@@ -31,11 +33,8 @@ p {
 }
 
 .button {       /*phantom button*/
-  /*  width: 200px;*/
-    color: black;
-    /*border-radius: 10px;
-    border: 1px solid red;*/
     float: right;
+    color: #333 !important;
 }
 
 a:link {
@@ -72,6 +71,15 @@ a:link, a:visited, a:active {
     h2 {
       font-size: 1em;
     }
+
+    #main {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .inner {
+        padding: 0px !important;
+    }
 }
 
 h1 {
@@ -100,7 +108,14 @@ h4, p {
 }
 
 #footer {
-	padding: 0.5em 0 1em 0 ;
+	padding: 1em !important;
+}
+
+.copyright {
+    text-align: center;
+    font-weight: bold;
+    margin: 5% !important;
+    background-color: #f6f6f6 !important;
 }
 
 .logoOnNavBar {
