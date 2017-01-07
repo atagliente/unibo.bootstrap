@@ -1,5 +1,5 @@
 $(function() {
-    $.get("../assets/php/loadCareer.php", function(data) {
+    $.get("../nostro_assets/php/loadCareer.php", function(data) {
 
         var obj = JSON.parse(data);
         var progress_bar_id;

@@ -5,7 +5,7 @@
 
 $(document).ready(function () {
 
-    $.getScript("../../../assets/js/loadEsami.js", function(){
+    $.getScript("../../../nostro_assets/js/loadEsami.js", function(){
         alert("Script loaded but not necessarily executed.");
     });
 
