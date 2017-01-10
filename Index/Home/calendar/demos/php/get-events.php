@@ -11,6 +11,7 @@
 
 // Require our Event class and datetime utilities
 require dirname(__FILE__) . '/utils.php';
+require('../../../../nostro_assets/php/MakeOperationsOnDB.php');
 
 // Short-circuit if the client did not give us a date range.
 if (!isset($_GET['start']) || !isset($_GET['end'])) {
@@ -29,8 +30,22 @@ if (isset($_GET['timezone'])) {
 	$timezone = new DateTimeZone($_GET['timezone']);
 }
 
+
+
+
+$var = new MakeOperationsOnDB();
+
+$matricola = intval($var->getCurrentMatricola());
+
+$sql = "SELECT title, DataInizio AS start, DataFine AS stop FROM events WHERE student___fk = $matricola";
+
+
+
 // Read and parse our events JSON file into an array of event data arrays.
-$json = file_get_contents(dirname(__FILE__) . '/../json/events.json');
+//$json = file_get_contents(dirname(__FILE__) . '/../json/events.json');
+//$json = '[{"title": "Click for Google","url": "http://google.com/", "start":"2016-12-28"}]';
+$json = $var->getQuery($sql);
+
 $input_arrays = json_decode($json, true);
 
 // Accumulate an output array of event data arrays.
