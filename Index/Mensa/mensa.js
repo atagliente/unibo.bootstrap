@@ -18,13 +18,13 @@ $(document).ready(function(){
   $("#panini").hide();
 
 
-    $(".mostra").click(function(){
+    $("#mostra").click(function(){
       if($("#mappa").is(":visible") ){
-          $("#mappa").hide();
+        $("#mappa").hide();
       }
       else{
         $("#mappa").show();
-          $("#panini").hide();
+        $("#panini").hide();
       }
     });
 
@@ -43,7 +43,7 @@ $(document).ready(function(){
 
 
 
-/**/
+/*----------------*/
 
 $("#mappa2").hide();
 $("#panini2").hide();
@@ -70,6 +70,36 @@ $("#panini2").hide();
       $("#mappa2").hide();
     }
   });
+
+
+
+  /*----------------*/
+
+  $("#mappa3").hide();
+  $("#panini3").hide();
+
+
+    $(".mostra3").click(function(){
+      if($("#mappa3").is(":visible") ){
+          $("#mappa3").hide();
+      }
+      else{
+          $("#mappa3").show();
+          $("#panini3").hide();
+      }
+    });
+
+
+
+    $("#mostraMenu3").click(function(){
+      if($("#panini3").is(":visible") ){
+          $("#panini3").hide();
+      }
+      else{
+        $("#panini3").show();
+        $("#mappa3").hide();
+      }
+    });
 
 
 });
