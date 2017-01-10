@@ -38,7 +38,7 @@ class MakeOperationsOnDB{
     /*
       table_name: the name of the table
       sql: query sql
-      return the query result converted to JSON
+      return the table converted to JSON '{"table_name":[{"attribute1": "value1","attribute2": "value2", "attributeN":"valueN"}]}'
     */
     public function getJSONFromQuery($table_name, $sql){
 
@@ -50,11 +50,33 @@ class MakeOperationsOnDB{
           while($row = $result->fetch_assoc()) {
               $text = $text . json_encode($row) . ',';
           }
-      } /*else {
-          echo "la query non ha prodotto alcun risultato";
-      }*/
+      } else {
+          //la query non ha prodotto alcun risultato
+      }
 
       $text = rtrim($text, ",") . ']}';
+      return $text;
+    }
+
+    /*
+      sql: query sql
+      return the query result converted to JSON '[{"attribute1": "value1","attribute2": "value2", "attributeN":"valueN"}]'
+    */
+    public function getQuery($sql){
+
+      $result = $this->conn->query($sql);
+
+      $text = '[';
+
+      if($result->num_rows > 0) {
+          while($row = $result->fetch_assoc()) {
+              $text = $text . json_encode($row) . ',';
+          }
+      } else {
+          //la query non ha prodotto alcun risultato
+      }
+
+      $text = rtrim($text, ",") . ']';
       return $text;
     }
 }
