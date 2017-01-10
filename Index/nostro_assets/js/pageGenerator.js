@@ -5,7 +5,7 @@ $(function () {
     var cfu = 6;
     var dateStart = "0";
     var examUrl = "index.html";
-    $.get("../assets/php/pageRequest/examResult.php", function(data) {
+    $.get("../nostro_assets/php/pageRequest/examResult.php", function(data) {
         var obj = JSON.parse(data);
         for(var i = 0; i < obj.exam.length; i++){
             numberID = obj.exam[i].numberID;
@@ -27,7 +27,7 @@ $(function () {
     var teacherFirstName = "";
     var teacherLastName = "";
 
-    $.get("../assets/php/pageRequest/testResult.php", function(data) {
+    $.get("../nostro_assets/php/pageRequest/testResult.php", function(data) {
         var obj = JSON.parse(data);
         for(var i = 0; i < obj.test.length; i++){
             numberID = obj.test[i].numberID;
@@ -46,7 +46,7 @@ $(function () {
         var classname = document.getElementsByClassName("prenota");
 
         var action = function() {
-            $.ajax({ url: '../assets/php/eventGenerator.php',
+            $.ajax({ url: '../nostro_assets/php/eventGenerator.php',
                 data: {'messageType':'examPrenotation' , 'value':$(this).attr('id')},
                 type: 'post',
                 success: function(output) {

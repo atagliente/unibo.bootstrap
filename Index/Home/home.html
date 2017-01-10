@@ -1,0 +1,152 @@
+<!DOCTYPE HTML>
+<html lang="it">
+
+<head>
+	<title>UniBo</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<!--[if lte IE 8]><script src="nostro_assets/js/ie/html5shiv.js"></script><![endif]-->
+	<script src='assets/js/jquery.min.js'></script>
+	<script src="assets/js/skel.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<!--[if lte IE 8]><script src="nostro_assets/js/ie/respond.min.js"></script><![endif]-->
+	<script src="assets/js/main.js"></script>
+
+	<script src="assets/js/calendarEvent.js"></script>
+	<script src="../nostro_assets/js/checklogin.js"></script>
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<!-- <link rel="stylesheet" href="nostro_assets/css/magic.css" /> -->
+	<link rel="stylesheet" href="home.css" />
+	<!--[if lte IE 9]><link rel="stylesheet" href="nostro_assets/css/ie9.css" /><![endif]-->
+	<!--[if lte IE 8]><link rel="stylesheet" href="nostro_assets/css/ie8.css" /><![endif]-->
+	<script src="../nostro_assets/js/logoSwap.js"></script>
+
+
+</head>
+
+<body>
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Header -->
+		<header id="header">
+			<!-- Logo -->
+			<a href="home.html">
+				<picture>
+					<img id="logoUnibo" class="logoOnNavBar" src="../Images/logoBig.png" alt="logo" style="width:auto">
+				</picture>
+			</a>
+			<div class="inner">
+				<nav>
+					<ul>
+						<li><a href="#menu">Menu</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<!-- Menu -->
+		<nav id="menu">
+			<h2>Menu</h2>
+			<ul>
+				<li><a href="home.html">Home</a></li>
+				<!-- <li><a href="../Notifiche/notifiche.html">Notifiche</a></li> -->
+				<li><a href="../Esami/esami.html">Esami</a></li>
+				<li><a href="../Insegnamenti/insegnamenti.html">Insegnamenti</a></li>
+				<li><a href="../Tasse/tasse.html">Tasse</a></li>
+				<li><a href="../Mensa/mensa.html">Mensa</a></li>
+				<li><a href="../Login/login.html">Bike Sharing</a></li>
+				<li><a href="https://outlook.office365.com/studio.unibo.it" target="_blank">Mail</a></li>
+				<!-- <li><a href="../Login/login.html">About us</a></li> -->
+				<li><a href="../Login/login.html">Logout</a></li>
+			</ul>
+		</nav>
+
+		<!-- Main -->
+		<div id="main">
+			<div class="inner">
+				<div class="calendar">
+					<iframe src="calendar/demos/json.html"></iframe> <!-- scrolling="no" allowfullscreen="" frameborder="0"  -->
+				</div>
+				<section class="tiles">
+					<h1>Tiles</h1>
+					<article class="style1">
+						<span class="image">
+							<img src="../Images/biblio.png" alt="immagine relativa a esami che raffigura dei libri"/>
+						</span>
+						<a href="../Esami/esami.html">			<!--../Esami/esami.html-->
+							<h2 class="title">Esami</h2>
+							<div class="content">
+								<p>Prenotazioni - Prenotati - Svolti</p>
+							</div>
+						</a>
+					</article>
+					<article class="style1">
+						<span class="image">
+							<img src="../Images/insegnamenti.png" alt="immagine relativa a insegnamenti che raffigura ragazzi che assistono ad una lezione" />
+						</span>
+						<a href="../Insegnamenti/insegnamenti.html">
+							<h2 class="title">Insegnamenti</h2>
+							<div class="content">
+								<p>Materiale didattico</p>
+							</div>
+						</a>
+					</article>
+					<article class="style1">
+						<span class="image">
+							<img src="../Images/tax.png" alt="immagine relativa a tasse che raffigura un timer che dice di muoversi a pagare" />
+						</span>
+						<a href="../Tasse/tasse.html">
+							<h2 class="title">Tasse</h2>
+							<div class="content">
+								<p>Da pagare - Pagate</p>
+							</div>
+						</a>
+					</article>
+					<article class="style1">
+						<span class="image">
+							<img src="../Images/bonbon.png" alt="immagine ralativa a mensa che rappresenta gustosi tortini al cioccolato con fragole e zucchero a velo" />
+						</span>
+						<a href="../Mensa/mensa.html">
+							<h2 class="title">Mensa</h2>
+							<div class="content">
+								<p>Mangia nei locali convenzionati</p>
+							</div>
+						</a>
+					</article>
+					<article class="style1">
+						<span class="image">
+							<img src="../Images/bike.png" alt="immagine relativa a bike sharing che rappresenta una bicicletta" />
+						</span>
+						<a href="generic.html">
+							<h2 class="title">Bike-Sharing</h2>
+							<div class="content">
+								<p>Pedala con noi</p>
+							</div>
+						</a>
+					</article>
+					<article class="style1">
+						<span class="image">
+							<img src="../Images/mail.png" alt="immagine relativa a mail che rappresenta delle caselle postali" />
+						</span>
+						<a href="https://outlook.office365.com/studio.unibo.it" target="_blank">
+							<h2 class="title">Mail</h2>
+							<div class="content">
+								<p>Mail istituzionale</p>
+							</div>
+						</a>
+					</article>
+				</section>
+			</div>
+		</div>
+
+		<footer id="footer">
+            <div class="copyright">
+                    &copy; Copyright 2016 - ALMA MATER STUDIORUM - Università di Bologna - Via Zamboni, 33 - 40126 Bologna - Partita IVA: 01131710376
+            </div>
+        </footer>
+
+	</div>
+
+</body>
+</html>

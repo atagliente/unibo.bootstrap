@@ -4,7 +4,7 @@ $(function () {
 
     var myFunction = function() {
 
-        $.ajax({ url: '../assets/php/eventGenerator.php',
+        $.ajax({ url: '../nostro_assets/php/eventGenerator.php',
             data: {'messageType': "examPrenotation"},
             type: 'post',
             success: function(output) {

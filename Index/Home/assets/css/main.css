@@ -16,7 +16,7 @@
 		margin: 0;
 		padding: 0;
 		border: 0;
-		font-size: auto;
+		/*font-size: auto;             php storm lo segnala errato*/
 		font: inherit;
 		vertical-align: baseline;
 	}

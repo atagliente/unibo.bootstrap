@@ -1,0 +1,202 @@
+<!DOCTYPE HTML>
+<html lang=it>
+
+<head>
+    <title>Tasse - UniBo</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <link rel="stylesheet" href="../Home/assets/css/main.css" />
+    <!-- <link rel="stylesheet" href="../Home/nostro_assets/css/magic.css" /> -->
+    <link rel="stylesheet" href="tasse.css" />
+
+    <!-- Scripts -->
+    <script src="../Home/assets/js/jquery.min.js"></script>
+    <script src="../Home/assets/js/skel.min.js"></script>
+    <script src="../Home/assets/js/util.js"></script>
+    <script src="../Home/assets/js/main.js"></script>
+    <!-- <script src="../Home/nostro_assets/js/pageGenerator.js"></script> -->
+    <!-- <script src="../Home/nostro_assets/js/checklogin.js"></script> -->
+    <script src="../nostro_assets/js/logoSwap.js"></script>
+</head>
+
+<body>
+
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <header id="header">
+            <a href="../Home/home.html">
+                <picture>
+                    <img id="logoUnibo" class="logoOnNavBar" src="../Images/logoBig.png" alt="logo" style="width:auto">
+                </picture>
+            </a>
+            <div class="inner">
+                <nav>
+                    <ul>
+                        <li><a href="#menu">Menu</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <nav id="menu">
+            <h2>Menu</h2>
+            <ul>
+                <li><a href="../Home/home.html">Home</a></li>
+                <li><a href="../Esami/esami.html">Esami</a></li>
+                <li><a href="../Insegnamenti/insegnamenti.html">Insegnamenti</a></li>
+                <li><a href="../Tasse/tasse.html">Tasse</a></li>
+                <li><a href="../Mensa/mensa.html">Mensa</a></li>
+                <li><a href="../Login/login.html">Bike Sharing</a></li>
+                <li><a href="https://outlook.office365.com/studio.unibo.it" target="_blank">Mail</a></li>
+                <li><a href="../Login/login.html">Logout</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main -->
+        <div id="main">
+            <div id="inner" class="inner">
+                <h1>Tasse</h1>
+
+                <!-- inizio collapse panel -->
+                <div class="container">
+                    <ul class="nav nav-pills red">
+                        <li class="active"><a data-toggle="pill" href="#tasserestanti">Restanti</a></li>
+                        <li><a data-toggle="pill" href="#tassepagate">Pagate</a></li>
+                    </ul>
+
+                    <div class="tab-content">
+
+                        <!-- Primo tab -->
+                        <div id="tasserestanti" class="tab-pane fade in active">
+                            <div id="containerRestanti" class="container">
+
+                                <!-- inizio collapse panel -->
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h2 class="panel-title">
+                                            <a data-toggle="collapse" href="#tasserimanenti">Da Pagare</a>
+                                        </h2>
+                                    </div>
+                                    <div id="tasserimanenti" class="panel-collapse collapse in">
+                                        <div class="panel-body">
+                                            <p>Prima rata: <br/>importo: 600€ <br/> Scandenza 10/09/2016 </p>
+                                            <button type="button" class="button hidden-xs">Paga</button>
+                                            <button type="button" class="button fit hidden-sm hidden-md hidden-lg">Paga</button><br/>
+
+                                            <p>Seconda rata:<br/>importo: 250€ <br/> Scandenza 30/12/2016 </p>
+                                            <button type="button" class="button disabled hidden-xs">Paga</button>
+                                            <button type="button" class="button fit hidden-sm disabled hidden-md hidden-lg">Paga</button> <br/>
+
+                                            <p>Terza rata: <br/>importo: 250€ <br/> Scandenza 15/05/2016</p>
+                                            <button type="button" class="button disabled hidden-xs">Paga</button>
+                                            <button type="button" class="button fit hidden-sm disabled hidden-md hidden-lg">Paga</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- fine collapse panel -->
+
+<!-- Altro modo per organizzare il contenuto dei collapse panel utilizzando i div e i float (ps: il pulsante così è di lato ma non è centrato con la relativa scritta) -->
+
+                        <!-- <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h2 class="panel-title">
+                                    <a data-toggle="collapse" href="#Urca">Urca</a>
+                                </h2>
+                            </div>
+                            <div id="Urca" class="panel-collapse collapse in">
+                                <div class="panel-body">
+                                    <div class="appello row">
+                                        <div class="info" style="float:left;">
+                                            <p>Prima prova scritta: <br/>giorno: 12/11/2020 <br/> ore: 18:34 aula A</p>
+                                        </div>
+                                        <div class="pulsanti" style="float:right;">
+                                            <button type="button" class="button hidden-xs">Prenota</button>
+                                            <button type="button" class="button fit hidden-sm hidden-md hidden-lg">Prenota</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+
+<!-- fine -->
+
+                        <div id="tassepagate" class="tab-pane fade">
+
+                            <!-- <h3>Pagate terzo Anno</h3> -->
+                            <div id="containerPagateTerzoAnno" class="container">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h2 class="panel-title">
+                                            <a data-toggle="collapse" href="#tasseannipassatitre">Terzo anno</a>
+                                        </h2>
+                                    </div>
+                                    <div id="tasseannipassatitre" class="panel-collapse collapse ">
+                                        <div class="panel-body">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- <h3>Pagate Secondo Anno</h3> -->
+                            <div id="containerPagateSecondoAnno" class="container">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h2 class="panel-title">
+                                            <a data-toggle="collapse" href="#tasseannipassatidue">Secondo anno</a>
+                                        </h2>
+                                    </div>
+                                    <div id="tasseannipassatidue" class="panel-collapse collapse ">
+                                        <div class="panel-body">
+                                            <p>Prima rata: <br/>importo: 600€ <br/> Scandenza 10/09/2016 </p>
+                                            <p>Seconda rata:<br/>importo: 250€ <br/> Scandenza 30/12/2016 </p>
+                                            <p>Terza rata: <br/>importo: 250€ <br/> Scandenza 15/05/2016 </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- <h3>Pagate Primo Anno</h3> -->
+                            <div id="containerPagatePrimoAnno" class="container">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h2 class="panel-title">
+                                            <a data-toggle="collapse" href="#tasseannipassati">Primo anno</a>
+                                        </h2>
+                                    </div>
+                                    <div id="tasseannipassati" class="panel-collapse collapse ">
+                                        <div class="panel-body">
+                                            <p>Prima rata: <br/>importo: 600€ <br/> Scandenza 10/09/2016 </p>
+                                            <p>Seconda rata:<br/>importo: 250€ <br/> Scandenza 30/12/2016 </p>
+                                            <p>Terza rata: <br/>importo: 250€ <br/> Scandenza 15/05/2016 </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- <h3>Chiudo il resto</h3> -->
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <footer id="footer">
+            <div class="copyright">
+                    &copy; Copyright 2016 - ALMA MATER STUDIORUM - Università di Bologna - Via Zamboni, 33 - 40126 Bologna - Partita IVA: 01131710376
+            </div>
+        </footer>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,187 @@
+body {
+    min-width:100px; /* suppose you want minimun width of 1000px */
+    width: auto !important;  /* Firefox will set width as auto */
+    width:100px;             /* As IE ignores !important it will set width as 1000px; */
+}
+
+.container {
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+}
+
+.red {  /* Restanti - Prenotati - Verbalizzati */
+    background-color: white !important;
+    color: black !important;
+    margin-bottom: 5%;
+    font-weight: bold;
+}
+
+.red .active a, .red .active a:hover {
+    background-color: #6b0808 !important;
+    color: white !important;
+}
+
+a:link {
+    color: #6b0808;
+}
+
+a:link, a:visited, a:active {
+    border: 0;                              /*  toglie la sottolineatura puntinata */
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: none !important;       /* toglie la sottolineatura */
+}
+
+.button {       /*phantom button*/
+    float: right;
+    color: #333 !important;
+}
+
+.docente, .cfu {
+    text-align: center;
+}
+
+.docente {
+    float: left;
+}
+
+.cfu {
+    float: right;
+}
+
+.materiale {
+    border-top: 1px solid lightgrey;
+    padding-top: 3%;
+}
+
+h1 { /* insegnamenti */
+    font-size: 2.5em;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    color: #6b0808;     /* #bb2e29 è il rosso chiaro, #6b0808 è quello scuro per gli hover ecc, #1d6684 è il blu */
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.panel-title { /* h2 - programazione/basi di dati/embedded */
+    padding: 2%;
+}
+
+h3 { /* docente/cfu/materiale*/
+    font-size: 17px;
+    margin-top: 1%;
+    margin-bottom: 4%;
+    color: #777;
+}
+
+h3, h4 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+h4 { /* teoria/laboratorio */
+    color: #999;
+    font-size: 14px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    color: #333;
+    font-size: 16px;
+}
+
+.my_li {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.panel-heading {
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    background-color: #f6f6f6 !important;
+}
+
+.panel-body {
+    margin-left: 9%;
+    margin-right: 9%;
+}
+
+#main {
+    margin-left: 7%;
+    margin-right: 7%;
+}
+
+button {
+    width: 100px !important;
+    height: 25px !important;
+    line-height: 0px !important;
+    color: #333 !important;
+    margin: 0px !important;
+    padding: 0px !important;
+}
+
+.link_materiale {
+    font-size: 16px;
+}
+
+.logoOnNavBar {
+    position: absolute;
+    height: 10%;
+    top: 10px;
+    margin-left: 10px;
+}
+
+#header {
+    padding: 3%;
+    background-color: #f6f6f6;
+    height: 120px;
+}
+
+#footer {
+	padding: 1em !important;
+}
+
+.copyright {
+    text-align: center;
+    margin: 5% !important;
+    font-size: 12px;
+}
+
+@media screen and (max-width: 775px) {
+    .link_materiale { font-size: 10px; }
+    button {
+        width: 75px !important;
+        height: 18px !important;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    a:link {
+        font-size: 14px;
+        letter-spacing: 3px;
+    }
+    body { margin: 0px; }
+    h1 {
+        margin-top: 20px !important;
+        margin-bottom: 20px !important;
+        font-size: 1.8em;
+    }
+    h2 { font-size: 16px; } /* "menu" */
+    h3 { font-size: 15px; }
+    .my_li { font-size: 14px; }
+    p { font-size: 13px; }
+    #main {
+        margin: 0px;
+        padding: 0px;
+    }
+    #inner { padding: 0px !important; }
+    #header { height: 90px; }
+    .copyright { font-size: 9px !important;}
+}
