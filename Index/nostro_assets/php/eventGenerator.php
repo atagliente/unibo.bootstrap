@@ -3,11 +3,10 @@
 require ('DBConnection.php');
 
 if(isset($_POST['messageType']) && !empty($_POST['messageType'])) {
-
     switch ($_POST['messageType']) {
         case "examPrenotation":
             echo "Esame prenotato con scuccesso.";
-            putPrenotationEvent(TRUE, 0, $_POST['value']);
+                putPrenotationEvent(TRUE, 0, $_POST['value']);
             break;
     }
 }

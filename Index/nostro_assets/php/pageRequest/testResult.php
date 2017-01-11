@@ -4,7 +4,7 @@ require('../MakeOperationsOnDB.php');
 
 $var = new MakeOperationsOnDB();
 
-$sql = "SELECT test.*, teacher.firstName, teacher.lastName FROM `test` JOIN `storyboard` ON storyBoard.test___fk != test.numberID JOIN `teacher` ON test.numberID ==  JOIN `exam`  AND teacher.numberID = test.teacher___fk AND exam.numberID = exam___fk";
+$sql = "SELECT test.*, teacher.firstName, teacher.lastName, storyBoard.vote, storyBoard.prenotation FROM `storyBoard` JOIN `test` ON storyBoard.test___fk = test.numberID JOIN `exam` ON test.exam___fk = exam.numberID JOIN `teacher` ON exam.teacher___fk = teacher.numberID";
 
 echo $var->getJSONFromQuery("test", $sql);
 
