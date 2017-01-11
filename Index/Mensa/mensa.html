@@ -5,20 +5,9 @@
 
 <head>
 
-
-<style>
-		/*
-
-		@media screen and (min-width: 480px) {
-			body {
-					background-color: lightgreen;
-			}
-		}*/
-</style>
-
-
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script type="text/javascript" src="mensa.js"></script>
+	<link href="mensa.css" rel="stylesheet" type="text/css">
 
 	<title>Mensa - UniBo</title>
 	<meta charset="utf-8" />
@@ -28,17 +17,15 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 	<link rel="stylesheet" href="../Home/assets/css/main.css" />
 	<link rel="stylesheet" href="../nostro_assets/magic.css" />
-	<link href="mensa.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="esami.css" />
 
 	<!--[if lte IE 9]>
     <link rel="stylesheet" href="../Home/nostro_assets/css/ie9.css"/><![endif]-->
 	<!--[if lte IE 8]>
     <link rel="stylesheet" href="../Home/nostro_assets/css/ie8.css"/><![endif]-->
-
 
 	<!-- Scripts -->
 	<script src="../Home/assets/js/jquery.min.js"></script>
@@ -47,24 +34,11 @@
 	<!--[if lte IE 8]>
     <script src="../Home/nostro_assets/js/ie/respond.min.js"></script><![endif]-->
 	<script src="../Home/assets/js/main.js"></script>
+	<script src="../nostro_assets/js/pageGenerator.js"></script>
 
-
-	<!--[if lte IE 9]>
-    <link rel="stylesheet" href="../Home/nostro_assets/css/ie9.css"/><![endif]-->
-	<!--[if lte IE 8]>
-    <link rel="stylesheet" href="../Home/nostro_assets/css/ie8.css"/><![endif]-->
-
-
-	<!-- Scripts -->
-	<script src="../Home/assets/js/jquery.min.js"></script>
-	<script src="../Home/assets/js/skel.min.js"></script>
-	<script src="../Home/assets/js/util.js"></script>
-	<!--[if lte IE 8]>
-    <script src="../Home/nostro_assets/js/ie/respond.min.js"></script><![endif]-->
-	<script src="../Home/assets/js/main.js"></script>
-
-
-
+	<script src="../Home/assets/js/loadCareer.js"></script>
+	<script src="../nostro_assets/js/checklogin.js"></script>
+	<script src="../nostro_assets/js/logoSwap.js"></script>
 
 </head>
 
@@ -77,18 +51,12 @@
 	<!-- Wrapper -->
 	<div id="wrapper">
 
-		<!-- Header -->
 		<header id="header">
-
-			<!-- Logo -->
-			<a href="home.html">
-					<picture>
-						<img id="logoUnibo" class="logoOnNavBar" src="../Images/logoBig.png" alt="logo" style="width:auto">
-					</picture>
+			<a href="../Home/home.html">
+				<picture>
+					<img id="logoUnibo" class="logoOnNavBar" src="../images/logoBig.png" alt="" longdesc="logo" style="width:auto">
+				</picture>
 			</a>
-
-
-
 			<div class="inner">
 				<nav>
 					<ul>
@@ -96,10 +64,23 @@
 					</ul>
 				</nav>
 			</div>
-
 		</header>
 
-		<!-- Menu -->
+		<nav id="menu">
+			<h2>Menu</h2>
+			<ul>
+				<li><a href="../Home/home.html">Home</a></li>		<!--../Home/home.html-->
+				<li><a href="../Notifiche/notifiche.html">Notifiche</a></li>
+				<li><a href="../Esami/esami.html">Esami</a></li>
+				<li><a href="../Insegnamenti/insegnamenti.html">Insegnamenti</a></li>
+				<li><a href="../Tasse/tasse.html">Tasse</a></li>
+				<li><a href="../Mensa/mensa.html">Mensa</a></li>	<!--Mensa/mensa.html-->
+				<li><a href="../Login/login.html">Bike Sharing</a></li>
+				<li><a href="../Login/login.html">Mail</a></li>
+				<li><a href="../Login/login.html">About us</a></li>
+				<li><a href="../Login/login.html">Logout</a></li>
+			</ul>
+		</nav>
 
 
 		<!-- Main -->
@@ -115,6 +96,30 @@
 						<div id="restanti" class="tab-pane fade in active">
 							<!--inizio-->
 							<div class="container">
+
+
+								<!--filtro-->
+								<div class="filtro">
+
+									<form action="demo_form.asp">
+										CELIACO:<br>
+										<input type="radio" name="gender" value="male"> SI<br>
+										<input type="radio" name="gender" value="female"> NO<br>
+									</form>
+
+									Citta:<br>
+									<select>
+										<option value="volvo">Cesena</option>
+										<option value="saab">Ravenna</option>
+										<option value="opel">Rimini</option>
+										<option value="audi">Forli</option>
+									</select>
+
+								</div>
+
+								<!--filtro-->
+
+
 
 
 
