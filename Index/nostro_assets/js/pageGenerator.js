@@ -38,7 +38,8 @@ $(function () {
     $.get("../nostro_assets/php/pageRequest/testResult.php", function(data) {
         var obj = JSON.parse(data);
         for(var i = 0; i < obj.test.length; i++){
-            numberID = obj.test[i].numberID;
+            numberID = obj.test[i].testID;
+            testID = obj.test[i].testID;
             dateStart = obj.test[i].dateStart;
             dateClose = obj.test[i].dateFinish;
             classroom = obj.test[i].classroom;
@@ -51,8 +52,8 @@ $(function () {
             if(vote > 0) {
                 var test = "<p style='float: left'>" + teacherFirstName + " " + teacherLastName + "</p><p style='float: right; font-size: 23px'>" + vote + "</p>";
             } else if (prenotation == 0) {
-                var test = "<button type=\"button\" class=\"button hidden-xs ritira\" id='" + numberID + "'>Prenota</button> <p style='text-align: left;'>" + teacherFirstName + " " + teacherLastName + "       " + classroom + "<br/>" + dateStart + "             " + time + "</p> <button type=\"button\" class=\"button fit hidden-sm hidden-md hidden-lg prenota\" id='" + numberID + "'>Prenota</button>";
-            } else var test = "<button type=\"button\" class=\"button hidden-xs ritira\" id='" + numberID + "'>Ritira</button> <p style='text-align: left;'>" + teacherFirstName + " " + teacherLastName + "       " + classroom + "<br/>" + dateStart + "             " + time + "</p> <button type=\"button\" class=\"button fit hidden-sm hidden-md hidden-lg prenota\" id='" + numberID + "'>Ritira</button>";
+                var test = "<button type=\"button\" class=\"button hidden-xs prenota\" id='" + numberID + "'>Prenota</button> <p style='text-align: left;'>" + teacherFirstName + " " + teacherLastName + "       " + classroom + "<br/>" + dateStart + "             " + time + "</p> <button type=\"button\" class=\"button fit hidden-sm hidden-md hidden-lg prenota\" id='" + numberID + "'>Prenota</button>";
+            } else var test = "<button type=\"button\" class=\"button hidden-xs ritira\" id='" + testID + "'>Ritira</button> <p style='text-align: left;'>" + teacherFirstName + " " + teacherLastName + "       " + classroom + "<br/>" + dateStart + "             " + time + "</p> <button type=\"button\" class=\"button fit hidden-sm hidden-md hidden-lg ritira\" id='" + testID + "'>Ritira</button>";
             var div = document.getElementById(examID);
             div.insertAdjacentHTML('afterbegin', test);
 
@@ -60,18 +61,51 @@ $(function () {
 
         var classname = document.getElementsByClassName("prenota");
 
-        var action = function() {
-            $.ajax({ url: '../nostro_assets/php/eventGenerator.php',
-                data: {'messageType':'examPrenotation' , 'value':$(this).attr('id')},
+        var actionADD = function() {
+            var test___ID = $(this).attr('id');
+            $.ajax({ url: '../nostro_assets/php/examPrenotation.php',
+                data: {'numberID': test___ID},
                 type: 'post',
                 success: function(output) {
                     alert(output);
                 }
             });
+            $.ajax({ url: '../nostro_assets/php/eventGenerator.php',
+                data: {'numberID': test___ID , 'messageType': "examPrenotation"},
+                type: 'post',
+                success: function(output) {
+                    alert(output);
+                    location.reload();
+                }
+            });
+        };
+
+        var actionRET = function() {
+            var test___ID = $(this).attr('id');
+            $.ajax({ url: '../nostro_assets/php/examRet.php',
+                data: {'numberID': test___ID},
+                type: 'post',
+                success: function(output) {
+                }
+            });
+            $.ajax({ url: '../nostro_assets/php/eventGenerator.php',
+                data: {'test___ID': test___ID , 'messageType': 'examRet'},
+                type: 'post',
+                success: function(out) {
+                    alert(out);
+                    location.reload();
+                }
+            });
         };
 
         for (var i = 0; i < classname.length; i++) {
-            classname[i].addEventListener('click', action, false);
+            classname[i].addEventListener('click', actionADD, false);
+        }
+
+        var classname = document.getElementsByClassName("ritira");
+
+        for (var i = 0; i < classname.length; i++) {
+            classname[i].addEventListener('click', actionRET, false);
         }
     });
 
