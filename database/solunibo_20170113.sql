@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Creato il: Gen 13, 2017 alle 17:32
+-- Creato il: Gen 13, 2017 alle 21:01
 -- Versione del server: 5.7.14
 -- Versione PHP: 5.6.25
 
@@ -150,10 +150,10 @@ INSERT INTO `login` (`username`, `password`) VALUES
 CREATE TABLE `menu` (
   `id_menu` int(11) NOT NULL,
   `ristorante___fk` int(11) NOT NULL,
-  `primo` text NOT NULL,
-  `secondo` text NOT NULL,
-  `dolce` text NOT NULL,
-  `bibita` text NOT NULL
+  `primo` text CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
+  `secondo` text CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
+  `dolce` text CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
+  `bibita` text CHARACTER SET utf8 COLLATE utf8_bin NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -189,8 +189,8 @@ INSERT INTO `payment` (`numberID`, `payDay`, `tax___fk`, `student___fk`) VALUES
 
 CREATE TABLE `ristorante` (
   `id_ristorante` int(11) NOT NULL,
-  `nome` text NOT NULL,
-  `indirizzo` text NOT NULL
+  `nome` text CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
+  `indirizzo` text CHARACTER SET utf8 COLLATE utf8_bin NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -329,8 +329,8 @@ CREATE TABLE `teachingdoc` (
 INSERT INTO `teachingdoc` (`teachingID`, `teachingTitle`, `typology`, `url`, `teacher___fk`) VALUES
 (1, 'Slide HTML 1', 'Teoria', 'https://elearning-cds.unibo.it/pluginfile.php/101054/mod_resource/content/1/5_html1.pdf', 4),
 (2, 'Slide HTML 2', 'Teoria', 'https://elearning-cds.unibo.it/pluginfile.php/103938/mod_resource/content/2/7_html2.pdf', 4),
-(3, 'Slide Seminario Bootstrap', 'Seminari', 'https://elearning-cds.unibo.it/pluginfile.php/105347/mod_resource/content/1/bootstrap.pdf', 4),
-(4, 'Slide Seminario Mobilita', 'Seminari', 'https://elearning-cds.unibo.it/pluginfile.php/99844/mod_resource/content/3/In%20movimento.pdf', 4),
+(3, 'Slide Bootstrap', 'Seminari', 'https://elearning-cds.unibo.it/pluginfile.php/105347/mod_resource/content/1/bootstrap.pdf', 4),
+(4, 'Slide Mobilita\'', 'Seminari', 'https://elearning-cds.unibo.it/pluginfile.php/99844/mod_resource/content/3/In%20movimento.pdf', 4),
 (5, 'Settimana 1', '', 'http://campus.unibo.it/240126/3/week01.zip', 2),
 (6, 'Settimana 2', '', 'http://campus.unibo.it/245677/1/week04.zip', 2),
 (7, 'Settimana 3', '', 'http://campus.unibo.it/247502/', 2),
