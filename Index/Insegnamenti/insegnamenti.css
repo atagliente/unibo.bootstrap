@@ -119,7 +119,7 @@ p {
 }
 
 button {
-    width: 100px !important;
+    width: 150px !important;
     height: 25px !important;
     line-height: 0px !important;
     color: #333 !important;
@@ -157,9 +157,10 @@ button {
 @media screen and (max-width: 775px) {
     .link_materiale { font-size: 10px; }
     button {
-        width: 75px !important;
+        width: 110px !important;
         height: 18px !important;
     }
+    .button { font-size: 10px; }
 }
 
 @media screen and (max-width: 480px) {
