@@ -1,3 +1,7 @@
+var daPagare = "";
+var idCounter = 0;
+var dascrizione = "";
+var id;
 $(function() {
     var title;
     var dateOpen;
@@ -57,7 +61,7 @@ $(function() {
 
         var obj = JSON.parse(data);
 
-        var daPagare = "";
+
         daPagare += '<div class="panel panel-default">';
         daPagare += '<div class="panel-heading">';
         daPagare += '<h2 class="panel-title">';
@@ -85,6 +89,7 @@ $(function() {
                 }
             }
             for (var i = 0; i < obj.notPaidTax.length; i++) {
+                id = obj.notPaidTax[i].numberID;
                 descrizione = obj.notPaidTax[i].descrizione;
                 dateStart = obj.notPaidTax[i].dateOpen;
                 dateClose = obj.notPaidTax[i].dateClose;
@@ -92,43 +97,37 @@ $(function() {
                 dalayFee = obj.notPaidTax[i].delayFee;
 
                 if (y == obj.notPaidTax[i].year) {
+
                     if (!monorata && numRate == 3) {
                         //è stata pagata la monorata
+                        idCounter += 4;
                     } else if (monorata && numRate == 0) {
                         //sono state pagate le tre rate
+                        idCounter += 4;
                     } else if (monorata && numRate == 3) {
                         //non è stato ancora pagato nulla
-                        if (descrizione == "Rata 1" || descrizione == "Monorata") {
+                        if ((descrizione == "Rata 1" || descrizione == "Monorata") && checkIfPaymentCanBeDone(dateStart)) {
                             disabled = "";
                         } else {
-                            disabled = "disabled";
+                            disabled = " disabled";
                         }
-                        daPagare += '<p>' + descrizione + ': <br/>importo: ' + amount;
-                        if (checkIfFeeShouldBeApplied(dateClose)) {
-                            daPagare += ' + ' + delayFee;
-                        }
-                        daPagare += ' € <button type="button" class="button ' + disabled + ' hidden-xs">Paga</button><br/> Pagamenti aperti da: ' + dateStart + ' Scandenza: ' + dateClose + ' </p>';
-                        daPagare += '<button type="button" class="button ' + disabled + ' fit hidden-sm hidden-md hidden-lg">Paga</button><br/>';
+                        addTaxDatas(y, amount, delayFee, dateStart, dateClose, disabled);
                     } else if (numRate < 3) {
-                        //ci sono tasse in sospeso disattivare pagamento 3 rata
-                        if (tasseArretrate) {
-                            disabled = "disabled";
+                        //ci sono tasse in sospeso disattivare pagamento rate succcessive
+                        if (tasseArretrate || !checkIfPaymentCanBeDone(dateStart)) {
+                            disabled = " disabled";
                         } else {
                             disabled = "";
                             tasseArretrate = true;
                         }
                         if (descrizione != "Monorata") {
-                            daPagare += '<p>' + descrizione + ': <br/>importo: ' + amount;
-                            if (checkIfFeeShouldBeApplied(dateClose)) {
-                                daPagare += ' + ' + delayFee;
-                            }
-                            daPagare += ' € <button type="button" class="button ' + disabled + ' hidden-xs">Paga</button><br/> Pagamenti aperti da: ' + dateStart + ' Scandenza: ' + dateClose + ' </p>';
-                            daPagare += '<button type="button" class="button ' + disabled + ' fit hidden-sm hidden-md hidden-lg">Paga</button><br/>';
+                            addTaxDatas(y, amount, delayFee, dateStart, dateClose, disabled);
+                        } else {
+                            idCounter++;
                         }
                     }
                 }
             }
-
 
             numRate = 0;
             monorata = false;
@@ -140,13 +139,27 @@ $(function() {
         daPagare += '</div>';
 
         $("#containerRestanti").append(daPagare);
+
+
+        for (var i = 0; i <= idCounter; i++) {
+            addEventListenerToButton("btnDesktop" + i);
+            addEventListenerToButton("btnMobile" + i);
+        }
     });
 });
 
+function checkIfPaymentCanBeDone(dateStart) {
+    var today = new Date();
+    if (today < convertToJavascriptDate(dateStart)) {
+        return false;
+    } else {
+        return true;
+    }
+}
 
 function checkIfFeeShouldBeApplied(dateClose) {
     var today = new Date();
-    if (today < convertToJavascriptDate(dateClose)) {
+    if (today <= convertToJavascriptDate(dateClose)) {
         return false;
     } else {
         return true;
@@ -161,3 +174,41 @@ function convertToJavascriptDate(dateToConvert) {
     var jsDate = new Date;
     return jsDate.setFullYear(yyyy, mm, dd);
 }
+
+function addTaxDatas(year, amount, delayFee, dateStart, dateClose, disabled) {
+    var btnDesktopID = "btnDesktop" + id;
+    var btnMobileID = "btnMobile" + id;
+    idCounter++;
+    daPagare += '<p> Anno ' + year + ' ' + descrizione + ': <br/>importo: ' + amount;
+
+    if (checkIfFeeShouldBeApplied(dateClose)) {
+        daPagare += ' + ' + delayFee;
+    }
+
+    daPagare += ' € Pagamenti aperti da: ' + dateStart + ' Scandenza: ' + dateClose + ' </p>';
+    daPagare += '<button type="button" id="' + btnDesktopID + '" class="button' + disabled + ' hidden-xs">Paga</button><br/>';
+    daPagare += '<button type="button" id="' + btnMobileID + '" class="button' + disabled + ' fit hidden-sm hidden-md hidden-lg">Paga</button><br/>';
+    daPagare += '<br/>'; //effetti ottenuti coi br da eliminare
+    daPagare += '<br/>';
+}
+
+function addEventListenerToButton(buttonID) {
+    var button = document.getElementById(buttonID);
+    if (button != null) {
+        button.addEventListener("click", function() {
+            var id = $(this).attr('id');
+            var idLength = id.length;
+            var rata_ID = id.charAt(idLength - 1);
+            $.ajax({
+                url: '../nostro_assets/php/updatePayment.php',
+                data: {
+                    'rata_ID': rata_ID
+                },
+                type: 'post',
+                success: function(output) {
+                    alert(output);
+                }
+            });
+        });
+    }
+};
