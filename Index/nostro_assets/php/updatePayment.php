@@ -30,7 +30,7 @@ if(isset($_POST['rata_ID'])) {
     $query = "INSERT INTO `payment` (`numberID`, `payDay`, `tax___fk`, `student___fk`) VALUES ('" . $nextID . "', '" . $paymentDate . "', '" . $rata_ID . "', '" . $matricola . "')";
     $DBconn->query($query);
 
-    //shows an "operation completed successfully" message 
+    //shows an "operation completed successfully" message
     $query = "SELECT descrizione FROM tax WHERE numberID = $rata_ID";
     $result = $var->getJSONFromQuery("max", $query);
     $result = substr($result, 8);
