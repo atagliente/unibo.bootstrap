@@ -62,7 +62,7 @@ class MakeOperationsOnDB{
       sql: query sql
       return the query result converted to JSON '[{"attribute1": "value1","attribute2": "value2", "attributeN":"valueN"}]'
     */
-    public function getQuery($sql){
+    public function convertQueryToCalendarFormat($sql){
 
       $result = $this->conn->query($sql);
 

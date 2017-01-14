@@ -42,7 +42,7 @@ $sql = "SELECT title, DataInizio AS start, DataFine AS stop FROM events WHERE st
 // Read and parse our events JSON file into an array of event data arrays.
 //$json = file_get_contents(dirname(__FILE__) . '/../json/events.json');
 //$json = '[{"title": "Click for Google","url": "http://google.com/", "start":"2016-12-28"}]';
-$json = $var->getQuery($sql);
+$json = $var->convertQueryToCalendarFormat($sql);
 
 $input_arrays = json_decode($json, true);
 
