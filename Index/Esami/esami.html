@@ -13,7 +13,7 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 	<link rel="stylesheet" href="../Home/assets/css/main.css" />
-	<link rel="stylesheet" href="../nostro_assets/magic.css" />
+	<!-- <link rel="stylesheet" href="../nostro_assets/magic.css" /> -->
 	<link rel="stylesheet" href="esami.css" />
 	<script src="circularGraph/js/jquery.circlechart.js"></script>
 	<!--[if lte IE 9]>
@@ -42,7 +42,7 @@
 		<header id="header">
 			<a href="../Home/home.html">
 				<picture>
-					<img id="logoUnibo" class="logoOnNavBar" src="../Images/logoBig.png" alt="" longdesc="logo" style="width:auto">
+					<img id="logoUnibo" class="logoOnNavBar" src="../Images/logoBig.png" alt="logo" style="width:auto">
 				</picture>
 			</a>
 			<div class="inner">
@@ -58,21 +58,19 @@
 			<h2>Menu</h2>
 			<ul>
 				<li><a href="../Home/home.html">Home</a></li>
-				<li><a href="../Notifiche/notifiche.html">Notifiche</a></li>
 				<li><a href="../Esami/esami.html">Esami</a></li>
 				<li><a href="../Insegnamenti/insegnamenti.html">Insegnamenti</a></li>
 				<li><a href="../Tasse/tasse.html">Tasse</a></li>
 				<li><a href="../Mensa/mensa.html">Mensa</a></li>
-				<li><a href="../Login/login.html">Bike Sharing</a></li>
-				<li><a href="../Login/login.html">Mail</a></li>
-				<li><a href="../Login/login.html">About us</a></li>
+				<li><a href="../bike.html">Bike Sharing</a></li>
+				<li><a href="https://outlook.office365.com/studio.unibo.it" target="_blank">Mail</a></li>
 				<li><a href="../Login/login.html">Logout</a></li>
 			</ul>
 		</nav>
 
 		<!-- Main -->
 		<div id="main">
-			<div class="inner">
+			<div id="inner" class="inner">
 				<h1>Esami</h1>
 
 				<!-- Section Tab -->
@@ -80,7 +78,7 @@
 					<ul class="nav nav-pills red">
 						<li class="active"><a data-toggle="pill" href="#restanti">Restanti</a></li>
 						<li><a data-toggle="pill" href="#prenotati">Prenotati</a></li>
-						<li><a data-toggle="pill" href="#verbalizzati">Verbalizzati</a></li>
+						<li><a data-toggle="pill" id="refreshGraph" href="#verbalizzati">Verbalizzati</a></li>
 					</ul>
 
 					<div class="tab-content">
@@ -125,21 +123,9 @@
 										<div id="avg">
 											<label style="font-size: 27px">Statistiche</label>
 										</div>
-										<script src="circularGraph/js/jquery.circlechart.js"></script>
-										<div id="graduated" data-percent="75"></div>
-									<script>
-                                        $('#graduated').percentcircle({
-                                            animate : true,
-                                            diameter :$('#graduated').height(),
-                                            guage: 3,
-                                            coverBg: '#fff',
-                                            bgColor: '#efefef',
-                                            fillColor: '#990004',
-                                            percentSize: '18px',
-                                            percentWeight: 'normal'
-                                        });
-									</script>
 
+									<script src="circularGraph/js/jquery.circlechart.js"></script>
+									<div id="graduated"></div>
 								</div>
 
 							</div>
@@ -151,7 +137,6 @@
 					</div>
 				</div>
 				<!-- End of Section Tab -->
-
 			</div>
 		</div>
 

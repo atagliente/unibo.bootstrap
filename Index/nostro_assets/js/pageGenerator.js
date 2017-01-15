@@ -1,18 +1,18 @@
 
 $(function () {
-    var title;
-    var numberID;
-    var cfu;
+    var title = "";
+    var numberID = 0;
+    var cfu = 0;
     var dateStart;
     var examUrl;
-    var testID;
+    var testID = 0;
     var dateClose;
     var classroom;
-    var examID;
+    var examID = 0;
     var time;
     var teacherFirstName;
     var teacherLastName;
-    var prenotation;
+    var prenotation = 0;
     var vote = 0;
     var average = 0;
     var graduateVote = 0;
@@ -31,14 +31,13 @@ $(function () {
             var exam = "<div class=\"panel panel-default\"> " +
                 "           <div class=\"panel-heading\"> " +
                 "               <h4 class=\"panel-title\"> " +
-                "                   <a data-toggle=\"collapse\" " + "    href=#" + numberID + ">" + title + "" +
+                "                   <a data-toggle=\"collapse\" " + "    href=#collapse" + numberID + ">" + title + "" +
                 "                   </a> " +
                 "               </h4> " +
-                "               <div class= \" panel-collapse collapse in\"> " +
-                "               <div id=\"" + numberID + "\" class=\"panel-body\">" +
+                "               <div id=\"collapse" + numberID + "\" class= \"panel-collapse collapse\"> " +
+                "                   <div id=\"panel" + numberID + "\" class=\" panel-body\">" +
                 "               </div>" +
                 "               </div>" +
-                "           " +
                 "       </div>";
             if(vote > 0) {
                 div = document.getElementById('verbalized');
@@ -57,79 +56,99 @@ $(function () {
             dateStart = obj.test[i].dateStart;
             dateClose = obj.test[i].dateFinish;
             classroom = obj.test[i].classroom;
-            cfu = obj.test[i].cfu;
+            cfu = parseInt(obj.test[i].cfu);
             examID = obj.test[i].exam___fk;
             time = obj.test[i].time;
-            vote = obj.test[i].vote;
+            vote = parseInt(obj.test[i].vote);
             prenotation = obj.test[i].prenotation;
             teacherFirstName = obj.test[i].firstName;
             teacherLastName = obj.test[i].lastName;
             if(vote > 0) {
                 var test = "<p style='float: left'>" + teacherFirstName + " " + teacherLastName + "</p><p style='float: right; font-size: 23px'>" + vote + "</p>";
-                personalCfu += cfu;
+                personalCfu = personalCfu + cfu;
                 average += vote*cfu;
-                average /= personalCfu;
-                graduateVote = average * 110 / 30;
-                graduateVote = graduateVote.toFixed(2);
             } else if (prenotation == 0) {
-                var test = "<button type=\"button\" class=\"button hidden-xs prenota\" id='" + numberID + "'>Prenota</button> <p style='text-align: left;'>" + teacherFirstName + " " + teacherLastName + "       " + classroom + "<br/>" + dateStart + "             " + time + "</p> <button type=\"button\" class=\"button fit hidden-sm hidden-md hidden-lg prenota\" id='" + numberID + "'>Prenota</button>";
-            } else var test = "<button type=\"button\" class=\"button hidden-xs ritira\" id='" + testID + "'>Ritira</button> <p style='text-align: left;'>" + teacherFirstName + " " + teacherLastName + "       " + classroom + "<br/>" + dateStart + "             " + time + "</p> <button type=\"button\" class=\"button fit hidden-sm hidden-md hidden-lg ritira\" id='" + testID + "'>Ritira</button>";
-            var div = document.getElementById(examID);
+                var test = "<button type=\"button\" class='button prenotaButton hidden-xs' id='" + numberID + "'>Prenota</button>" +
+                            " <p style='text-align: left;'>" + teacherFirstName + " " + teacherLastName + "       " + classroom  +
+                            "<br/>" + dateStart + "             " + time + "</p> " +
+                            "<button type=\"button\" class='button prenotaButton fit hidden-sm hidden-md hidden-lg' id='" + numberID + "'>Prenota</button>";
+            } else {
+                var test = "<button type=\"button\" class=\"button hidden-xs ritiraButton\" id='" + testID + "'>Ritira</button> <p style='text-align: left;'>" + teacherFirstName + " " + teacherLastName + "       " + classroom + "<br/>" + dateStart + "             " + time + "</p> <button type=\"button\" class=\"button fit hidden-sm hidden-md hidden-lg ritiraButton\" id='" + testID + "'>Ritira</button>";
+            }
+            var div = document.getElementById("panel"+examID);
             div.insertAdjacentHTML('afterbegin', test);
         }
+
+        average = average/personalCfu;
+        graduateVote = average * 110 / 30;
+        graduateVote = graduateVote.toFixed(2);
+        average = average.toFixed(2);
+
+        var percentage = 100/120 * personalCfu;
+        $('#graduated').attr('data-percent', percentage);
+            $('#graduated').percentcircle({
+                animate : true,
+                diameter :$('#graduated').height(),
+                guage: 3,
+                coverBg: '#fff',
+                bgColor: '#efefef',
+                fillColor: '#990004',
+                percentSize: '18px',
+                percentWeight: 'normal'
+            });
         var info = "<span style='text-align: center; padding-top: 13%'>Media</span><br/>"
-                    +"<span style='text-align: center; font-size: 23px; font-family: bold; color: #6b0808'>"+average+"</span><br/>"
+                    +"<span style='text-align: center; font-size: 23px; font-family: bold; color: #6b0808'>" + average + "</span><br/>"
                     +"<span style='text-align: center;'>Voto di Laurea</span><br/>"
                     +"<p style='text-align: center; font-size: 37px; font-family: bold; color: #6b0808'>" + graduateVote + "</p>";
         var div1 = document.getElementById("infoVote");
         div1.insertAdjacentHTML('afterbegin', info);
-        alert(info);
-    });
 
-        var classname = document.getElementsByClassName("prenota");
+    var actionADD = function() {
+        var test___ID = $(this).attr('id');
+        $.ajax({ url: '../nostro_assets/php/examPrenotation.php',
+            data: {'numberID': test___ID},
+            type: 'post',
+            success: function(output) {
+            }
+        });
+        $.ajax({ url: '../nostro_assets/php/eventGenerator.php',
+            data: {'numberID': test___ID , 'messageType': "examPrenotation"},
+            type: 'post',
+            success: function(output) {
+                location.reload();
+            }
+        });
+    };
 
-        var actionADD = function() {
-            var test___ID = $(this).attr('id');
-            $.ajax({ url: '../nostro_assets/php/examPrenotation.php',
-                data: {'numberID': test___ID},
-                type: 'post',
-                success: function(output) {
-                }
-            });
-            $.ajax({ url: '../nostro_assets/php/eventGenerator.php',
-                data: {'numberID': test___ID , 'messageType': "examPrenotation"},
-                type: 'post',
-                success: function(output) {
-                    location.reload();
-                }
-            });
-        };
+    var actionRET = function() {
+        var test___ID = $(this).attr('id');
+        $.ajax({ url: '../nostro_assets/php/examRet.php',
+            data: {'numberID': test___ID},
+            type: 'post',
+            success: function(output) {
+                alert(output);
+            }
+        });
+        $.ajax({ url: '../nostro_assets/php/eventGenerator.php',
+            data: {'test___ID': test___ID , 'messageType': 'examRet'},
+            type: 'post',
+            success: function(out) {
+                //location.reload();
+            }
+        });
+    };
 
-        var actionRET = function() {
-            var test___ID = $(this).attr('id');
-            $.ajax({ url: '../nostro_assets/php/examRet.php',
-                data: {'numberID': test___ID},
-                type: 'post',
-                success: function(output) {
-                }
-            });
-            $.ajax({ url: '../nostro_assets/php/eventGenerator.php',
-                data: {'test___ID': test___ID , 'messageType': 'examRet'},
-                type: 'post',
-                success: function(out) {
-                    location.reload();
-                }
-            });
-        };
+        var classname = document.getElementsByClassName("prenotaButton");
 
         for (var i = 0; i < classname.length; i++) {
             classname[i].addEventListener('click', actionADD, false);
         }
 
-        var classname = document.getElementsByClassName("ritira");
+
+        var classname = document.getElementsByClassName("ritiraButton");
 
         for (var i = 0; i < classname.length; i++) {
             classname[i].addEventListener('click', actionRET, false);
         }
-
+    });
 });
