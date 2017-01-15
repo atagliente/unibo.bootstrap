@@ -38,15 +38,19 @@ $(function() {
                     amount = obj.paidTax[i].amount;
                     delayFee = obj.paidTax[i].delayFee;
                     payDay = obj.paidTax[i].payDay;
-                    paidTax += "<p>" + description + " importo: " + amount;
+                    paidTax += '<p class="paidDescription">' + description + '</p>';
+                    paidTax += '<p> Importo: ' + amount;
                     if (delayFee > 0) {
-                        paidTax += " + " + delayFee;
+                        paidTax += ' + ' + delayFee;
                     }
-                    paidTax += " € Data pagamento: " + payDay + "</p> ";
+                    paidTax += ' € </p>'
+                    paidTax += '<p> Data pagamento: ' + payDay + '</p>';
+                    paidTax += '<hr>';
                 }
                 payDay = 0;
             }
 
+            paidTax = paidTax.slice(0, -4);
             paidTax += "</div>";
             paidTax += "</div>";
             paidTax += "</div>";
@@ -67,7 +71,6 @@ $(function() {
         notPaid += '</div>';
         notPaid += '<div id="tasserimanenti" class="panel-collapse collapse in">';
         notPaid += '<div class="panel-body">';
-        notPaid += '<br/>';
 
         var numRate = 0;
         var monorata = false;
@@ -125,6 +128,7 @@ $(function() {
             monorata = false;
         }
 
+        notPaid = notPaid.slice(0, -4);
         notPaid += '</div>';
         notPaid += '</div>';
         notPaid += '</div>';
@@ -168,17 +172,19 @@ function convertToJavascriptDate(dateToConvert) {
 function addNotPaidTaxDatas(description, year, amount, delayFee, dateStart, dateClose, disabled) {
     var btnDesktopID = "btnD" + numberID;
     var btnMobileID = "btnM" + numberID;
-    notPaid += '<p> Anno ' + year + ' ' + description + ': <br/>importo: ' + amount;
+    notPaid += '<p class="notPaidTitle"> Anno ' + year + ' ' + description + '</p>';
+    notPaid += '<p>Importo: ' + amount;
 
     if (checkIfFeeShouldBeApplied(dateClose)) {
         notPaid += ' + ' + delayFee;
     }
 
-    notPaid += ' € Pagamenti aperti da: ' + dateStart + ' Scandenza: ' + dateClose + ' </p>';
-    notPaid += '<button type="button" id="' + btnDesktopID + '" class="button' + disabled + ' hidden-xs">Paga</button><br/>';
-    notPaid += '<button type="button" id="' + btnMobileID + '" class="button' + disabled + ' fit hidden-sm hidden-md hidden-lg">Paga</button><br/>';
-    notPaid += '<br/>'; //effetti ottenuti coi br da eliminare
-    notPaid += '<br/>';
+    notPaid += ' € </p>';
+    notPaid += '<button type="button" id="' + btnDesktopID + '" class="button' + disabled + ' hidden-xs">Paga</button>'; //<br/>
+    notPaid += '<p>Pagamenti aperti da: ' + dateStart +  '</p> ';
+    notPaid += '<p>Scandenza: ' + dateClose + ' </p>';
+    notPaid += '<button type="button" id="' + btnMobileID + '" class="button' + disabled + ' fit hidden-sm hidden-md hidden-lg">Paga</button>';//<br/>
+    notPaid += '<hr>';
 }
 
 function addEventListenerToButton(buttonID) {
