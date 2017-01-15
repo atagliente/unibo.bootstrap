@@ -14,9 +14,9 @@ $(function(){
   });
 
   $.get("../nostro_assets/php/getTaxDeadline.php", function(data) {
-      //var obj = JSON.parse(data);
-      alert(data);
-      /*var description;
+      var obj = JSON.parse(data);
+
+      var description;
       var paymentCounter = 0;
       var monoPaymentDone = true;
       var payment = "Rata 1";
@@ -64,7 +64,7 @@ $(function(){
         daysLeft = -daysLeft;
         message = "Pagamento della rata scaduto da " + daysLeft + " giorni";
         setReminderOnCalendar(message);
-      }*/
+      }
   });
 });
 
