@@ -79,6 +79,10 @@ class MakeOperationsOnDB{
       $text = rtrim($text, ",") . ']';
       return $text;
     }
+
+    public function getMatricolaLogged() {
+        return $this->userEmail;
+    }
 }
 
 

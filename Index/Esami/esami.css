@@ -1,23 +1,13 @@
-body{
-   min-width:100px; /* suppose you want minimun width of 1000px */
-   width: auto !important;  /* Firefox will set width as auto */
-   width:100px;             /* As IE ignores !important it will set width as 1000px; */
+body {
+    min-width:100px; /* suppose you want minimun width of 1000px */
+    width: auto !important;  /* Firefox will set width as auto */
+    width:100px;             /* As IE ignores !important it will set width as 1000px; */
 }
 
-p {
-    color: #333;
-    font-size: 16px;
-}
-
-.panel-body {
-    margin-left: 9%;
-    margin-right: 9%;
-    /*border: solid 5px green;*/
-}
-
-#main {
-    margin-left: 7%;
-    margin-right: 7%;
+.container {
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
 }
 
 .red {  /* Restanti - Prenotati - Verbalizzati */
@@ -32,22 +22,20 @@ p {
     color: white !important;
 }
 
-.button {       /*phantom button*/
-    float: right;
-    color: #333 !important;
-}
-
 a:link {
     color: #6b0808;
 }
 
 a:link, a:visited, a:active {
     border: 0;                              /*  toglie la sottolineatura puntinata */
-    font-size: 17px;
+    font-size: 18px;
     font-family: 'Open Sans', sans-serif;
     text-decoration: none !important;       /* toglie la sottolineatura */
-    font-size: 20px;
-    letter-spacing: 3px;
+}
+
+.button {       /*phantom button*/
+    float: right;
+    color: #333 !important;
 }
 
 @media screen and (max-width: 480px) {
@@ -130,4 +118,68 @@ h4, p {
     padding: 0px;
     text-align: center;
     background-color: #f6f6f6 !important;
+}
+
+#graph {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 10%;
+}
+
+#verbalized {
+    display: block;
+    position: relative;
+}
+
+@media (min-width: 900px) {
+
+    #progressBar {
+        display: inline-block;
+        position: relative;
+        float: left;
+        width: 70%;
+    }
+
+    #average {
+        display: inline-block;
+        position: relative;
+        float: right;
+        width: 30%;
+    }
+
+}
+
+@media (max-width: 900px) {
+
+    #progressBar {
+        display: none;
+    }
+
+    #average {
+        display: block;
+        position: relative;
+        width: 100%;
+    }
+
+}
+
+#avg {
+    position: relative;
+    display: inline-block;
+    color: #6b0808;
+    bottom: 10%;
+    top: 10%;
+    height: 30%;
+    width: 100%;
+}
+
+#graduated {
+    position: relative;
+    display: inline-block;
+    height: 70%;
+    width: auto;
+    padding-left: 7%;
+    padding-right: 7%;
 }
