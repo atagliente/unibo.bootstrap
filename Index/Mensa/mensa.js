@@ -1,19 +1,7 @@
-/*
-function swapSize() {
-    if ($(window).width() > 601) {
-        $("#variableView").css("margin-top:""-10%");
-    } else {
-        $("#variableView").css("margin-top:""-30%;");
-    }
-}
-*/
+
 $(document).ready(function(){
 
-/*  swapSize();
-  $(window).resize(function() {
-      swapSize();
-  });
-*/
+
   $("#mappa").hide();
   $("#panini").hide();
 
@@ -39,8 +27,6 @@ $(document).ready(function(){
         $("#mappa").hide();
       }
     });
-
-
 
 
 /*----------------*/
@@ -100,6 +86,34 @@ $("#panini2").hide();
         $("#mappa3").hide();
       }
     });
+
+    /*----------------*/
+
+    $("#mappa4").hide();
+    $("#panini4").hide();
+
+
+      $(".mostra4").click(function(){
+        if($("#mappa4").is(":visible") ){
+            $("#mappa4").hide();
+        }
+        else{
+            $("#mappa4").show();
+            $("#panini4").hide();
+        }
+      });
+
+
+
+      $("#mostraMenu4").click(function(){
+        if($("#panini4").is(":visible") ){
+            $("#panini4").hide();
+        }
+        else{
+          $("#panini4").show();
+          $("#mappa4").hide();
+        }
+      });
 
 
 });
