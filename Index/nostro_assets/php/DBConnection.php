@@ -11,10 +11,8 @@ if(!defined("DATABASE_VALUE")) {
   define("GET_ATTEMPS_QUERY","SELECT time FROM  WHERE (username=?) AND time > ?");
   define("DATABASE","solunibo");
   define("EMAIL","antoniotagliente@aol.com");
-
   define("DATABASE_VALUE","DB_OK");
 }
-
 
 class DBConnection
 {

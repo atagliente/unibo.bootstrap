@@ -15,7 +15,7 @@
 	<link rel="stylesheet" href="../Home/assets/css/main.css" />
 	<link rel="stylesheet" href="../nostro_assets/magic.css" />
 	<link rel="stylesheet" href="esami.css" />
-
+	<script src="circularGraph/js/jquery.circlechart.js"></script>
 	<!--[if lte IE 9]>
     <link rel="stylesheet" href="../Home/nostro_assets/css/ie9.css"/><![endif]-->
 	<!--[if lte IE 8]>
@@ -29,8 +29,7 @@
     <script src="../Home/nostro_assets/js/ie/respond.min.js"></script><![endif]-->
 	<script src="../Home/assets/js/main.js"></script>
 	<script src="../nostro_assets/js/pageGenerator.js"></script>
-
-	<script src="../Home/assets/js/loadCareer.js"></script>
+	<script src="../nostro_assets/js/loadCareer.js"></script>
 	<script src="../nostro_assets/js/checklogin.js"></script>
 	<script src="../nostro_assets/js/logoSwap.js"></script>
 </head>
@@ -43,7 +42,7 @@
 		<header id="header">
 			<a href="../Home/home.html">
 				<picture>
-					<img id="logoUnibo" class="logoOnNavBar" src="images/logoBig.png" alt="" longdesc="logo" style="width:auto">
+					<img id="logoUnibo" class="logoOnNavBar" src="../Images/logoBig.png" alt="logo" style="width:auto">
 				</picture>
 			</a>
 			<div class="inner">
@@ -58,15 +57,13 @@
 		<nav id="menu">
 			<h2>Menu</h2>
 			<ul>
-				<li><a href="../Home/home.html">Home</a></li>		<!--../Home/home.html-->
-				<li><a href="../Notifiche/notifiche.html">Notifiche</a></li>
+				<li><a href="../Home/home.html">Home</a></li>
 				<li><a href="../Esami/esami.html">Esami</a></li>
 				<li><a href="../Insegnamenti/insegnamenti.html">Insegnamenti</a></li>
 				<li><a href="../Tasse/tasse.html">Tasse</a></li>
-				<li><a href="../Mensa/mensa.html">Mensa</a></li>	<!--Mensa/mensa.html-->
-				<li><a href="../Login/login.html">Bike Sharing</a></li>
-				<li><a href="../Login/login.html">Mail</a></li>
-				<li><a href="../Login/login.html">About us</a></li>
+				<li><a href="../Mensa/mensa.html">Mensa</a></li>
+				<li><a href="../bike.html">Bike Sharing</a></li>
+				<li><a href="https://outlook.office365.com/studio.unibo.it" target="_blank">Mail</a></li>
 				<li><a href="../Login/login.html">Logout</a></li>
 			</ul>
 		</nav>
@@ -86,64 +83,67 @@
 
 					<div class="tab-content">
 
-						<div id="restanti" class="tab-pane fade in active">
-							<!--inizio-->
-							<div id="container" class="container">
+						<div id="restanti" class="tab-pane fade in active"></div>
 
-							</div>
+						<div id="prenotati" class="tab-pane fade in"></div>
 
+						<div id="verbalizzati" class="tab-pane fade in">
 
-							<!--fine-->
-						</div>
+							<div id="graph">
 
-						<div id="prenotati" class="tab-pane fade">
-							<!-- <h3>Prenotati</h3> -->
-							<div>
-								<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-							</div>
-							<div>
-								<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-							</div>
-							<div>
-								<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-							</div>
-						</div>
+								<div id="progressBar">
+									<!-- Diagramma -->
+									<span>I anno</span><div class="progress">
 
-						<div id="verbalizzati" class="tab-pane fade">
-
-							<!-- Diagramma -->
-							<div class="progress">
-								<div id="primo_anno" class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="60" style="width:0%">
-									0/60 cfu
-									<!-- se scrivo <span> 0/60 cfu </span> allora dovrei riuscire a centrare il testo con il css -->
+									<div id="primo_anno" class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="60" style="width:0%">
+										0/60 cfu
+										<!-- se scrivo <span> 0/60 cfu </span> allora dovrei riuscire a centrare il testo con il css -->
+									</div>
 								</div>
-							</div>
-							<div class="progress">
-								<div id="secondo_anno" class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="60" style="width:0%">
-									0/60 cfu
+									<span>II anno</span><div class="progress">
+									<div id="secondo_anno" class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="60" style="width:0%">
+										0/60 cfu
+									</div>
 								</div>
-							</div>
-							<div class="progress">
-								<div id="terzo_anno" class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="60" style="width:0%">
-									0/60 cfu
+									<span>III anno</span><div class="progress">
+									<div id="terzo_anno" class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="60" style="width:0%">
+										0/60 cfu
+									</div>
 								</div>
-							</div>
-							<div class="progress">
-								<div id="totale_cfu" class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="180" style="width:0%">
-									0/180 cfu
+									<span>Totale CFU</span>
+									<div class="progress">
+										<div id="totale_cfu" class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="180" style="width:0%">
+											0/180 cfu
+										</div>
+									</div>
 								</div>
+
+								<div id="average">
+
+										<div id="avg">
+											<label style="font-size: 27px">Statistiche</label>
+										</div>
+										<script src="circularGraph/js/jquery.circlechart.js"></script>
+									<div id="graduated"></div>
+									<script>
+                                        $('#graduated').percentcircle({
+                                            animate : true,
+                                            diameter :$('#graduated').height(),
+                                            guage: 3,
+                                            coverBg: '#fff',
+                                            bgColor: '#efefef',
+                                            fillColor: '#990004',
+                                            percentSize: '18px',
+                                            percentWeight: 'normal'
+                                        });
+									</script>
+
+								</div>
+
 							</div>
 
-							<!-- <h3>Verbalizzati</h3>  -->
-							<div>
-								<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-							</div>
-							<div>
-								<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-							</div>
-							<div>
-								<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-							</div>
+							<div id="verbalized"></div>
+
 						</div>
 
 					</div>
