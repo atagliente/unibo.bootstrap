@@ -31,14 +31,13 @@ $(function () {
             var exam = "<div class=\"panel panel-default\"> " +
                 "           <div class=\"panel-heading\"> " +
                 "               <h4 class=\"panel-title\"> " +
-                "                   <a data-toggle=\"collapse\" " + "    href=#" + numberID + ">" + title + "" +
+                "                   <a data-toggle=\"collapse\" " + "    data-target=#collapse" + numberID + ">" + title + "" +
                 "                   </a> " +
                 "               </h4> " +
-                "               <div class= \" panel-collapse collapse in\"> " +
-                "               <div id=\"" + numberID + "\" class=\"panel-body\">" +
+                "               <div id=\"collapse" + numberID + "\" class= \"panel-collapse collapse\"> " +
+                "                   <div id=\"" + numberID + "\" class=\" panel-body\">" +
                 "               </div>" +
                 "               </div>" +
-                "           " +
                 "       </div>";
             if(vote > 0) {
                 div = document.getElementById('verbalized');
@@ -77,13 +76,13 @@ $(function () {
             var div = document.getElementById(examID);
             div.insertAdjacentHTML('afterbegin', test);
         }
+        $('#graduated').attr('data-percent', "75");
         var info = "<span style='text-align: center; padding-top: 13%'>Media</span><br/>"
                     +"<span style='text-align: center; font-size: 23px; font-family: bold; color: #6b0808'>"+average+"</span><br/>"
                     +"<span style='text-align: center;'>Voto di Laurea</span><br/>"
                     +"<p style='text-align: center; font-size: 37px; font-family: bold; color: #6b0808'>" + graduateVote + "</p>";
         var div1 = document.getElementById("infoVote");
         div1.insertAdjacentHTML('afterbegin', info);
-        alert(info);
     });
 
         var classname = document.getElementsByClassName("prenota");
