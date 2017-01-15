@@ -62,6 +62,14 @@ p {
     margin-bottom: 0;
 }
 
+.paidDescription {
+    margin-top: 10px;
+}
+
+.notPaidTitle {
+  margin-top: 15px;
+}
+
 .panel-heading {
     margin: 0px;
     padding: 0px;
