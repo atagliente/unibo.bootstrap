@@ -1,6 +1,5 @@
 var notPaid = "";
 var numberID = 0;
-
 $(function() {
     var dateClose;
     var amount;
@@ -32,7 +31,6 @@ $(function() {
             paidTax += '<div class="panel-body">';
 
             for (var i = 0; i < obj.paidTax.length; i++) {
-
                 if (y == obj.paidTax[i].year) {
                     description = obj.paidTax[i].descrizione;
                     amount = obj.paidTax[i].amount;
@@ -62,6 +60,12 @@ $(function() {
 
     $.get("../nostro_assets/php/loadNotPaidTax.php", function(data) {
         var obj = JSON.parse(data);
+        var paymentsNumber = 0;
+        var monoPayment = false;
+        var disabled = "";
+        var tasseArretrate = false;
+        var description = "";
+        var onHoldTaxes = false;                  //used to load only the year with taxes on hold
 
         notPaid += '<div class="panel panel-default">';
         notPaid += '<div class="panel-heading">';
@@ -72,21 +76,19 @@ $(function() {
         notPaid += '<div id="tasserimanenti" class="panel-collapse collapse in">';
         notPaid += '<div class="panel-body">';
 
-        var numRate = 0;
-        var monorata = false;
-        var disabled = "";
-        var tasseArretrate = false;
-        var description = "";
         for (var y = 1; y <= studentCourseYear; y++) {
-
+          if(!onHoldTaxes){
             for (var i = 0; i < obj.notPaidTax.length; i++) {
                 if (y == obj.notPaidTax[i].year) {
                     if (obj.notPaidTax[i].descrizione == "Rata 1" || obj.notPaidTax[i].descrizione == "Rata 2" || obj.notPaidTax[i].descrizione == "Rata 3") {
-                        numRate++;
+                        paymentsNumber++;
                     } else if (obj.notPaidTax[i].descrizione == "Monorata") {
-                        monorata = true;
+                        monoPayment = true;
                     }
                 }
+            }
+            if(!((!monoPayment && paymentsNumber == 3) || (monoPayment && paymentsNumber == 0))){
+              onHoldTaxes = true;
             }
             for (var i = 0; i < obj.notPaidTax.length; i++) {
                 numberID = obj.notPaidTax[i].numberID;
@@ -97,12 +99,11 @@ $(function() {
                 delayFee = obj.notPaidTax[i].delayFee;
 
                 if (y == obj.notPaidTax[i].year) {
-
-                    if (!monorata && numRate == 3) {
+                    if (!monoPayment && paymentsNumber == 3) {
                         //è stata pagata la monorata
-                    } else if (monorata && numRate == 0) {
+                    } else if (monoPayment && paymentsNumber == 0) {
                         //sono state pagate le tre rate
-                    } else if (monorata && numRate == 3) {
+                    } else if (monoPayment && paymentsNumber == 3) {
                         //non è stato ancora pagato nulla
                         if ((description == "Rata 1" || description == "Monorata") && checkIfPaymentCanBeDone(dateStart)) {
                             disabled = "";
@@ -110,7 +111,7 @@ $(function() {
                             disabled = " disabled";
                         }
                         addNotPaidTaxDatas(description, y, amount, delayFee, dateStart, dateClose, disabled);
-                    } else if (numRate < 3) {
+                    } else if (paymentsNumber < 3) {
                         //ci sono tasse in sospeso disabilitato il  pagamento delle rate succcessive
                         if (tasseArretrate || !checkIfPaymentCanBeDone(dateStart)) {
                             disabled = " disabled";
@@ -124,8 +125,9 @@ $(function() {
                     }
                 }
             }
-            numRate = 0;
-            monorata = false;
+            paymentsNumber = 0;
+            monoPayment = false;
+          }
         }
 
         notPaid = notPaid.slice(0, -4);
