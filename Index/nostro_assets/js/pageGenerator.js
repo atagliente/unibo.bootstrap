@@ -17,6 +17,7 @@ $(function () {
     var average = 0;
     var graduateVote = 0;
     var personalCfu = 0;
+    var student___fk = 0;
 
     $.get("../nostro_assets/php/pageRequest/examResult.php", function(data) {
         var obj = JSON.parse(data);
@@ -35,9 +36,10 @@ $(function () {
                 "                   </a> " +
                 "               </h4> " +
                 "               <div id=\"collapse" + numberID + "\" class= \"panel-collapse collapse\"> " +
-                "                   <div id=\"panel" + numberID + "\" class=\" panel-body\">" +
+                "                   <div id=\"" + numberID + "\" class=\"panel-body\">" +
+                "                   </div>" +
                 "               </div>" +
-                "               </div>" +
+                "           </div>" +
                 "       </div>";
             if(vote > 0) {
                 div = document.getElementById('verbalized');
@@ -51,6 +53,7 @@ $(function () {
     $.get("../nostro_assets/php/pageRequest/testResult.php", function(data) {
         var obj = JSON.parse(data);
         for(var i = 0; i < obj.test.length; i++){
+            student___fk = obj.test[i].student___fk;
             numberID = obj.test[i].testID;
             testID = obj.test[i].testID;
             dateStart = obj.test[i].dateStart;
@@ -68,15 +71,15 @@ $(function () {
                 personalCfu = personalCfu + cfu;
                 average += vote*cfu;
             } else if (prenotation == 0) {
-                var test = "<button type=\"button\" class='button prenotaButton hidden-xs' id='" + numberID + "'>Prenota</button>" +
+                var test = "</div><button type=\"button\" class='button prenotaButton hidden-xs' id='" + numberID + "'>Prenota</button>" +
                             " <p style='text-align: left;'>" + teacherFirstName + " " + teacherLastName + "       " + classroom  +
                             "<br/>" + dateStart + "             " + time + "</p> " +
                             "<button type=\"button\" class='button prenotaButton fit hidden-sm hidden-md hidden-lg' id='" + numberID + "'>Prenota</button>";
             } else {
-                var test = "<button type=\"button\" class=\"button hidden-xs ritiraButton\" id='" + testID + "'>Ritira</button> <p style='text-align: left;'>" + teacherFirstName + " " + teacherLastName + "       " + classroom + "<br/>" + dateStart + "             " + time + "</p> <button type=\"button\" class=\"button fit hidden-sm hidden-md hidden-lg ritiraButton\" id='" + testID + "'>Ritira</button>";
+                var test = "<button type=\"button\" class=\"button hidden-xs ritiraButton\" id='" + numberID + "'>Ritira</button> <p style='text-align: left;'>" + teacherFirstName + " " + teacherLastName + "       " + classroom + "<br/>" + dateStart + "             " + time + "</p> <button type=\"button\" class=\"button fit hidden-sm hidden-md hidden-lg ritiraButton\" id='" + numberID + "'>Ritira</button>";
             }
-            var div = document.getElementById("panel"+examID);
-            div.insertAdjacentHTML('afterbegin', test);
+            var div = document.getElementById(examID);
+            div.insertAdjacentHTML('beforeend', test);
         }
 
         average = average/personalCfu;
@@ -115,7 +118,8 @@ $(function () {
             data: {'numberID': test___ID , 'messageType': "examPrenotation"},
             type: 'post',
             success: function(output) {
-                location.reload();
+            alert("test \n\n"+output);
+            // location.reload();
             }
         });
     };
@@ -123,17 +127,17 @@ $(function () {
     var actionRET = function() {
         var test___ID = $(this).attr('id');
         $.ajax({ url: '../nostro_assets/php/examRet.php',
-            data: {'numberID': test___ID},
+            data: {'numberID': student___fk + test___ID},
             type: 'post',
             success: function(output) {
-                alert(output);
             }
         });
         $.ajax({ url: '../nostro_assets/php/eventGenerator.php',
-            data: {'test___ID': test___ID , 'messageType': 'examRet'},
+            data: {'numberID': student___fk + test___ID , 'messageType': 'examRet'},
             type: 'post',
             success: function(out) {
-                //location.reload();
+                alert("socmel \n\n" + out);
+              //  location.reload();
             }
         });
     };
