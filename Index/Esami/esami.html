@@ -78,7 +78,7 @@
 					<ul class="nav nav-pills red">
 						<li class="active"><a data-toggle="pill" href="#restanti">Restanti</a></li>
 						<li><a data-toggle="pill" href="#prenotati">Prenotati</a></li>
-						<li><a data-toggle="pill" href="#verbalizzati">Verbalizzati</a></li>
+						<li><a data-toggle="pill" id="refreshGraph" href="#verbalizzati">Verbalizzati</a></li>
 					</ul>
 
 					<div class="tab-content">
@@ -123,18 +123,9 @@
 										<div id="avg">
 											<label style="font-size: 27px">Statistiche</label>
 										</div>
-										<script src="circularGraph/js/jquery.circlechart.js"></script>
-									<div id="graduated"></div>
-									<script>$('#graduated').percentcircle({animate : true, diameter :$('#graduated').height(),
-                                            guage: 3,
-                                            coverBg: '#fff',
-                                            bgColor: '#efefef',
-                                            fillColor: '#990004',
-                                            percentSize: '18px',
-                                            percentWeight: 'normal'
-                                        });
-									</script>
 
+									<script src="circularGraph/js/jquery.circlechart.js"></script>
+									<div id="graduated"></div>
 								</div>
 
 							</div>
@@ -146,7 +137,6 @@
 					</div>
 				</div>
 				<!-- End of Section Tab -->
-
 			</div>
 		</div>
 
