@@ -55,10 +55,9 @@ $(function(){
       }
       convertToJavascriptDate(deadline)
       var daysLeft = getDaysNumberTillToday(jsDate);
-      alert(daysLeft);
       var message;
       if(daysLeft >= 0 && daysLeft <= 10){
-        message = "Il pagamento deve essere effettuato entro " + daysLeft + " giorni";
+        message = "Effettuare il pagamento della rata, giorni rimasti " + daysLeft;
         setReminderOnCalendar(message);
       } else if(daysLeft < 0){
         daysLeft = -daysLeft;
@@ -85,7 +84,7 @@ function convertToJavascriptDate(dateToConvert) {
 
 function getDaysNumberTillToday(date){
   var today = new Date();
-  return (int)((today - date)/86400000);
+  return Math.round((today - date)/86400000);
 }
 
 function convertToPhpDate(day){
@@ -114,8 +113,8 @@ function setReminderOnCalendar(message) {
           'dataFine': phpDateClose
       },
       type: 'post',
-      success: function(output) {
+      /*success: function(output) {
           alert(output);
-      }
+      }*/
   });
 }
