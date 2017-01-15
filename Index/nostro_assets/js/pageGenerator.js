@@ -30,7 +30,6 @@ $(function () {
             var div;
             var exam = "<div class=\"panel panel-default\"> " +
                 "           <div class=\"panel-heading\"> " +
-<<<<<<< HEAD
                 "               <h4 class=\"panel-title\"> " +
                 "                   <a data-toggle=\"collapse\" " + "    href=#collapse" + numberID + ">" + title + "" +
                 "                   </a> " +
@@ -38,24 +37,13 @@ $(function () {
                 "               <div id=\"collapse" + numberID + "\" class= \"panel-collapse collapse\"> " +
                 "                   <div id=\"panel" + numberID + "\" class=\" panel-body\">" +
                 "               </div>" +
-=======
-                "               <h2 class=\"panel-title\"> " +
-                "                   <a data-toggle=\"collapse\" " + "    href=#" + numberID + ">" + title + "" +
-                "                   </a> " +
-                "               </h2> " +
-                "            </div>" +
-                "            <div id=\"" + numberID + "\" class= \" panel-collapse collapse in\"> " +
-                "               <div class=\"panel-body\">" +
->>>>>>> 89712d8410ffa42681fd00796c4dd942c20290b9
                 "               </div>" +
-                "            </div>" +
-                "           " +
                 "       </div>";
             if(vote > 0) {
                 div = document.getElementById('verbalized');
             } else if (prenotation == 0) {
                 div = document.getElementById('restanti');
-            } else div = document.getElementById('prenotati').childNodes[0];
+            } else div = document.getElementById('prenotati');
             div.insertAdjacentHTML( 'afterbegin', exam);
         }
     });
@@ -95,7 +83,6 @@ $(function () {
         graduateVote = average * 110 / 30;
         graduateVote = graduateVote.toFixed(2);
         average = average.toFixed(2);
-        alert("cfu "+personalCfu+" average "+average+" graduateVote "+graduateVote);
 
         var percentage = 100/120 * personalCfu;
         $('#graduated').attr('data-percent', percentage);
@@ -139,13 +126,14 @@ $(function () {
             data: {'numberID': test___ID},
             type: 'post',
             success: function(output) {
+                alert(output);
             }
         });
         $.ajax({ url: '../nostro_assets/php/eventGenerator.php',
             data: {'test___ID': test___ID , 'messageType': 'examRet'},
             type: 'post',
             success: function(out) {
-                location.reload();
+                //location.reload();
             }
         });
     };

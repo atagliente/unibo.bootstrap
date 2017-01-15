@@ -121,7 +121,7 @@ h4, p {
         left: auto;
         right: auto;
         top: auto;
-        min-height: 900px;
+        min-height: 951px;
     }
 
 }
@@ -135,9 +135,10 @@ h4, p {
     }
 }
 
-.calendar iframe {
+iframe {
     property: inherit;
     position: absolute;
+    scrollable: off;
     top: auto;
     left: 0;
     width: 100%;
