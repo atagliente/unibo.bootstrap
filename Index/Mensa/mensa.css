@@ -2,6 +2,8 @@
 #variableView,#variableView2,#variableView3,#variableView4{
     position: relative;
     float: right;
+    margin-right: 20%;
+    margin-top:-10%;
 }
 
 
