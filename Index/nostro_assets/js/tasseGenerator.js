@@ -34,11 +34,12 @@ $(function() {
                 if (y == obj.paidTax[i].year) {
                     description = obj.paidTax[i].descrizione;
                     amount = obj.paidTax[i].amount;
+                    dateClose = obj.paidTax[i].dateClose;
                     delayFee = obj.paidTax[i].delayFee;
                     payDay = obj.paidTax[i].payDay;
                     paidTax += '<p class="paidDescription">' + description + '</p>';
                     paidTax += '<p> Importo: ' + amount;
-                    if (delayFee > 0) {
+                    if (getDaysBetweenTwoDates(convertToJavascriptDate(dateClose), convertToJavascriptDate(payDay)) < 0) {
                         paidTax += ' + ' + delayFee;
                     }
                     paidTax += ' € </p>'
@@ -65,7 +66,7 @@ $(function() {
         var disabled = "";
         var tasseArretrate = false;
         var description = "";
-        var onHoldTaxes = false;                  //used to load only the year with taxes on hold
+        var onHoldTaxes = false; //used to load only the year with taxes on hold
 
         notPaid += '<div class="panel panel-default">';
         notPaid += '<div class="panel-heading">';
@@ -77,57 +78,57 @@ $(function() {
         notPaid += '<div class="panel-body">';
 
         for (var y = 1; y <= studentCourseYear; y++) {
-          if(!onHoldTaxes){
-            for (var i = 0; i < obj.notPaidTax.length; i++) {
-                if (y == obj.notPaidTax[i].year) {
-                    if (obj.notPaidTax[i].descrizione == "Rata 1" || obj.notPaidTax[i].descrizione == "Rata 2" || obj.notPaidTax[i].descrizione == "Rata 3") {
-                        paymentsNumber++;
-                    } else if (obj.notPaidTax[i].descrizione == "Monorata") {
-                        monoPayment = true;
+            if (!onHoldTaxes) {
+                for (var i = 0; i < obj.notPaidTax.length; i++) {
+                    if (y == obj.notPaidTax[i].year) {
+                        if (obj.notPaidTax[i].descrizione == "Rata 1" || obj.notPaidTax[i].descrizione == "Rata 2" || obj.notPaidTax[i].descrizione == "Rata 3") {
+                            paymentsNumber++;
+                        } else if (obj.notPaidTax[i].descrizione == "Monorata") {
+                            monoPayment = true;
+                        }
                     }
                 }
-            }
-            if(!((!monoPayment && paymentsNumber == 3) || (monoPayment && paymentsNumber == 0))){
-              onHoldTaxes = true;
-            }
-            for (var i = 0; i < obj.notPaidTax.length; i++) {
-                numberID = obj.notPaidTax[i].numberID;
-                description = obj.notPaidTax[i].descrizione;
-                dateStart = obj.notPaidTax[i].dateOpen;
-                dateClose = obj.notPaidTax[i].dateClose;
-                amount = obj.notPaidTax[i].amount;
-                delayFee = obj.notPaidTax[i].delayFee;
+                if (!((!monoPayment && paymentsNumber == 3) || (monoPayment && paymentsNumber == 0))) {
+                    onHoldTaxes = true;
+                }
+                for (var i = 0; i < obj.notPaidTax.length; i++) {
+                    numberID = obj.notPaidTax[i].numberID;
+                    description = obj.notPaidTax[i].descrizione;
+                    dateStart = obj.notPaidTax[i].dateOpen;
+                    dateClose = obj.notPaidTax[i].dateClose;
+                    amount = obj.notPaidTax[i].amount;
+                    delayFee = obj.notPaidTax[i].delayFee;
 
-                if (y == obj.notPaidTax[i].year) {
-                    if (!monoPayment && paymentsNumber == 3) {
-                        //è stata pagata la monorata
-                    } else if (monoPayment && paymentsNumber == 0) {
-                        //sono state pagate le tre rate
-                    } else if (monoPayment && paymentsNumber == 3) {
-                        //non è stato ancora pagato nulla
-                        if ((description == "Rata 1" || description == "Monorata") && checkIfPaymentCanBeDone(dateStart)) {
-                            disabled = "";
-                        } else {
-                            disabled = " disabled";
-                        }
-                        addNotPaidTaxDatas(description, y, amount, delayFee, dateStart, dateClose, disabled);
-                    } else if (paymentsNumber < 3) {
-                        //ci sono tasse in sospeso disabilitato il  pagamento delle rate succcessive
-                        if (tasseArretrate || !checkIfPaymentCanBeDone(dateStart)) {
-                            disabled = " disabled";
-                        } else {
-                            disabled = "";
-                            tasseArretrate = true;
-                        }
-                        if (description != "Monorata") {
+                    if (y == obj.notPaidTax[i].year) {
+                        if (!monoPayment && paymentsNumber == 3) {
+                            //è stata pagata la monorata
+                        } else if (monoPayment && paymentsNumber == 0) {
+                            //sono state pagate le tre rate
+                        } else if (monoPayment && paymentsNumber == 3) {
+                            //non è stato ancora pagato nulla
+                            if ((description == "Rata 1" || description == "Monorata") && checkIfPaymentCanBeDone(dateStart)) {
+                                disabled = "";
+                            } else {
+                                disabled = " disabled";
+                            }
                             addNotPaidTaxDatas(description, y, amount, delayFee, dateStart, dateClose, disabled);
+                        } else if (paymentsNumber < 3) {
+                            //ci sono tasse in sospeso disabilitato il  pagamento delle rate succcessive
+                            if (tasseArretrate || !checkIfPaymentCanBeDone(dateStart)) {
+                                disabled = " disabled";
+                            } else {
+                                disabled = "";
+                                tasseArretrate = true;
+                            }
+                            if (description != "Monorata") {
+                                addNotPaidTaxDatas(description, y, amount, delayFee, dateStart, dateClose, disabled);
+                            }
                         }
                     }
                 }
+                paymentsNumber = 0;
+                monoPayment = false;
             }
-            paymentsNumber = 0;
-            monoPayment = false;
-          }
         }
 
         notPaid = notPaid.slice(0, -4);
@@ -137,7 +138,7 @@ $(function() {
 
         $("#containerRestanti").append(notPaid);
 
-        for (var i = 0; i <= (studentCourseYear*4); i++) {
+        for (var i = 0; i <= (studentCourseYear * 4); i++) {
             addEventListenerToButton("btnD" + i);
             addEventListenerToButton("btnM" + i);
         }
@@ -183,9 +184,9 @@ function addNotPaidTaxDatas(description, year, amount, delayFee, dateStart, date
 
     notPaid += ' € </p>';
     notPaid += '<button type="button" id="' + btnDesktopID + '" class="button' + disabled + ' hidden-xs">Paga</button>'; //<br/>
-    notPaid += '<p>Pagamenti aperti da: ' + dateStart +  '</p> ';
+    notPaid += '<p>Pagamenti aperti da: ' + dateStart + '</p> ';
     notPaid += '<p>Scandenza: ' + dateClose + ' </p>';
-    notPaid += '<button type="button" id="' + btnMobileID + '" class="button' + disabled + ' fit hidden-sm hidden-md hidden-lg">Paga</button>';//<br/>
+    notPaid += '<button type="button" id="' + btnMobileID + '" class="button' + disabled + ' fit hidden-sm hidden-md hidden-lg">Paga</button>'; //<br/>
     notPaid += '<hr>';
 }
 
@@ -209,3 +210,7 @@ function addEventListenerToButton(buttonID) {
         });
     }
 };
+
+function getDaysBetweenTwoDates(date1, date2){
+  return Math.round((date1 - date2)/86400000);
+}
