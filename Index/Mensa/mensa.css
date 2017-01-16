@@ -1,21 +1,12 @@
 
-/*#inf,#inf2,#inf3{
-  position: relative;
-  margin-right: 30%;
-  float: left;
-}*/
-
 #variableView,#variableView2,#variableView3,#variableView4{
     position: relative;
     float: right;
 }
-.bottoni{
-/*  position: relative;
-  margin-top:10%;*/
-}
 
 
-/*per ridimensionare il menu e la mappa in base alla dimensione del dispositivo*/
+
+/*RESPONSIVE: per ridimensionare il menu e la mappa in base alla dimensione del dispositivo*/
 @media screen and (min-width: 480px) {
 
     #mappa-menu {
@@ -24,22 +15,4 @@
      margin-top:-10%;
     }
 
-}
-
-/*filtro*/
-#filter{
-  background-color: lightgrey;
-}
-
-#celiaco{
-  position: relative;
-  float: left;
-  background-color: lightgrey;
-}
-
-.citta{
-    position: relative;
-    float: left;
-    margin-right: 70%;
-    background-color: lightgrey;
 }
