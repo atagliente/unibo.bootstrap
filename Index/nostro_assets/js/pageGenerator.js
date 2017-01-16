@@ -29,18 +29,8 @@ $(function () {
             vote = obj.exam[i].vote;
             prenotation = obj.exam[i].prenotation;
             var div;
-            var exam = "<div class=\"panel panel-default\"> " +
-                "           <div class=\"panel-heading\"> " +
-                "               <h4 class=\"panel-title\"> " +
-                "                   <a data-toggle=\"collapse\" " + "    href=#collapse" + numberID + ">" + title + "" +
-                "                   </a> " +
-                "               </h4> " +
-                "               <div id=\"collapse" + numberID + "\" class= \"panel-collapse collapse\"> " +
-                "                   <div id=\"" + numberID + "\" class=\"panel-body\">" +
-                "                   </div>" +
-                "               </div>" +
-                "           </div>" +
-                "       </div>";
+            var exam = "<div class=\"panel panel-default\"><div class=\"panel-heading\"><h4 class=\"panel-title\"><a data-toggle=\"collapse\" " + "    href=#collapse" + numberID + ">" + title + "</a> " +
+                        "</h4></div><div id=\"collapse" + numberID + "\" class= \"panel-collapse collapse\"><div id=\"panel" + numberID + "\" class=\"panel-body\"></div></div>";
             if(vote > 0) {
                 div = document.getElementById('verbalized');
             } else if (prenotation == 0) {
@@ -71,14 +61,13 @@ $(function () {
                 personalCfu = personalCfu + cfu;
                 average += vote*cfu;
             } else if (prenotation == 0) {
-                var test = "</div><button type=\"button\" class='button prenotaButton hidden-xs' id='" + numberID + "'>Prenota</button>" +
+                var test = "<button type=\"button\" class='button prenotaButton' id='" + numberID + "'>Prenota</button>" +
                             " <p style='text-align: left;'>" + teacherFirstName + " " + teacherLastName + "       " + classroom  +
-                            "<br/>" + dateStart + "             " + time + "</p> " +
-                            "<button type=\"button\" class='button prenotaButton fit hidden-sm hidden-md hidden-lg' id='" + numberID + "'>Prenota</button>";
+                            "<br/>" + dateStart + "             " + time + "</p>";
             } else {
-                var test = "<button type=\"button\" class=\"button hidden-xs ritiraButton\" id='" + numberID + "'>Ritira</button> <p style='text-align: left;'>" + teacherFirstName + " " + teacherLastName + "       " + classroom + "<br/>" + dateStart + "             " + time + "</p> <button type=\"button\" class=\"button fit hidden-sm hidden-md hidden-lg ritiraButton\" id='" + numberID + "'>Ritira</button>";
+                var test = "<button type=\"button\" class=\"button ritiraButton\" id='" + numberID + "'>Ritira</button> <p style='text-align: left;'>" + teacherFirstName + " " + teacherLastName + "       " + classroom + "<br/>" + dateStart + "             " + time + "</p>";
             }
-            var div = document.getElementById(examID);
+            var div = document.getElementById('panel'+examID);
             div.insertAdjacentHTML('beforeend', test);
         }
 
@@ -118,8 +107,7 @@ $(function () {
             data: {'numberID': test___ID , 'messageType': "examPrenotation"},
             type: 'post',
             success: function(output) {
-            alert("test \n\n"+output);
-            // location.reload();
+                location.reload();
             }
         });
     };
@@ -127,7 +115,7 @@ $(function () {
     var actionRET = function() {
         var test___ID = $(this).attr('id');
         $.ajax({ url: '../nostro_assets/php/examRet.php',
-            data: {'numberID': student___fk + test___ID},
+            data: {'numberID': test___ID},
             type: 'post',
             success: function(output) {
             }
@@ -136,8 +124,7 @@ $(function () {
             data: {'numberID': student___fk + test___ID , 'messageType': 'examRet'},
             type: 'post',
             success: function(out) {
-                alert("socmel \n\n" + out);
-              //  location.reload();
+                location.reload();
             }
         });
     };

@@ -34,14 +34,14 @@ a:link, a:visited, a:active {
     font-size: 12px;
 }
 
-.calendar, iframe {
+iframe {
     position: absolute;
     top: auto;
     left: 0;
     width: 100%;
     height: 100%;
      /* al posto di questi attributi obsoleti scrolling="no" allowfullscreen="" frameborder="0" metto: */
-    overflow: hidden;
+    overflow-y: visible;
     border: 0px;
 }
 
@@ -51,16 +51,8 @@ a:link, a:visited, a:active {
         left: auto;
         right: auto;
         top: auto;
+        height: auto;
         min-height: 900px;
-    }
-}
-
-@media screen and (max-width: 900px) {
-    .calendar {
-        position: relative;
-        top: auto;
-        left: auto;
-        min-height: 440px;
     }
 }
 
@@ -74,6 +66,14 @@ a:link, a:visited, a:active {
     h2 { font-size: 16px; }
     #header { height: 90px; }
     .copyright { font-size: 8px !important;}
+
+    .calendar {
+        position: relative;
+        top: auto;
+        left: auto;
+        height: 600px;
+        margin-bottom: -70px;
+    }
 }
 
 @media screen and (max-width: 736px) {
@@ -85,18 +85,3 @@ h1 {
 }
 
 
-/* Secondo Rossella è inutile
-.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus, .ui-button:hover, .ui-button:focus {
-border: 1px solid #bb2e29;
-background: #b92c28 url("images/ui-bg_glass_100_e4f1fb_1x400.png") 50% 50% repeat-x;
-font-weight: bold;
-color: #bb2e29;
-}
-
-.ui-state-active,.ui-widget-content .ui-state-active,.ui-widget-header .ui-state-active,a.ui-button:active,.ui-button:active,.ui-button.ui-state-active:hover{
-border:1px solid #bb2e29;
-background:#b92c28 url("images/ui-bg_glass_50_3baae3_1x400.png") 50% 50% repeat-x;
-font-weight:bold;
-color:#bb2e29;
-}
-*/
